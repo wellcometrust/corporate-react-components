@@ -5,6 +5,7 @@ import MediaCaption from './MediaCaption';
 
 type MediaProps = {
   caption?: string;
+  captionDisplay?: string;
   children: React.ReactElement;
   className?: string;
   credit?: string;
@@ -13,6 +14,7 @@ type MediaProps = {
 
 const Media = ({
   caption,
+  captionDisplay,
   children,
   className,
   credit,
@@ -27,7 +29,10 @@ const Media = ({
       <div className="cc-media__element">{children}</div>
       <MediaCaption
         caption={caption}
-        className="cc-media--wide__caption"
+        captionDisplay={captionDisplay}
+        className={cx({
+          'cc-media--wide__caption': captionDisplay !== 'below_image'
+        })}
         credit={credit}
         licence={licence}
       />

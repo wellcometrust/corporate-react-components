@@ -3,6 +3,7 @@ import cx from 'classnames';
 
 type MediaCaptionProps = {
   caption?: string;
+  captionDisplay?: string;
   className?: string;
   credit?: string;
   licence?: string;
@@ -10,17 +11,19 @@ type MediaCaptionProps = {
 
 const MediaCaption = ({
   caption,
+  captionDisplay,
   className,
   credit,
   licence
 }: MediaCaptionProps) => {
   const classNames = cx('cc-media__caption', {
+    'cc-media__caption--below-image': captionDisplay === 'below_image',
     [`${className}`]: className
   });
 
-  return caption || credit ? (
+  return (caption && captionDisplay !== 'hide') || credit ? (
     <figcaption className={classNames}>
-      {caption && (
+      {caption && captionDisplay !== 'hide' && (
         <div
           className="cc-media__caption-detail"
           dangerouslySetInnerHTML={{ __html: caption }}
