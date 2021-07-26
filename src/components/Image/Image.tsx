@@ -9,8 +9,8 @@ type ImageProps = {
   captionVariant?: 'below' | 'right';
   credit?: string;
   className?: string;
-  shouldHideCaption?: boolean;
   licence?: string;
+  shouldHideCaption?: boolean;
   sizes?: string;
   src: string;
   srcSet?: string;
