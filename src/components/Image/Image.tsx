@@ -6,9 +6,10 @@ import ImageElement from './ImageElement';
 type ImageProps = {
   alt: string;
   caption?: string;
-  captionDisplay?: string;
+  captionVariant?: 'below' | 'right';
   credit?: string;
   className?: string;
+  hideCaption?: boolean;
   licence?: string;
   sizes?: string;
   src: string;
@@ -21,9 +22,10 @@ const imageSizesDefault =
 export const Image = ({
   alt = '',
   caption,
-  captionDisplay,
+  captionVariant = 'right',
   credit,
   className,
+  hideCaption,
   licence,
   sizes = imageSizesDefault,
   src,
@@ -31,9 +33,10 @@ export const Image = ({
 }: ImageProps) => (
   <Media
     caption={caption}
-    captionDisplay={captionDisplay}
+    captionVariant={captionVariant}
     className={className}
     credit={credit}
+    hideCaption={hideCaption}
     licence={licence}
   >
     <ImageElement alt={alt} sizes={srcSet && sizes} src={src} srcSet={srcSet} />
