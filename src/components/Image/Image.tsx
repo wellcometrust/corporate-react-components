@@ -5,11 +5,11 @@ import ImageElement from './ImageElement';
 
 type ImageProps = {
   alt: string;
-  caption?: string;
+  captionText?: string;
   captionVariant?: 'below' | 'right';
   credit?: string;
   className?: string;
-  hideCaption?: boolean;
+  shouldHideCaption?: boolean;
   licence?: string;
   sizes?: string;
   src: string;
@@ -21,23 +21,23 @@ const imageSizesDefault =
 
 export const Image = ({
   alt = '',
-  caption,
+  captionText,
   captionVariant = 'right',
   credit,
   className,
-  hideCaption,
   licence,
+  shouldHideCaption,
   sizes = imageSizesDefault,
   src,
   srcSet
 }: ImageProps) => (
   <Media
-    caption={caption}
+    caption={captionText}
     captionVariant={captionVariant}
     className={className}
     credit={credit}
-    hideCaption={hideCaption}
     licence={licence}
+    shouldHideCaption={shouldHideCaption}
   >
     <ImageElement alt={alt} sizes={srcSet && sizes} src={src} srcSet={srcSet} />
   </Media>

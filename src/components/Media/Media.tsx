@@ -9,8 +9,8 @@ type MediaProps = {
   children: React.ReactElement;
   className?: string;
   credit?: string;
-  hideCaption?: boolean;
   licence?: string;
+  shouldHideCaption?: boolean;
 };
 
 const Media = ({
@@ -19,8 +19,8 @@ const Media = ({
   children,
   className,
   credit,
-  hideCaption,
-  licence
+  licence,
+  shouldHideCaption
 }: MediaProps) => {
   const classNames = cx('cc-media', {
     [className]: className
@@ -36,8 +36,8 @@ const Media = ({
           'cc-media--wide__caption': captionVariant === 'right'
         })}
         credit={credit}
-        hideCaption={hideCaption}
         licence={licence}
+        shouldHideCaption={shouldHideCaption}
       />
     </figure>
   );
