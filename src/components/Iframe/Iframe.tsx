@@ -1,13 +1,13 @@
 import React from 'react';
 
 export type IframeProps = {
-  src: string;
-  width: number;
   height: number;
+  src: string;
   title: string;
+  width: number;
 };
 
-export const Iframe = ({ src, width, height, title }: IframeProps) => (
+export const Iframe = ({ height, src, title, width }: IframeProps) => (
   // Make this responsive by ignoring width/height, but using a container div with paddingTop
   // to ensure aspect ratio is respected.
   <div
