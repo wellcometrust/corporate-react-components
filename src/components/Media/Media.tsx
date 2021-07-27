@@ -5,18 +5,22 @@ import MediaCaption from './MediaCaption';
 
 type MediaProps = {
   caption?: string;
+  captionVariant?: 'below' | 'right';
   children: React.ReactElement;
   className?: string;
   credit?: string;
   licence?: string;
+  shouldHideCaption?: boolean;
 };
 
 const Media = ({
   caption,
+  captionVariant = 'right',
   children,
   className,
   credit,
-  licence
+  licence,
+  shouldHideCaption
 }: MediaProps) => {
   const classNames = cx('cc-media', {
     [className]: className
@@ -27,9 +31,13 @@ const Media = ({
       <div className="cc-media__element">{children}</div>
       <MediaCaption
         caption={caption}
-        className="cc-media--wide__caption"
+        captionVariant={captionVariant}
+        className={cx({
+          'cc-media--wide__caption': captionVariant === 'right'
+        })}
         credit={credit}
         licence={licence}
+        shouldHideCaption={shouldHideCaption}
       />
     </figure>
   );

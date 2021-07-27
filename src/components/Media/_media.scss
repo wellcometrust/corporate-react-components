@@ -43,6 +43,18 @@
   }
 }
 
+.cc-media__caption--below-image {
+  @include grid-column(1, 7);
+
+  @include mq(sm) {
+    @include grid-column(2, 12);
+  }
+
+  @include mq(md) {
+    @include grid-column(4, 10);
+  }
+}
+
 .cc-media--wide__caption {
   @include grid-column(1, 7);
 
