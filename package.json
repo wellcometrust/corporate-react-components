@@ -1,6 +1,6 @@
 {
   "name": "@wellcometrust/corporate-components",
-  "version": "0.15.18",
+  "version": "0.15.19",
   "description": "Component library for main Wellcome Trust corporate site",
   "main": "dist/index.js",
   "style": "dist/styles.css",
