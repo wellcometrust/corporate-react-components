@@ -21,15 +21,17 @@
   z-index: var(--z-low);
 
   // WYSIWYG content styles
+  .cc-rich-text a,
   a {
+    @include animated-link($hover-colour: var(--colour-white), $underline-colour: var(--colour-white));
     color: var(--colour-white);
+
+    @include hocus {
+      color: var(--colour-white);
+    }
   }
 
-  a:focus,
-  a:hover {
-    color: var(--colour-white);
-  }
-
+  .cc-rich-text a:active,
   a:active {
     color: var(--colour-white);
   }
