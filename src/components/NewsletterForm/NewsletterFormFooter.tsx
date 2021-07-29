@@ -8,14 +8,8 @@ export const NewsletterFormFooter = () => (
     <p>
       We use a third party provider, Dotdigital, to deliver our newsletters. For
       information about how we handle your data, please read our{' '}
-      <a
-        className="newsletter-form__link"
-        href="/about-us/governance/privacy-and-terms"
-      >
-        privacy notice
-      </a>
-      . You can unsubscribe at any time using the links in the email you
-      receive.
+      <a href="/about-us/governance/privacy-and-terms">privacy notice</a>. You
+      can unsubscribe at any time using the links in the email you receive.
     </p>
   </NewsletterFormItem>
 );

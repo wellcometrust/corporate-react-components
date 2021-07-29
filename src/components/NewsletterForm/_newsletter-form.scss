@@ -61,10 +61,6 @@
   flex-basis: 100%;
 }
 
-.newsletter-form__link {
-  @include animated-link($hover-colour: var(--colour-white), $underline-colour: var(--colour-white));
-}
-
 /* Errors */
 
 .newsletter-form__item-error {
