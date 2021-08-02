@@ -1,0 +1,97 @@
+// ----------------------------------
+// UI Components
+// Person
+// ----------------------------------
+// Design System 1.0 Alpha
+// 2019-11-11
+// ----------------------------------
+
+.cc-person {
+  margin-bottom: var(--space-lg);
+
+  a {
+    @include animated-link;
+  }
+
+  @include mq(sm) {
+    display: flex;
+  }
+}
+
+.cc-person__image {
+  background-color: var(--colour-grey-70);
+  border-radius: 50%;
+  height: 162px;
+  margin-bottom: var(--space-md);
+  width: 162px;
+
+  @include mq(sm) {
+    margin-bottom: 0;
+    margin-right: calc(6 * var(--space-unit));
+  }
+}
+
+.cc-person__body {
+  @include mq(sm) {
+    flex-basis: calc(100% - 162px);
+  }
+}
+
+.cc-person__header {
+  @include heading-fancy;
+  margin-bottom: var(--space-md);
+}
+
+.cc-person__title {
+  @extend %heading-base;
+  @extend %heading-large;
+
+  margin-bottom: 0;
+}
+
+.cc-person__subtitle {
+  font-weight: normal;
+}
+
+.cc-person__description {
+  margin-bottom: var(--space-md);
+}
+
+.cc-person__links {
+  @extend %list-clean;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cc-person__link-item {
+  margin-bottom: calc(2 * var(--space-unit));
+  margin-right: calc(2 * var(--space-unit));
+
+  @include mq(md) {
+    margin-bottom: 0;
+  }
+}
+
+//.cc-author__image {
+//  --image-size: calc(6.25 * var(--space-unit));
+//
+//  @extend %img-cover;
+//
+//  border-radius: 50%;
+//  height: var(--image-size);
+//  margin-right: var(--space-lg);
+//  overflow: hidden;
+//  width: var(--image-size);
+//
+//  @include mq(sm) {
+//    --image-size: calc(20 * var(--space-unit));
+//  }
+//
+//  @include mq(md) {
+//    --image-size: calc(12.5 * var(--space-unit));
+//
+//    margin-bottom: var(--space-lg);
+//    margin-right: 0;
+//  }
+//}
+

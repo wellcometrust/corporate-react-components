@@ -42,6 +42,7 @@ export { Quote } from 'Quote/Quote';
 export { PageHeader } from 'PageHeader/PageHeader';
 export { default as PageHeaderCompact } from 'PageHeaderCompact';
 export { default as Pagination } from 'Pagination';
+export { default as Person } from 'Person';
 export { default as RadioInput } from 'RadioInput';
 export { default as ResultsCount } from 'ResultsCount';
 export { default as RichText } from 'RichText';
