@@ -9,13 +9,18 @@
 .cc-person {
   margin-bottom: var(--space-lg);
 
-  a {
-    @include animated-link;
-  }
-
   @include mq(sm) {
     display: flex;
   }
+
+  a {
+    @include animated-link;
+  }
+}
+
+.cc-person--author {
+  background-color: var(--colour-amber-10);
+  padding: var(--space-lg);
 }
 
 .cc-person__image {
@@ -28,6 +33,12 @@
   @include mq(sm) {
     margin-bottom: 0;
     margin-right: calc(6 * var(--space-unit));
+  }
+}
+
+.cc-person--author .cc-person__image {
+  @include mq(sm) {
+    margin-right: var(--space-lg);
   }
 }
 
@@ -66,6 +77,10 @@
 .cc-person__link-item {
   margin-bottom: calc(2 * var(--space-unit));
   margin-right: calc(2 * var(--space-unit));
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @include mq(md) {
     margin-bottom: 0;
