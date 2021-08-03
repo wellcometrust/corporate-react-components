@@ -50,15 +50,18 @@ export const Person = ({
     )}
     <div className="cc-person__wrapper">
       <div className="cc-person__header">
-        <h3 className="cc-person__title" itemProp="name">
+        <h3 className="cc-person__heading" itemProp="name">
           {name}
         </h3>
-        <p className="cc-person__title cc-person__subtitle" itemProp="jobTitle">
+        <p
+          className="cc-person__heading cc-person__subheading"
+          itemProp="jobTitle"
+        >
           {jobTitle}
         </p>
         {organisation && (
           <p
-            className="cc-person__title cc-person__subtitle"
+            className="cc-person__heading cc-person__subheading"
             itemProp="memberOf"
           >
             {organisation}

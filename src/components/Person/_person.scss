@@ -50,14 +50,14 @@
   margin-bottom: var(--space-md);
 }
 
-.cc-person__title {
+.cc-person__heading {
   @extend %heading-base;
   @extend %heading-large;
 
   margin-bottom: 0;
 }
 
-.cc-person__subtitle {
+.cc-person__subheading {
   font-weight: normal;
 }
 
@@ -106,7 +106,7 @@
   }
 }
 
-.cc-person--author .cc-person__title {
+.cc-person--author .cc-person__heading {
   font-size: var(--heading-xs);
 }
 
