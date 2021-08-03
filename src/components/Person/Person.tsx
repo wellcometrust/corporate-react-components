@@ -5,7 +5,7 @@ import parseHtml from 'utils/parse-html';
 import { ImageElement } from 'Image';
 
 export type PersonProps = {
-  description: string;
+  description?: string;
   imageSizes?: string;
   imageSrc?: string;
   imageSrcSet?: string;

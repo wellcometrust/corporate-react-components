@@ -53,4 +53,4 @@ const PersonExample = () => {
 
 const stories = storiesOf('Components/Person', module);
 
-stories.add('Person', PersonExample, {});
+stories.add('Person', PersonExample);
