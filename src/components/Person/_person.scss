@@ -6,6 +6,11 @@
 // 2019-11-11
 // ----------------------------------
 
+:root {
+  --person-image-size-small: calc(10 * var(--space-unit)); // 80px
+  --person-image-size-medium: 162px; // temporary
+}
+
 .cc-person {
   margin-bottom: var(--space-lg);
 
@@ -18,17 +23,15 @@
   }
 }
 
-.cc-person--author {
-  background-color: var(--colour-amber-10);
-  padding: var(--space-lg);
-}
-
 .cc-person__image {
+  @extend %img-cover;
+
   background-color: var(--colour-grey-70);
   border-radius: 50%;
-  height: 162px;
+  height: var(--person-image-size-medium);
   margin-bottom: var(--space-md);
-  width: 162px;
+  overflow: hidden;
+  width: var(--person-image-size-medium);
 
   @include mq(sm) {
     margin-bottom: 0;
@@ -36,15 +39,9 @@
   }
 }
 
-.cc-person--author .cc-person__image {
+.cc-person__image + .cc-person__wrapper {
   @include mq(sm) {
-    margin-right: var(--space-lg);
-  }
-}
-
-.cc-person__body {
-  @include mq(sm) {
-    flex-basis: calc(100% - 162px);
+    flex-basis: calc(100% - var(--person-image-size-medium));
   }
 }
 
@@ -78,35 +75,42 @@
   margin-bottom: calc(2 * var(--space-unit));
   margin-right: calc(2 * var(--space-unit));
 
-  &:last-child {
+  @include mq(md) {
     margin-bottom: 0;
   }
 
-  @include mq(md) {
+  &:last-child {
     margin-bottom: 0;
   }
 }
 
-//.cc-author__image {
-//  --image-size: calc(6.25 * var(--space-unit));
-//
-//  @extend %img-cover;
-//
-//  border-radius: 50%;
-//  height: var(--image-size);
-//  margin-right: var(--space-lg);
-//  overflow: hidden;
-//  width: var(--image-size);
-//
-//  @include mq(sm) {
-//    --image-size: calc(20 * var(--space-unit));
-//  }
-//
-//  @include mq(md) {
-//    --image-size: calc(12.5 * var(--space-unit));
-//
-//    margin-bottom: var(--space-lg);
-//    margin-right: 0;
-//  }
-//}
+// variant: AUTHOR
 
+.cc-person--author {
+  background-color: var(--colour-amber-10);
+  padding: var(--space-lg);
+}
+
+.cc-person--author .cc-person__image {
+  height: var(--person-image-size-small);
+  width: var(--person-image-size-small);
+
+  @include mq(sm) {
+    margin-right: var(--space-lg);
+  }
+}
+
+.cc-person--author .cc-person__image + .cc-person__wrapper {
+  @include mq(sm) {
+    flex-basis: calc(100% - var(--person-image-size-small));
+  }
+}
+
+.cc-person--author .cc-person__title {
+  font-size: var(--heading-xs);
+}
+
+.cc-person--author .cc-person__description,
+.cc-person--author a {
+  font-size: var(--body-sm);
+}

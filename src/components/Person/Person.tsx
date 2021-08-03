@@ -10,13 +10,13 @@ export type PersonProps = {
   imageSrc?: string;
   imageSrcSet?: string;
   jobTitle: string;
-  layoutVariant: string;
+  layoutVariant: 'author' | 'full-width' | 'narrow' | 'team';
   links?: {
     title: string;
     url: string;
   }[];
   name: string;
-  organization?: string;
+  organisation?: string;
 };
 
 export const Person = ({
@@ -28,7 +28,7 @@ export const Person = ({
   layoutVariant,
   links,
   name,
-  organization
+  organisation
 }: PersonProps) => (
   <div
     className={cx('cc-person', {
@@ -48,7 +48,7 @@ export const Person = ({
         />
       </figure>
     )}
-    <div className="cc-person__body">
+    <div className="cc-person__wrapper">
       <div className="cc-person__header">
         <h3 className="cc-person__title" itemProp="name">
           {name}
@@ -56,26 +56,35 @@ export const Person = ({
         <p className="cc-person__title cc-person__subtitle" itemProp="jobTitle">
           {jobTitle}
         </p>
-        {organization && (
+        {organisation && (
           <p
             className="cc-person__title cc-person__subtitle"
             itemProp="memberOf"
           >
-            {organization}
+            {organisation}
           </p>
         )}
       </div>
-      {description && (
-        <div className="cc-person__description">{parseHtml(description)}</div>
-      )}
-      {!!links?.length && (
-        <ul className="cc-person__links">
-          {links.map(link => (
-            <li className="cc-person__link-item" key={`${name}-link-${link}`}>
-              <a href={link.url}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
+      {(description || !!links?.length) && (
+        <div className="cc-person__body">
+          {description && (
+            <div className="cc-person__description">
+              {parseHtml(description)}
+            </div>
+          )}
+          {!!links?.length && (
+            <ul className="cc-person__links">
+              {links.map(link => (
+                <li
+                  className="cc-person__link-item"
+                  key={`${name}-link-${link.url}`}
+                >
+                  <a href={link.url}>{link.title}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       )}
     </div>
   </div>
