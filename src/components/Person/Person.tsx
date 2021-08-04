@@ -9,7 +9,7 @@ export type PersonProps = {
   imageSizes?: string;
   imageSrc?: string;
   imageSrcSet?: string;
-  jobTitle: string;
+  jobTitle?: string;
   layoutVariant: 'author' | 'full-width' | 'narrow' | 'team';
   links?: {
     title: string;
@@ -53,12 +53,14 @@ export const Person = ({
         <h3 className="cc-person__heading" itemProp="name">
           {name}
         </h3>
-        <p
-          className="cc-person__heading cc-person__subheading"
-          itemProp="jobTitle"
-        >
-          {jobTitle}
-        </p>
+        {jobTitle && (
+          <p
+            className="cc-person__heading cc-person__subheading"
+            itemProp="jobTitle"
+          >
+            {jobTitle}
+          </p>
+        )}
         {organisation && (
           <p
             className="cc-person__heading cc-person__subheading"
