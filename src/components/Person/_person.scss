@@ -1,0 +1,121 @@
+// ----------------------------------
+// UI Components
+// Person
+// ----------------------------------
+// Design System 1.0 Alpha
+// 2019-11-11
+// ----------------------------------
+
+:root {
+  --person-image-size-small: calc(10 * var(--space-unit)); // 80px
+  --person-image-size-medium: 162px; // temporary
+}
+
+.cc-person {
+  margin-bottom: var(--space-lg);
+
+  @include mq(sm) {
+    display: flex;
+  }
+
+  a {
+    @include animated-link;
+  }
+}
+
+.cc-person__image {
+  @extend %img-cover;
+
+  background-color: var(--colour-grey-70);
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: var(--person-image-size-medium);
+  margin: 0 0 var(--space-md) 0;
+  overflow: hidden;
+  width: var(--person-image-size-medium);
+
+  @include mq(sm) {
+    margin-bottom: 0;
+    margin-right: calc(6 * var(--space-unit));
+  }
+}
+
+.cc-person__image + .cc-person__wrapper {
+  @include mq(sm) {
+    flex-basis: calc(100% - var(--person-image-size-medium));
+  }
+}
+
+.cc-person__header {
+  @include heading-fancy;
+  margin-bottom: var(--space-md);
+}
+
+.cc-person__heading {
+  @extend %heading-base;
+  @extend %heading-large;
+
+  margin-bottom: 0;
+}
+
+.cc-person__subheading {
+  font-weight: normal;
+}
+
+.cc-person__body {
+  line-height: var(--body-line-height);
+}
+
+.cc-person__description {
+  margin-bottom: var(--space-md);
+}
+
+.cc-person__links {
+  @extend %list-clean;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cc-person__link-item {
+  margin-bottom: calc(2 * var(--space-unit));
+  margin-right: calc(2 * var(--space-unit));
+
+  @include mq(md) {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// variant: AUTHOR
+
+.cc-person--author {
+  background-color: var(--colour-amber-10);
+  padding: var(--space-lg);
+}
+
+.cc-person--author .cc-person__image {
+  height: var(--person-image-size-small);
+  width: var(--person-image-size-small);
+
+  @include mq(sm) {
+    margin-right: var(--space-lg);
+  }
+}
+
+.cc-person--author .cc-person__image + .cc-person__wrapper {
+  @include mq(sm) {
+    flex-basis: calc(100% - var(--person-image-size-small));
+  }
+}
+
+.cc-person--author .cc-person__heading {
+  font-size: var(--heading-xs);
+}
+
+.cc-person--author .cc-person__description,
+.cc-person--author a {
+  font-size: var(--body-sm);
+}
