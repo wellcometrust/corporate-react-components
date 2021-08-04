@@ -28,8 +28,9 @@
 
   background-color: var(--colour-grey-70);
   border-radius: 50%;
+  flex-shrink: 0;
   height: var(--person-image-size-medium);
-  margin-bottom: var(--space-md);
+  margin: 0 0 var(--space-md) 0;
   overflow: hidden;
   width: var(--person-image-size-medium);
 
@@ -59,6 +60,10 @@
 
 .cc-person__subheading {
   font-weight: normal;
+}
+
+.cc-person__body {
+  line-height: var(--body-line-height);
 }
 
 .cc-person__description {
