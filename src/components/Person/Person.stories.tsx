@@ -26,7 +26,7 @@ const PersonExample = () => {
   const organisation = text('Organisation', 'Wellcome Trust', generalGroupID);
   const layoutVariant = select(
     'Layout variant',
-    ['author', 'full-width', 'narrow', 'team'],
+    ['author', 'compact', 'full-width', 'narrow'],
     'full-width',
     generalGroupID
   );
@@ -34,13 +34,13 @@ const PersonExample = () => {
   const links = ['one', 'two', 'three'].map(el => {
     return {
       title: text(`Link ${el} text`, `Link ${el}`, linksGroupID),
-      url: '/'
+      url: `/${el}`
     };
   });
 
   return (
     <Person
-      description={description}
+      description={layoutVariant !== 'compact' && description}
       imageSrc={hasImage && imageSrc}
       jobTitle={jobTitle}
       layoutVariant={layoutVariant}

@@ -10,7 +10,7 @@ export type PersonProps = {
   imageSrc?: string;
   imageSrcSet?: string;
   jobTitle?: string;
-  layoutVariant: 'author' | 'full-width' | 'narrow' | 'team';
+  layoutVariant: 'author' | 'compact' | 'full-width' | 'narrow';
   links?: {
     title: string;
     url: string;

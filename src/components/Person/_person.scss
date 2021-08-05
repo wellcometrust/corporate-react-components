@@ -119,3 +119,31 @@
 .cc-person--author a {
   font-size: var(--body-sm);
 }
+
+// variant: COMPACT
+.cc-person--compact {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.cc-person--compact .cc-person__image {
+  height: var(--person-image-size-small);
+  margin-right: var(--space-lg);
+  width: var(--person-image-size-small);
+}
+
+.cc-person--compact .cc-person__image + .cc-person__wrapper {
+  flex-basis: calc(100% - var(--person-image-size-small));
+}
+
+.cc-person--compact .cc-person__heading {
+  font-size: var(--heading-sm);
+}
+
+.cc-person--compact a {
+  font-size: var(--body-md);
+}
+
+.cc-person--compact .cc-person__header:after {
+  content: none;
+}
