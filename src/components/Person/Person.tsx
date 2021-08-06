@@ -78,7 +78,7 @@ export const Person = ({
       {(description || !!links?.length) && (
         <div className="cc-person__body">
           {description && (
-            <RichText className="cc-person__description" itemProp="abstract">
+            <RichText className="cc-person__description">
               {description}
             </RichText>
           )}
