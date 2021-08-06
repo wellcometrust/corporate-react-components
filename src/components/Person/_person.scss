@@ -8,7 +8,19 @@
 
 :root {
   --person-image-size-small: calc(10 * var(--space-unit)); // 80px
-  --person-image-size-medium: 162px; // temporary
+  --person-image-size-responsive: var(--person-image-size-small);
+
+  @include mq(sm) {
+    --person-image-size-responsive: calc(12.5 * var(--space-unit)); // 100px
+  }
+
+  @include mq(md) {
+    --person-image-size-responsive: calc(16 * var(--space-unit)); // 128px
+  }
+
+  @include mq(xl) {
+    --person-image-size-responsive: calc(20.25 * var(--space-unit)); // 162px
+  }
 }
 
 .cc-person {
@@ -17,32 +29,22 @@
   @include mq(sm) {
     display: flex;
   }
-
-  a {
-    @include animated-link;
-  }
 }
 
 .cc-person__image {
-  @extend %img-cover;
+  @extend %img-responsive;
 
   background-color: var(--colour-grey-70);
   border-radius: 50%;
   flex-shrink: 0;
-  height: var(--person-image-size-medium);
+  height: var(--person-image-size-responsive);
   margin: 0 0 var(--space-md) 0;
   overflow: hidden;
-  width: var(--person-image-size-medium);
+  width: var(--person-image-size-responsive);
 
   @include mq(sm) {
     margin-bottom: 0;
     margin-right: calc(6 * var(--space-unit));
-  }
-}
-
-.cc-person__image + .cc-person__wrapper {
-  @include mq(sm) {
-    flex-basis: calc(100% - var(--person-image-size-medium));
   }
 }
 
@@ -89,6 +91,10 @@
   }
 }
 
+.cc-person__link {
+  @include animated-link;
+}
+
 // variant: AUTHOR
 
 .cc-person--author {
@@ -96,7 +102,7 @@
   padding: var(--space-lg);
 }
 
-.cc-person--author .cc-person__image {
+.cc-person__image--author {
   height: var(--person-image-size-small);
   width: var(--person-image-size-small);
 
@@ -105,17 +111,35 @@
   }
 }
 
-.cc-person--author .cc-person__image + .cc-person__wrapper {
-  @include mq(sm) {
-    flex-basis: calc(100% - var(--person-image-size-small));
-  }
-}
-
 .cc-person--author .cc-person__heading {
   font-size: var(--heading-xs);
 }
 
 .cc-person--author .cc-person__description,
-.cc-person--author a {
+.cc-person--author .cc-person__link {
   font-size: var(--body-sm);
+}
+
+// variant: NARROW
+
+.cc-person--narrow .cc-person__image {
+  @include mq(md) {
+    position: absolute;
+  }
+
+  @include mq(xl) {
+    position: static;
+  }
+}
+
+.cc-person__image--narrow + .cc-person__wrapper .cc-person__header {
+  @include mq(md) {
+    margin-left: calc(var(--person-image-size-responsive) + calc(6 * var(--space-unit)));
+    min-height: var(--person-image-size-responsive);
+  }
+
+  @include mq(xl) {
+    margin-left: 0;
+    min-height: 0;
+  }
 }
