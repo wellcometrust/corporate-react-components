@@ -1,8 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
 
-import parseHtml from 'utils/parse-html';
 import { ImageElement } from 'Image';
+import Link from 'Link';
+import RichText from 'RichText';
 
 export type PersonProps = {
   description?: string;
@@ -38,7 +39,11 @@ export const Person = ({
     itemType="http://schema.org/Person"
   >
     {(imageSrc || imageSrcSet) && (
-      <figure className="cc-person__image">
+      <figure
+        className={cx('cc-person__image', {
+          [`cc-person__image--${layoutVariant}`]: layoutVariant
+        })}
+      >
         <ImageElement
           itemProp="image"
           sizes={imageSizes}
@@ -49,7 +54,12 @@ export const Person = ({
       </figure>
     )}
     <div className="cc-person__wrapper">
-      <div className="cc-person__header">
+      <div
+        className={cx('cc-person__header', {
+          [`cc-person__header--${layoutVariant}`]:
+            layoutVariant && (imageSrc || imageSrcSet)
+        })}
+      >
         <h3 className="cc-person__heading" itemProp="name">
           {name}
         </h3>
@@ -73,9 +83,9 @@ export const Person = ({
       {(description || !!links?.length) && (
         <div className="cc-person__body">
           {description && (
-            <div className="cc-person__description">
-              {parseHtml(description)}
-            </div>
+            <RichText className="cc-person__description">
+              {description}
+            </RichText>
           )}
           {!!links?.length && (
             <ul className="cc-person__links">
@@ -84,7 +94,9 @@ export const Person = ({
                   className="cc-person__link-item"
                   key={`${name}-link-${link.url}`}
                 >
-                  <a href={link.url}>{link.title}</a>
+                  <Link className="cc-person__link" to={link.url}>
+                    {link.title}
+                  </Link>
                 </li>
               ))}
             </ul>
