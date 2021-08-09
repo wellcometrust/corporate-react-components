@@ -54,7 +54,12 @@ export const Person = ({
       </figure>
     )}
     <div className="cc-person__wrapper">
-      <div className="cc-person__header">
+      <div
+        className={cx('cc-person__header', {
+          [`cc-person__header--${layoutVariant}`]:
+            layoutVariant && (imageSrc || imageSrcSet)
+        })}
+      >
         <h3 className="cc-person__heading" itemProp="name">
           {name}
         </h3>

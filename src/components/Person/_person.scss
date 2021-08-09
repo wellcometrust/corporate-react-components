@@ -122,24 +122,15 @@
 
 // variant: NARROW
 
-.cc-person--narrow .cc-person__image {
-  @include mq(md) {
+.cc-person__image--narrow {
+  @include mq($from: md, $until: xl) {
     position: absolute;
-  }
-
-  @include mq(xl) {
-    position: static;
   }
 }
 
-.cc-person__image--narrow + .cc-person__wrapper .cc-person__header {
-  @include mq(md) {
+.cc-person__header--narrow {
+  @include mq($from: md, $until: xl) {
     margin-left: calc(var(--person-image-size-responsive) + calc(6 * var(--space-unit)));
     min-height: var(--person-image-size-responsive);
-  }
-
-  @include mq(xl) {
-    margin-left: 0;
-    min-height: 0;
   }
 }
