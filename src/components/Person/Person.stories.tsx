@@ -26,8 +26,8 @@ const PersonExample = () => {
   const organisation = text('Organisation', 'Wellcome Trust', generalGroupID);
   const layoutVariant = select(
     'Layout variant',
-    ['author', 'compact', 'full-width', 'narrow'],
-    'full-width',
+    ['author', 'compact', 'narrow', null],
+    null,
     generalGroupID
   );
 

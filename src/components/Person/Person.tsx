@@ -11,7 +11,7 @@ export type PersonProps = {
   imageSrc?: string;
   imageSrcSet?: string;
   jobTitle?: string;
-  layoutVariant: 'author' | 'compact' | 'full-width' | 'narrow';
+  layoutVariant?: 'author' | 'compact' | 'narrow';
   links?: {
     title: string;
     url: string;
