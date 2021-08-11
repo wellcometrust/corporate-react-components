@@ -11,7 +11,7 @@ export type PersonProps = {
   imageSrc?: string;
   imageSrcSet?: string;
   jobTitle?: string;
-  layoutVariant: 'author' | 'full-width' | 'narrow' | 'team';
+  layoutVariant?: 'author' | 'compact' | 'narrow';
   links?: {
     title: string;
     url: string;
@@ -80,9 +80,9 @@ export const Person = ({
           </p>
         )}
       </div>
-      {(description || !!links?.length) && (
+      {((description && layoutVariant !== 'compact') || !!links?.length) && (
         <div className="cc-person__body">
-          {description && (
+          {description && layoutVariant !== 'compact' && (
             <RichText className="cc-person__description">
               {description}
             </RichText>
