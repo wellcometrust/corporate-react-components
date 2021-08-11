@@ -24,7 +24,7 @@
 }
 
 .cc-person {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
 
   @include mq(sm) {
     display: flex;
@@ -133,4 +133,28 @@
     margin-left: calc(var(--person-image-size-responsive) + calc(6 * var(--space-unit)));
     min-height: var(--person-image-size-responsive);
   }
+}
+
+// variant: COMPACT
+.cc-person--compact {
+  display: flex;
+  margin-bottom: calc(4 * var(--space-unit));
+}
+
+.cc-person__image--compact {
+  height: var(--person-image-size-small);
+  margin-right: var(--space-lg);
+  width: var(--person-image-size-small);
+}
+
+.cc-person--compact .cc-person__heading {
+  font-size: var(--heading-sm);
+}
+
+.cc-person--compact .cc-person__link {
+  font-size: var(--body-md);
+}
+
+.cc-person--compact .cc-person__header:after {
+  content: none;
 }

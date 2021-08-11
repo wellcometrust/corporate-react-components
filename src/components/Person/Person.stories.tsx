@@ -26,15 +26,15 @@ const PersonExample = () => {
   const organisation = text('Organisation', 'Wellcome Trust', generalGroupID);
   const layoutVariant = select(
     'Layout variant',
-    ['author', 'full-width', 'narrow', 'team'],
-    'full-width',
+    ['author', 'compact', 'narrow', null],
+    null,
     generalGroupID
   );
 
   const links = ['one', 'two', 'three'].map(el => {
     return {
       title: text(`Link ${el} text`, `Link ${el}`, linksGroupID),
-      url: '/'
+      url: `/${el}`
     };
   });
 
