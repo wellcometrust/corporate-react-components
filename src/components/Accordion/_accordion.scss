@@ -44,6 +44,7 @@
   @extend %btn-base;
   @extend %btn-size-standard;
   color: inherit;
+  font-family: inherit;
 
   .btn__icon {
     height: 0.5rem;
