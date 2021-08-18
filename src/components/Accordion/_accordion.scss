@@ -44,6 +44,7 @@
   @extend %btn-base;
   @extend %btn-size-standard;
   color: inherit;
+  font-family: inherit;
 
   .btn__icon {
     height: 0.5rem;
@@ -71,7 +72,7 @@
 .cc-accordion__button--plus {
   display: flex;
   font-size: var(--text-base-size);
-  font-weight: bold;
+  font-weight: var(--heading-font-weight);
   height: auto;
   justify-content: flex-start;
   line-height: var(--body-line-height);
@@ -133,7 +134,7 @@
   }
 
   .cc-accordion__button--plus[aria-expanded='true'] {
-    font-weight: bold;
+    font-weight: var(--heading-font-weight);
   }
 
   .cc-accordion-item--active {
