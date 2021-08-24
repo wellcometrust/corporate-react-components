@@ -26,7 +26,7 @@
   width: var(--image-size);
 
   @include mq(md) {
-    margin-bottom: var(--space-lg);
+    margin-bottom: calc(1.5 * var(--space-unit));
     margin-right: 0;
   }
 }
@@ -51,4 +51,8 @@
 .cc-author__link-item {
   margin-bottom: var(--space-unit);
   margin-right: calc(2 * var(--space-unit));
+}
+
+.cc-author__link {
+  @include animated-link;
 }
