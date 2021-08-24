@@ -75,26 +75,28 @@
   }
 }
 
-// .cc-page-header__main {}
-
-.cc-page-header-compact__aside {
-  @include mq($from: sm, $until: md) {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.cc-page-header-compact__topics {
-  @include mq(sm) {
-    flex-basis: 33.33%;
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
-}
-
 .cc-page-header-compact__authors {
   @include mq($until: sm) {
     margin-bottom: calc(4 * var(--space-unit));
+  }
+
+  @include mq($from: sm, $until: md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .cc-author {
+    @include mq($from: sm, $until: md) {
+      width: 49%;
+    }
+  }
+
+  .cc-author:only-child {
+    @include mq($from: sm, $until: md) {
+      width: 100%;
+    }
   }
 }
 

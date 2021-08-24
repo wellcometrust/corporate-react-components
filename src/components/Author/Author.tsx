@@ -1,14 +1,19 @@
 import React from 'react';
 
 import { ImageElement } from 'Image';
+import Link from 'Link';
 
 export type AuthorProps = {
-  imageSizes: string;
-  imageSrc: string;
-  imageSrcSet: string;
-  jobTitle: string;
+  imageSizes?: string;
+  imageSrc?: string;
+  imageSrcSet?: string;
+  jobTitle?: string;
+  links?: {
+    title: string;
+    url: string;
+  }[];
   name: string;
-  organization: string;
+  organisation?: string;
 };
 
 export const Author = ({
@@ -16,8 +21,9 @@ export const Author = ({
   imageSrc,
   imageSrcSet,
   jobTitle,
+  links,
   name,
-  organization
+  organisation
 }: AuthorProps) => (
   <div className="cc-author" itemScope itemType="http://schema.org/Person">
     {(imageSrc || imageSrcSet) && (
@@ -35,11 +41,30 @@ export const Author = ({
       <h2 className="cc-author__name" itemProp="name">
         {name}
       </h2>
-      <p className="cc-author__byline">
-        {jobTitle && <span itemProp="jobTitle">{jobTitle}</span>}
-        {jobTitle && organization && ', '}
-        {organization && <span itemProp="memberOf">{organization}</span>}
-      </p>
+      {jobTitle && (
+        <p className="cc-author__byline" itemProp="jobTitle">
+          {jobTitle}
+        </p>
+      )}
+      {organisation && (
+        <p className="cc-author__byline" itemProp="memberOf">
+          {organisation}
+        </p>
+      )}
+      {!!links?.length && (
+        <ul className="cc-author__links">
+          {links.map(link => (
+            <li
+              className="cc-author__link-item"
+              key={`${name}-link-${link.url}`}
+            >
+              <Link className="cc-author__link" to={link.url}>
+                {link.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   </div>
 );
