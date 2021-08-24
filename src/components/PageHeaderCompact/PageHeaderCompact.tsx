@@ -88,9 +88,10 @@ export const PageHeaderCompact = ({
               imageSrc={author.imageSrc}
               imageSrcSet={author.imageSrcSet}
               jobTitle={author.jobTitle}
+              links={author.links}
               key={`author-${author.id}`}
               name={`${author.name}`}
-              organization={author.organization}
+              organisation={author.organisation}
             />
           ))}
         </div>
