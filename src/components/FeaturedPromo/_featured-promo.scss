@@ -7,6 +7,8 @@
 // ----------------------------------
 
 .cc-featured-promo {
+  position: relative;
+
   @include mq(sm) {
     display: flex;
     flex-wrap: nowrap;
@@ -127,3 +129,22 @@
     @include hover-underline;
   }
 }
+
+.cc-featured-promo__link {
+  @include pseudo-link;
+
+  &:before {
+    height: 51vw;
+    width: 100%;
+
+    @include mq(sm) {
+      height: 100%;
+      width: calc((100% / 12) * 5);
+    }
+
+    @include mq(md) {
+      width: 50%;
+    }
+  }
+}
+

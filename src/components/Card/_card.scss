@@ -106,16 +106,7 @@
 
 .cc-card__link {
   @include animated-link;
-
-  &:before {
-    bottom: 0;
-    content: '';
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
-  }
+  @include pseudo-link;
 }
 
 .cc-card__link:before {

@@ -46,7 +46,7 @@ export const ImageCardWithCTA = ({
       itemScope
       itemType="https://schema.org/Article"
     >
-      <Link className="cc-image-card-with-cta__figure" to={href}>
+      <div className="cc-image-card-with-cta__figure">
         <figure className="cc-image-card-with-cta__image">
           <ImageElement
             alt={imageAlt}
@@ -58,7 +58,7 @@ export const ImageCardWithCTA = ({
             width={imageWidth}
           />
         </figure>
-      </Link>
+      </div>
       <div className="cc-image-card-with-cta__body">
         <TitleElement className="cc-image-card-with-cta__title" itemProp="name">
           <Link className="cc-image-card-with-cta__link" to={href}>

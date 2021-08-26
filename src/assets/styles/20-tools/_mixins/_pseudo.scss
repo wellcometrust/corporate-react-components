@@ -68,3 +68,27 @@
     @content;
   }
 }
+
+/**
+ * This stretches the link's layout over the whole card, making it clickable like a button.
+ * Important!!
+ * Give the card container element position: relative;
+ *
+ * Usage:
+ *
+ * .selector {
+ *   @include pseudo-image-link;
+ * }
+ *
+ */
+@mixin pseudo-link {
+  &:before {
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
