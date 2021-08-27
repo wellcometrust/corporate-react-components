@@ -123,12 +123,12 @@
     width: 33.33%;
 
     @include mq(md) {
-      height: 55%;
+      height: 50%;
       width: 100%;
     }
 
-    @include mq(lg) {
-      height: 60%;
+    @include mq(xl) {
+      height: 62%;
     }
   }
 }
@@ -190,6 +190,6 @@
 .cc-image-card--listing .cc-image-card__link:before {
   @include mq(md) {
     height: 100%;
-    width: 33%;
+    width: 33.33%;
   }
 }

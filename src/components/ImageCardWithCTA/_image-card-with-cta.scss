@@ -96,12 +96,12 @@
     width: 33%;
 
     @include mq(md) {
-      height: 55%;
+      height: 50%;
       width: 100%;
     }
 
     @include mq(lg) {
-      height: 60%;
+      height: 62%;
     }
   }
 }

@@ -134,9 +134,6 @@
   @include pseudo-link;
 
   &:before {
-    height: 51vw;
-    width: 100%;
-
     @include mq(sm) {
       height: 100%;
       width: calc((100% / 12) * 5);
