@@ -48,19 +48,23 @@
 
 .site-alert__link {
   @include animated-link($hover-colour: var(--colour-grey-80), $child-selector: '.site-alert__link-text');
-  align-items: center;
   color: var(--colour-grey-80);
-  display: flex;
+  display: inline-block;
   font-family: var(--font-secondary);
+  margin-right: calc(2.5 * var(--space-unit));
   max-width: 66%;
+  position: relative;
 
   .icon {
     height: calc(1.5 * var(--space-unit));
-    margin-left: var(--space-unit);
+    position: absolute;
+    right: calc(-1.5 * var(--space-unit));
+    top: 50%;
+    transform: translate(0, -50%);
     width: calc(1.5 * var(--space-unit));
 
     @include mq(xs) {
-      margin-left: calc(2 * var(--space-unit));
+      right: calc(-2.5 * var(--space-unit));
     }
   }
 }

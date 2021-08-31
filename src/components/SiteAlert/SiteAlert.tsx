@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import cx from 'classnames';
 
+import Button from 'Button';
 import Icon from 'Icon/Icon';
+import VisuallyHidden from 'VisuallyHidden';
+import { isExternalLink } from 'Link/Link';
 
 type SiteAlertProps = {
   className?: string;
@@ -23,6 +26,15 @@ export const SiteAlert = ({
     'is-active': isActive
   });
 
+  const [isExternal, setExternal] = useState(false);
+
+  // Ensures 'window' is present
+  useEffect(() => {
+    if (url) {
+      setExternal(isExternalLink(url));
+    }
+  }, []);
+
   const tabIndex = isActive ? 0 : -1;
 
   return (
@@ -30,12 +42,17 @@ export const SiteAlert = ({
       <div className="site-alert__container">
         {url ? (
           <a
-            href={url}
             className="site-alert__link no-external-marker"
+            href={url}
+            rel={isExternal ? 'noopener noreferrer' : null}
+            target={isExternal ? '_blank' : null}
             tabIndex={tabIndex}
           >
             <span className="site-alert__link-text">{text}</span>
-            <Icon name="arrow" />
+            {isExternal && (
+              <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+            )}
+            <Icon name="arrow" className="btn__icon btn__icon--right" />
           </a>
         ) : (
           <p className="site-alert__text">{text}</p>
@@ -47,7 +64,7 @@ export const SiteAlert = ({
             type="button"
             tabIndex={tabIndex}
           >
-            Close
+            Close <VisuallyHidden>{`${text} banner`}</VisuallyHidden>
             <Icon name="closeBold" />
           </button>
         )}

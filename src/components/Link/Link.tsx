@@ -24,7 +24,7 @@ const isFileLink = (str: string) =>
  * @param { string } url
  * @returns { boolean }
  */
-const isExternalLink = (url: string) => {
+export const isExternalLink = (url: string) => {
   const isRelativeUrl = ['#', '/', '?'].includes(url.charAt(0));
 
   // Else test whether the current origin === destination URL
