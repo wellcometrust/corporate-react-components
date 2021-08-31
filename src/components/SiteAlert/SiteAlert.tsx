@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import cx from 'classnames';
 
-import Button from 'Button';
 import Icon from 'Icon/Icon';
 import VisuallyHidden from 'VisuallyHidden';
 import { isExternalLink } from 'Link/Link';
