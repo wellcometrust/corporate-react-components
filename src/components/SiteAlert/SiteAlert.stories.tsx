@@ -8,8 +8,17 @@ const SiteAlertExample = () => {
   const isActive = boolean('isActive', true);
   const urlString = text('url', 'https://wellcome.org/');
   const textString = text('text', 'Visit the Wellcome Trust website');
+  const hasButton = boolean('Show close button?', false);
+  const handleDismiss = () => {};
 
-  return <SiteAlert isActive={isActive} text={textString} url={urlString} />;
+  return (
+    <SiteAlert
+      handleDismiss={hasButton && handleDismiss}
+      isActive={isActive}
+      text={textString}
+      url={urlString}
+    />
+  );
 };
 
 const stories = storiesOf('Components/SiteAlert', module);
