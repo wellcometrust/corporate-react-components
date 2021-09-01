@@ -20,6 +20,7 @@
   @extend %img-cover;
 
   border-radius: 50%;
+  flex-shrink: 0;
   height: var(--image-size);
   margin-right: var(--space-lg);
   overflow: hidden;

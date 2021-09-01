@@ -19,7 +19,7 @@
   }
 
   @include mq(xl) {
-    --person-image-size-responsive: calc(20.25 * var(--space-unit)); // 162px
+    --person-image-size-responsive: calc(20 * var(--space-unit)); // 160px
   }
 }
 
@@ -32,7 +32,7 @@
 .cc-person__image {
   @extend %img-responsive;
 
-  background-color: var(--colour-grey-70);
+  background-color: var(--colour-amber-05);
   border-radius: 50%;
   flex-shrink: 0;
   height: var(--person-image-size-responsive);
