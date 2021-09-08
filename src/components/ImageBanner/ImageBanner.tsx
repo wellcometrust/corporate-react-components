@@ -1,3 +1,8 @@
+/**
+ * @deprecated ImageBanner is to be moved to corporate-react
+ *
+ * @see {@link https://github.com/wellcometrust/corporate/issues/8947}
+ */
 import React, { useContext } from 'react';
 import cx from 'classnames';
 
