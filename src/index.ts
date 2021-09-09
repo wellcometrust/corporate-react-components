@@ -50,7 +50,6 @@ export { RouterLinkWrapper } from 'RouterLinkWrapper/RouterLinkWrapper';
 export { SearchForm } from 'SearchForm/SearchForm';
 export { Section } from 'Section/Section';
 export { SectionTitle } from 'SectionTitle/SectionTitle';
-export { default as SiteAlert } from 'SiteAlert';
 export { default as SkipLink } from 'SkipLink';
 export { default as SidebarFilter } from 'SidebarFilter';
 export { default as SidebarSearch } from 'SidebarSearch';
