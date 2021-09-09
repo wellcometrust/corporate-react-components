@@ -1,3 +1,8 @@
+/**
+ * @deprecated PageHeader is to be moved to corporate-react
+ *
+ * @see {@link https://github.com/wellcometrust/corporate/issues/8948}
+ */
 import React from 'react';
 import cx from 'classnames';
 

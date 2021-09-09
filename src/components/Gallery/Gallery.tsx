@@ -1,3 +1,8 @@
+/**
+ * @deprecated Gallery and GalleryMedia are to be moved to corporate-react
+ *
+ * @see {@link https://github.com/wellcometrust/corporate/issues/8947}
+ */
 import React, {
   Children,
   cloneElement,

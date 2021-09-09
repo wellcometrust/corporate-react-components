@@ -68,11 +68,6 @@ export { default as VisuallyHidden } from 'VisuallyHidden';
 export { WellcomeCollectionBanner } from 'WellcomeCollectionBanner/WellcomeCollectionBanner';
 
 // context components
-export { NavContext, NavContextProvider } from 'NavContext/NavContext';
-export {
-  SearchPaneContext,
-  SearchPaneContextProvider
-} from 'SearchPaneContext/SearchPaneContext';
 export {
   ViewportContext,
   ViewportContextProvider
