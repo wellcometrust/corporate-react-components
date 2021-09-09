@@ -25,8 +25,7 @@ export { Gallery, GalleryMedia } from 'Gallery/Gallery';
 export { Grid, GridCell } from 'Grid/Grid';
 export { Icon } from 'Icon/Icon';
 export { default as Iframe } from 'Iframe';
-export { Image } from 'Image/Image';
-export { ImageBanner } from 'ImageBanner/ImageBanner';
+export { Image, ImageElement } from 'Image/Image';
 export { InfoBox } from 'InfoBox/InfoBox';
 export { default as Label } from 'Label';
 export { default as Link } from 'Link';
@@ -66,9 +65,3 @@ export { default as Timeline } from 'Timeline';
 export { Video } from 'Video/Video';
 export { default as VisuallyHidden } from 'VisuallyHidden';
 export { WellcomeCollectionBanner } from 'WellcomeCollectionBanner/WellcomeCollectionBanner';
-
-// context components
-export {
-  ViewportContext,
-  ViewportContextProvider
-} from 'ViewportContext/ViewportContext';
