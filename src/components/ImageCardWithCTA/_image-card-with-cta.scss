@@ -5,6 +5,7 @@
 
 .cc-image-card-with-cta {
   margin-bottom: var(--space-lg);
+  position: relative;
 
   @include mq($until: md) {
     display: flex;
@@ -84,6 +85,24 @@
   .cc-image-card-with-cta__figure:hover + .cc-image-card-with-cta__body &,
   .cc-image-card-with-cta__figure:focus + .cc-image-card-with-cta__body & {
     @include hover-underline;
+  }
+}
+
+.cc-image-card-with-cta__link {
+  @include pseudo-link;
+
+  &:before {
+    height: 100%;
+    width: 33%;
+
+    @include mq(md) {
+      height: 50%;
+      width: 100%;
+    }
+
+    @include mq(lg) {
+      height: 62%;
+    }
   }
 }
 

@@ -50,7 +50,7 @@ export const FeaturedPromo = ({
       itemScope
       itemType="https://schema.org/Article"
     >
-      <Link className="cc-featured-promo__figure" to={href}>
+      <div className="cc-featured-promo__figure">
         <figure className="cc-featured-promo__image">
           <ImageElement
             alt={imageAlt}
@@ -62,7 +62,7 @@ export const FeaturedPromo = ({
             width={imageWidth}
           />
         </figure>
-      </Link>
+      </div>
       <div className="cc-featured-promo__body">
         <span className="cc-featured-promo__meta">
           {metaLabel && (

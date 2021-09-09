@@ -51,7 +51,7 @@ export const ImageCard = ({
       itemScope
       itemType="https://schema.org/Article"
     >
-      <Link className="cc-image-card__figure" to={href}>
+      <div className="cc-image-card__figure">
         <figure className="cc-image-card__image">
           <ImageElement
             alt={imageAlt}
@@ -63,7 +63,7 @@ export const ImageCard = ({
             width={imageWidth}
           />
         </figure>
-      </Link>
+      </div>
       <div className="cc-image-card__body">
         {(metaLabel || authors?.length) && (
           <span className="cc-image-card__meta">
