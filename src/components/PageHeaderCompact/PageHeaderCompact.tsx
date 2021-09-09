@@ -84,7 +84,6 @@ export const PageHeaderCompact = ({
         <div className="cc-page-header-compact__authors">
           {authors.map(author => (
             <Author
-              imageSizes="(min-width: 48em) 6.25rem, 3.125rem"
               imageSrc={author.imageSrc}
               imageSrcSet={author.imageSrcSet}
               jobTitle={author.jobTitle}
