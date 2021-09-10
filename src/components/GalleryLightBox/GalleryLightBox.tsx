@@ -21,7 +21,7 @@ import Icon from 'Icon';
 import SocialShare from 'SocialShare';
 import Text from 'Text';
 
-import { ViewportContext } from 'ViewportContext/ViewportContext';
+// import { ViewportContext } from 'ViewportContext/ViewportContext';
 
 import useLockBodyScroll from 'utils/use-body-scroll-lock';
 
@@ -63,7 +63,8 @@ export const GalleryLightBox = ({
 }: GalleryLightBoxProps) => {
   useLockBodyScroll();
 
-  const { isMobile } = useContext(ViewportContext);
+  // const { isMobile } = useContext(ViewportContext);
+  const isMobile = true;
 
   // Design feedback - on mobile info is always visible and will be scrolled down to
   const initialInfoPaneVisibility = true;
