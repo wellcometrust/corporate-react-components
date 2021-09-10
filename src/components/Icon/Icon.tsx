@@ -27,4 +27,6 @@ export const Icon = ({ className, height, name, width }: IconProps) => {
   ) : null;
 };
 
+Icon.displayName = 'Icon';
+
 export default Icon;
