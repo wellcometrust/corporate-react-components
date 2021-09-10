@@ -21,7 +21,6 @@ export { default as FormFieldHint } from 'FormFieldHint';
 export { default as FormFieldset } from 'FormFieldset';
 export { default as FormSelect } from 'FormSelect';
 export { default as FullWidthPromo } from 'FullWidthPromo';
-export { Gallery, GalleryMedia } from 'Gallery/Gallery';
 export { Grid, GridCell } from 'Grid/Grid';
 export { Icon } from 'Icon/Icon';
 export { default as Iframe } from 'Iframe';
