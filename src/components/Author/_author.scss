@@ -42,6 +42,10 @@
   line-height: var(--body-line-height);
 }
 
+.cc-author__name {
+  font-weight: var(--heading-font-weight);
+}
+
 .cc-author__links {
   @extend %list-clean;
   display: flex;
