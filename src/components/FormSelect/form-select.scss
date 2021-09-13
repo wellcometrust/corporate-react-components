@@ -9,6 +9,7 @@
 .cc-select {
   @extend %text-input-base;
   appearance: none;
+  background-color: var(--colour-white);
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.9347 5L8.43458 9.20018L3.93446 5L2.43506 6.39946L8.43458 12L14.4351 6.39946L12.9347 5Z' fill='black'/%3E%3C/svg%3E");
   background-position: right calc(2 * var(--space-unit)) center;
   background-repeat: no-repeat;
