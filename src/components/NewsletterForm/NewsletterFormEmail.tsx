@@ -32,7 +32,7 @@ export const NewsletterFormEmail = ({
         Your email address
       </label>
       <input
-        aria-describedby={hasError && `${id}-error`}
+        aria-describedby={hasError ? `${id}-error` : null}
         autoComplete="email"
         className={classNames}
         id={id}
