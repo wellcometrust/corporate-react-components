@@ -45,14 +45,14 @@ export const NewsletterFormEmail = ({
         value={value}
       />
       {hasError && (
-        <span className="newsletter-form__item-error" id={`${id}-error`}>
-          <VisuallyHidden>
-            Error on the &quot;Your email address&quot; field.
-          </VisuallyHidden>
-          <span className="newsletter-form__item-error-text">
+        <div className="newsletter-form__item-error">
+          <span className="newsletter-form__item-error-text" id={`${id}-error`}>
+            <VisuallyHidden>
+              Error on the &quot;Your email address&quot; field.
+            </VisuallyHidden>
             Please provide a valid email address.
           </span>
-        </span>
+        </div>
       )}
     </NewsletterFormItem>
   );
