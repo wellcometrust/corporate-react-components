@@ -27,22 +27,22 @@ export const FormFieldError = ({
   });
 
   return (
-    <span className={classNames} id={id}>
+    <div className={classNames}>
       <Icon className="cc-form-field-error__icon" name="exclamationMark" />
       {typeof errors === 'string' && (
-        <p className="cc-form-field-error__text">
+        <span className="cc-form-field-error__text" id={id}>
           <VisuallyHidden>Error: </VisuallyHidden>
           {errors}
-        </p>
+        </span>
       )}
       {typeof errors === 'object' && Object.entries(errors).length === 1 && (
-        <p className="cc-form-field-error__text">
+        <span className="cc-form-field-error__text" id={id}>
           <VisuallyHidden>Error: </VisuallyHidden>
           {Object.values(errors)[0]}
-        </p>
+        </span>
       )}
       {typeof errors === 'object' && Object.entries(errors).length > 1 && (
-        <ul className="cc-form-field-error__list">
+        <ul className="cc-form-field-error__list" id={id}>
           {Object.entries(errors).map(([type, message]) => (
             <li
               key={`${id}-error-text-${type}`}
@@ -54,7 +54,7 @@ export const FormFieldError = ({
           ))}
         </ul>
       )}
-    </span>
+    </div>
   );
 };
 
