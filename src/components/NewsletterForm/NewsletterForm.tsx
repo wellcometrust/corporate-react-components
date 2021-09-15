@@ -115,7 +115,9 @@ export const NewsletterForm = ({
    * @param {Object} HTMLInputElement - value key of an HTMLInputElement
    */
   const handleEmailBlur = ({ value }: HTMLInputElement) => {
-    setEmailError(!isEmail(value));
+    if (value) {
+      setEmailError(!isEmail(value));
+    }
   };
 
   /**

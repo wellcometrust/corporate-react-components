@@ -68,6 +68,7 @@
   background-image: none;
   border-radius: calc(0.25 * var(--space-unit));
   color: var(--X-colour-error-red);
+  display: inline-block;
   font-size: var(--body-sm);
   margin-top: var(--space-md);
   padding-bottom: var(--space-xs);
@@ -83,8 +84,8 @@
     border-top: 0;
     content: '';
     left: 1rem;
-    margin-left: -var(--space-unit);
-    margin-top: -var(--space-unit);
+    margin-left: calc(-1 * var(--space-unit));
+    margin-top: calc(-1 * var(--space-unit));
     position: absolute;
     top: 0.125rem;
   }

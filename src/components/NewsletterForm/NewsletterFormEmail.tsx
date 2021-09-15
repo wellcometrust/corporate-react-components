@@ -32,6 +32,7 @@ export const NewsletterFormEmail = ({
         Your email address
       </label>
       <input
+        aria-describedby={hasError && `${id}-error`}
         autoComplete="email"
         className={classNames}
         id={id}
@@ -44,14 +45,14 @@ export const NewsletterFormEmail = ({
         value={value}
       />
       {hasError && (
-        <div className="newsletter-form__item-error">
+        <span className="newsletter-form__item-error" id={`${id}-error`}>
           <VisuallyHidden>
             Error on the &quot;Your email address&quot; field.
           </VisuallyHidden>
           <span className="newsletter-form__item-error-text">
             Please provide a valid email address.
           </span>
-        </div>
+        </span>
       )}
     </NewsletterFormItem>
   );
