@@ -83,8 +83,8 @@
     border-top: 0;
     content: '';
     left: 1rem;
-    margin-left: -var(--space-unit);
-    margin-top: -var(--space-unit);
+    margin-left: calc(-1 * var(--space-unit));
+    margin-top: calc(-1 * var(--space-unit));
     position: absolute;
     top: 0.125rem;
   }
