@@ -56,6 +56,26 @@
     border-color: var(--colour-blue-60);
   }
 
+  /**
+   * @see focus-visible: https://css-tricks.com/focus-visible-and-backwards-compatibility/
+   */
+  // Focused radio
+  .cc-radio-input__input-element:not(:disabled):focus ~ &:before {
+    box-shadow: 0 0 0 3px var(--colour-blue-30);
+  }
+
+  /**
+   * Browsers will ignore the entire block when using a pseudo-class they don’t understand/support
+   */
+  .cc-radio-input__input-element:not(:disabled):focus:not(:focus-visible) ~ &:before {
+    // undo all the above focused styles
+    box-shadow: none;
+  }
+
+  .cc-radio-input__input-element:not(:disabled):focus-visible ~ &:before {
+    box-shadow: 0 0 0 3px var(--colour-blue-30);
+  }
+
   // Disabled
   .cc-radio-input__input-element:disabled ~ &:before {
     background-color: var(--colour-grey-05);
