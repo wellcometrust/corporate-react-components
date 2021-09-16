@@ -61,7 +61,7 @@
    */
   // Focused radio
   .cc-radio-input__input-element:not(:disabled):focus ~ &:before {
-    box-shadow: 0 0 0 2px var(--colour-blue-30);
+    box-shadow: 0 0 0 3px var(--colour-blue-30);
   }
 
   /**
@@ -73,7 +73,7 @@
   }
 
   .cc-radio-input__input-element:not(:disabled):focus-visible ~ &:before {
-    box-shadow: 0 0 0 2px var(--colour-blue-30);
+    box-shadow: 0 0 0 3px var(--colour-blue-30);
   }
 
   // Disabled
