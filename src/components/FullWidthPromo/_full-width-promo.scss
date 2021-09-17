@@ -46,7 +46,7 @@
 
   @include mq(sm) {
     @include grid-column(1, 9);
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(var(--color-white-rgb), 0.95);
     padding: calc(6 * var(--space-unit)) calc(5 * var(--space-unit));
   }
 

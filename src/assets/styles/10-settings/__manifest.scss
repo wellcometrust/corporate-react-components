@@ -8,6 +8,8 @@
 @import 'mq'; // must be first import
 @import 'colours';
 @import 'spacing';
+@import '~@wellcometrust/design-system/dist/core';
+// @import '~@wellcometrust/design-system/dist/theme';
 @import 'grid';
 @import 'sizes';
 @import 'typography';

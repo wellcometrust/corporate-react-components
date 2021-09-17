@@ -64,10 +64,10 @@
 /* Errors */
 
 .newsletter-form__item-error {
-  background-color: var(--X-colour-error-pink);
+  background-color: var(--colour-red-05);
   background-image: none;
   border-radius: calc(0.25 * var(--space-unit));
-  color: var(--X-colour-error-red);
+  color: var(--colour-red-60);
   font-size: var(--body-sm);
   margin-top: var(--space-md);
   padding-bottom: var(--space-xs);
@@ -79,7 +79,7 @@
 
   &:after {
     border: 8px solid transparent;
-    border-bottom-color: var(--X-colour-error-pink);
+    border-bottom-color: var(--colour-red-05);
     border-top: 0;
     content: '';
     left: 1rem;

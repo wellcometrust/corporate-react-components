@@ -110,7 +110,7 @@
 }
 
 .cc-card__link:before {
-  box-shadow: 0 2px 6px 0 rgba($colour-grey-60, 0.3);
+  box-shadow: 0 2px 6px 0 rgba(var(--color-grey-60-rgb), 0.3);
   transition: box-shadow 0.2s;
 }
 
@@ -118,7 +118,7 @@
 .cc-card__link:focus,
 .cc-card__link:hover {
   &:before {
-    box-shadow: 0 0 2px 0 rgba($colour-grey-60, 0.3);
+    box-shadow: 0 0 2px 0 rgba(var(--color-grey-60-rgb), 0.3);
   }
 }
 

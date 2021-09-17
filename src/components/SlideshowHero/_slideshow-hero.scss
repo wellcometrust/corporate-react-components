@@ -222,7 +222,7 @@
 
   // IE11: ensure caption is at least visible
   @media all and (-ms-high-contrast:none) {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(var(--color-white-rgb), 0.9);
     padding: var(--space-unit);
     position: relative;
   }
