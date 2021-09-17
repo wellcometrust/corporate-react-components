@@ -10,7 +10,9 @@
 
   /**
     * When the browser zoom is used to scale content to 400%,
-    * we should un-fixed Cookie message as the height of the viewport is limited.
+    * we should un-fix Cookie banner as the height of the viewport is limited.
+    *
+    * Present content with fixed Cookie only when there is enough space.
     *
     * @see {@link https://www.w3.org/WAI/WCAG21/Techniques/css/C34.html}
    */
