@@ -5,9 +5,20 @@
   left: 0;
   letter-spacing: var(--body-letter-spacing);
   padding: calc(2 * var(--space-unit));
-  position: fixed;
   width: 100%;
   z-index: 105;
+
+  /**
+    * When the browser zoom is used to scale content to 400%,
+    * we should un-fix Cookie banner as the height of the viewport is limited.
+    *
+    * Present content with fixed Cookie only when there is enough space.
+    *
+    * @see {@link https://www.w3.org/WAI/WCAG21/Techniques/css/C34.html}
+   */
+  @media (min-height: 480px) {
+    position: fixed;
+  }
 
   @include mq(sm) {
     padding: calc(4 * var(--space-unit)) calc(6 * var(--space-unit));
