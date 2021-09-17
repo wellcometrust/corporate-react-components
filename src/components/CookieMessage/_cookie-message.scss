@@ -16,7 +16,7 @@
     *
     * @see {@link https://www.w3.org/WAI/WCAG21/Techniques/css/C34.html}
    */
-  @media (min-height: 480px) {
+  @media ($min-height) {
     position: fixed;
   }
 
