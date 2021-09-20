@@ -28,7 +28,7 @@ export default (async () => ({
       extensions,
 
       // Allows us to import modules absolutely from these directories
-      moduleDirectory: ['./src', './src/components']
+      moduleDirectories: ['./src', './src/components']
     }),
     babel({
       babelHelpers: 'runtime',
