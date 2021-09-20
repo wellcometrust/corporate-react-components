@@ -34,9 +34,7 @@ const FeaturedPromoExample = () => {
               .map(a => a.trim())
           : []
       }
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-      // @ts-ignore
-      description={parseHtml(description)}
+      description={description}
       href={href}
       imageAlt={imageAlt}
       imageSrc={`${imageSrc}?text=${imageAlt}`}

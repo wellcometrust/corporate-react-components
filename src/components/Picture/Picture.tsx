@@ -40,6 +40,7 @@ const Picture = ({
   };
 
   const onError = (e: SyntheticEvent) => {
+    // eslint-disable-next-line no-console
     console.error('error', e);
   };
 
@@ -49,9 +50,9 @@ const Picture = ({
 
   return (
     <picture>
-      {sources?.map((s, index) => (
+      {sources?.map(s => (
         <source
-          key={`${index}-${s.sourcePreload}`}
+          key={s.sourcePreload}
           type={s.sourceType}
           media={s.sourceMedia}
           srcSet={shouldUseFullSrc ? s.sourceFull : s.sourcePreload}

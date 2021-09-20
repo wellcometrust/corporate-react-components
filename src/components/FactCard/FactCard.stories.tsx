@@ -81,5 +81,9 @@ const MultipleFactCard = () => {
 
 const stories = storiesOf('Components/FactCard', module);
 
-stories.add('SingleFactCard', SingleFactCard);
-stories.add('MultipleFactCard', MultipleFactCard);
+stories.add('SingleFactCard', SingleFactCard, {
+  readme: { sidebar: Readme }
+});
+stories.add('MultipleFactCard', MultipleFactCard, {
+  readme: { sidebar: Readme }
+});
