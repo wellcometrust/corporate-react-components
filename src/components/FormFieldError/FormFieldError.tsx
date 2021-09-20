@@ -6,7 +6,7 @@ import VisuallyHidden from 'VisuallyHidden';
 
 type FormFieldErrorProps = {
   className?: string;
-  errors: string | {};
+  errors: string | Record<string, unknown>;
   id: string;
 };
 

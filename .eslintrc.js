@@ -32,6 +32,7 @@ module.exports = {
     process: true
   },
   rules: {
+    'camelcase': ['warn', { properties: 'never' }],
     'react/destructuring-assignment': 0,
     'react/require-default-props': 0,
     'react/forbid-prop-types': 0,
@@ -49,8 +50,8 @@ module.exports = {
       depth: 3,
     }],
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/camelcase': ['warn', { properties: 'never' }],
     '@typescript-eslint/explicit-member-accessibility': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': [
       'warn',
       {
@@ -61,7 +62,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-for-in-array': 'error',
     '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
+    'no-use-before-define': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     'import/extensions': [
       'error',
