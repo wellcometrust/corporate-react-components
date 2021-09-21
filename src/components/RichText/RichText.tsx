@@ -83,15 +83,18 @@ export const RichText = ({
   itemProp,
   variant = 'text'
 }: RichTextProps) => {
-  const htmlString = formatHTMLString(children);
+  // pass text through parseHtml to sanitize it prior to applying transformations
+  const htmlString = formatHTMLString(parseHtml(children));
   const classNames = cx(`cc-rich-${variant}`, {
     [className]: className
   });
 
   return (
-    <div className={classNames} itemProp={itemProp}>
-      {parseHtml(htmlString)}
-    </div>
+    <div
+      className={classNames}
+      itemProp={itemProp}
+      dangerouslySetInnerHTML={{ __html: htmlString }}
+    />
   );
 };
 

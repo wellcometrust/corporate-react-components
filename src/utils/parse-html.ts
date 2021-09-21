@@ -4,22 +4,37 @@
 
 // polyfill and type definitions for String.prototype.replaceAll()
 import 'ts-replace-all';
-import ReactHtmlParser, { Options } from 'react-html-parser';
+
+// other libraries which have been tried and found wanting
+
+// import ReactHtmlParser, { Options } from 'react-html-parser';
+// import parser from 'html-react-parser';
+// import sanitizeHtml from 'sanitize-html';
+// import htmlparser2 from 'htmlparser2';
+// import parser from 'parse-entities';
+
+// no server-side, otherwise really good
+// import DOMPurify from 'dompurify';
+
+// built on top of DOMPurify but presents dependency issues on import
+// import DOMPurify from 'isomorphic-dompurify';
+
+// very similar to DOMPurify, really wide usage
+import xss from 'xss';
 
 /**
- * Parse some HTML using the ReactHtmlParser lib.
+ * Sanitise an HTML string
  *
- * Decodes HTML entities, strips out <script> tags to prevent XSS
- * attacks.
+ * Escapes <script> tags to prevent XSS attacks.
  *
- * @see {@link https://github.com/wrakky/react-html-parser}
+ * @see {@link https://www.npmjs.com/package/xss}
  *
  * @param {string} html
  * @param {object} options
  *
  * @returns {ReactElement}
  */
-export const parseHtml = (html: string, options?: Options) =>
-  ReactHtmlParser(html, options);
+// Should ideally be called sanitize (or GB spelling), sanitiseHTML or similar
+export const parseHtml = (html: string): string => xss(html);
 
 export default parseHtml;

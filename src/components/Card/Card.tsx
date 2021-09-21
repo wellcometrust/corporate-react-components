@@ -4,6 +4,8 @@ import cx from 'classnames';
 import FormattedDate from 'FormattedDate';
 import ImageElement from 'Image/ImageElement';
 
+import { parseHtml } from 'utils/parse-html';
+
 type CardProps = {
   authors?: string[];
   className?: string;
@@ -98,7 +100,7 @@ export const Card = ({
         {isVertical && description && (
           <div
             className="cc-card__description"
-            dangerouslySetInnerHTML={{ __html: description }}
+            dangerouslySetInnerHTML={{ __html: parseHtml(description) }}
           />
         )}
       </div>
