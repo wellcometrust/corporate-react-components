@@ -92,8 +92,8 @@ export const RichText = ({
   return (
     <div
       className={classNames}
-      itemProp={itemProp}
       dangerouslySetInnerHTML={{ __html: htmlString }}
+      itemProp={itemProp}
     />
   );
 };
