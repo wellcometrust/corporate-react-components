@@ -2,8 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { select, text } from '@storybook/addon-knobs';
 
-import { parseHtml } from 'utils/parse-html';
-
 import FeaturedPromo from './FeaturedPromo';
 
 const FeaturedPromoExample = () => {
@@ -34,9 +32,7 @@ const FeaturedPromoExample = () => {
               .map(a => a.trim())
           : []
       }
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-      // @ts-ignore
-      description={parseHtml(description)}
+      description={description}
       href={href}
       imageAlt={imageAlt}
       imageSrc={`${imageSrc}?text=${imageAlt}`}

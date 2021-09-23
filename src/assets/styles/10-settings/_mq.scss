@@ -15,4 +15,12 @@ $mq-breakpoints: (
   xxl: 1500px
 ) !default;
 
+/**
+ * @media (min-height: 30em) is used to add fixed components when there is enough space in the browser's viewport.
+ * Prevents from obstructing the content when the browser is zoomed and the height of the viewport is limited .
+ *
+ * @see {@link https://www.w3.org/WAI/WCAG21/Techniques/css/C34.html}
+*/
+$min-height: 'min-height: 30em';
+
 @import '~sass-mq';
