@@ -62,3 +62,5 @@ export { default as TextInput } from 'TextInput';
 export { default as Timeline } from 'Timeline';
 export { Video } from 'Video/Video';
 export { default as VisuallyHidden } from 'VisuallyHidden';
+
+export { parseHtml } from 'utils/parse-html';
