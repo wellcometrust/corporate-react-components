@@ -5,7 +5,7 @@ import FileDownload from 'FileDownload';
 import FormattedDate from 'FormattedDate';
 import { format, isValid } from 'date-fns';
 
-import { parseHtml } from 'utils/parse-html';
+import { sanitizeHtml } from 'utils/sanitize-html';
 import RichText from 'RichText';
 
 type TextCardProps = {
@@ -97,15 +97,24 @@ export const TextCard = ({
         </div>
       )}
       {title && (
-        <TitleElement className="cc-text-card__title">
+        <>
           {type === 'file' ? (
-            parseHtml(title)
+            <TitleElement
+              className="cc-text-card__title"
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(title) }}
+            />
           ) : (
-            <a href={href} className="cc-text-card__link">
-              {parseHtml(title)}
-            </a>
+            <TitleElement className="cc-text-card__title">
+              {/* eslint-disable jsx-a11y/control-has-associated-label */}
+              <a
+                href={href}
+                className="cc-text-card__link"
+                dangerouslySetInnerHTML={{ __html: sanitizeHtml(title) }}
+              />
+              {/* eslint-enable jsx-a11y/control-has-associated-label */}
+            </TitleElement>
           )}
-        </TitleElement>
+        </>
       )}
       {type === 'file' && (
         <FileDownload

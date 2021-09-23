@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import { ExternalLinkMarker } from 'Link';
 
-import { parseHtml } from 'utils/parse-html';
+import { sanitizeHtml } from 'utils/sanitize-html';
 
 type RichTextProps = {
   children: string;
@@ -83,8 +83,8 @@ export const RichText = ({
   itemProp,
   variant = 'text'
 }: RichTextProps) => {
-  // pass text through parseHtml to sanitize it prior to applying transformations
-  const htmlString = formatHTMLString(parseHtml(children));
+  // pass text through sanitizeHtml to sanitize it prior to applying transformations
+  const htmlString = formatHTMLString(sanitizeHtml(children));
   const classNames = cx(`cc-rich-${variant}`, {
     [className]: className
   });

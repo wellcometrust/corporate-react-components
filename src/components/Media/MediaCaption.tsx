@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-import { parseHtml } from 'utils/parse-html';
+import { sanitizeHtml } from 'utils/sanitize-html';
 
 type MediaCaptionProps = {
   caption?: string;
@@ -30,19 +30,23 @@ const MediaCaption = ({
       {caption && !shouldHideCaption && (
         <div
           className="cc-media__caption-detail"
-          dangerouslySetInnerHTML={{ __html: parseHtml(caption) }}
+          dangerouslySetInnerHTML={{ __html: sanitizeHtml(caption) }}
         />
       )}
       {credit && (
         <div
           className="cc-media__credit"
-          dangerouslySetInnerHTML={{ __html: `Credit: ${parseHtml(credit)}` }}
+          dangerouslySetInnerHTML={{
+            __html: `Credit: ${sanitizeHtml(credit)}`
+          }}
         />
       )}
       {licence && (
         <div
           className="cc-media__licence"
-          dangerouslySetInnerHTML={{ __html: `Licence: ${parseHtml(licence)}` }}
+          dangerouslySetInnerHTML={{
+            __html: `Licence: ${sanitizeHtml(licence)}`
+          }}
         />
       )}
     </figcaption>

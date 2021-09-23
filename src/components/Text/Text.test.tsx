@@ -17,22 +17,15 @@ const content = `
 `;
 
 describe('<Text />', () => {
-  const outputShallow = shallow(
-    <Text className="My text">{content}</Text>
-  );
-  const outputRender = render(
-    <Text className="My text">{content}</Text>
-  );
+  const outputShallow = shallow(<Text className="My text">{content}</Text>);
+  const outputRender = render(<Text className="My text">{content}</Text>);
 
   it('contains a RichText child component', () => {
     expect(outputShallow.find(RichText)).toHaveLength(1);
   });
 
   it('contains an H3 element', () => {
-    expect(
-      outputRender
-        .find('h3')
-    ).toHaveLength(1);
+    expect(outputRender.find('h3')).toHaveLength(1);
   });
 
   it('has script elements stripped out', () => {
@@ -45,9 +38,6 @@ describe('<Text />', () => {
   });
 
   it('ignores email links and absolute links to wellcome.org or wellcome.ac.uk when adding external link icons', () => {
-    expect(
-      outputRender
-        .find('.u-link-new-window')
-    ).toHaveLength(2);
+    expect(outputRender.find('.u-link-new-window')).toHaveLength(2);
   });
 });
