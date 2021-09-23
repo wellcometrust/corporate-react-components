@@ -1,3 +1,9 @@
+/**
+ * @deprecated CookieMessage is to be moved into corporate-react
+ * and aria-hidden prop to be added
+ *
+ * @see {@link https://github.com/wellcometrust/corporate/issues/9003}
+ */
 import React from 'react';
 
 import Button from 'Button';
