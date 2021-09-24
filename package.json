@@ -1,6 +1,6 @@
 {
   "name": "@wellcometrust/corporate-components",
-  "version": "0.16.2",
+  "version": "0.17.0",
   "description": "Component library for main Wellcome Trust corporate site",
   "main": "dist/index.js",
   "style": "dist/styles.css",
@@ -140,6 +140,7 @@
     "style-loader": "^1.1.2",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0",
+    "terser-webpack-plugin": "^5.2.4",
     "typescript": "^3.9.10"
   },
   "lint-staged": {
