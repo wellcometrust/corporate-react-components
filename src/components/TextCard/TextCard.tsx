@@ -102,7 +102,7 @@ export const TextCard = forwardRef(
         )}
         {title && (
           <TitleElement className="cc-text-card__title">
-            {type === 'file' ? (
+            {type === 'file' || !href ? (
               parseHtml(title)
             ) : (
               <a href={href} className="cc-text-card__link" ref={ref}>

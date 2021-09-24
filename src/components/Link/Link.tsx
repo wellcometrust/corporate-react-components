@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { forwardRef, useState, useEffect, Ref } from 'react';
 
 import RouterLinkWrapper from 'RouterLinkWrapper';
 import ExternalLinkMarker from './ExternalLinkMarker';
@@ -47,37 +47,43 @@ const isExternalLink = (url: string) => {
  * @returns {ReactElement}
  * @constructor
  */
-export const Link = ({ children, className, to, ...props }: LinkProps) => {
-  const [isExternal, setExternal] = useState(false);
-  const isFile = isFileLink(to);
+export const Link = forwardRef(
+  (
+    { children, className, to, ...props }: LinkProps,
+    ref: Ref<HTMLAnchorElement>
+  ) => {
+    const [isExternal, setExternal] = useState(false);
+    const isFile = isFileLink(to);
 
-  // Ensures 'window' is present
-  useEffect(() => {
-    if (to) {
-      setExternal(isExternalLink(to));
-    }
-  }, []);
+    // Ensures 'window' is present
+    useEffect(() => {
+      if (to) {
+        setExternal(isExternalLink(to));
+      }
+    }, []);
 
-  return isExternal || isFile ? (
-    <a
-      className={className}
-      download={isFile}
-      href={to}
-      rel="noopener noreferrer"
-      target="_blank"
-      {...props}
-    >
-      {children}
-      {isExternal && !isFile && <ExternalLinkMarker />}
-    </a>
-  ) : (
-    <RouterLinkWrapper href={to}>
-      <a className={className} href={to} {...props}>
+    return isExternal || isFile ? (
+      <a
+        className={className}
+        download={isFile}
+        href={to}
+        ref={ref}
+        rel="noopener noreferrer"
+        target="_blank"
+        {...props}
+      >
         {children}
+        {isExternal && !isFile && <ExternalLinkMarker />}
       </a>
-    </RouterLinkWrapper>
-  );
-};
+    ) : (
+      <RouterLinkWrapper href={to} ref={ref}>
+        <a className={className} href={to} {...props}>
+          {children}
+        </a>
+      </RouterLinkWrapper>
+    );
+  }
+);
 
 export default Link;
 export { ExternalLinkMarker };
