@@ -25,7 +25,7 @@
   position: relative;
 
   &:before {
-    background-color: var(--colour-white);
+    background-color: var(--color-white);
     border: 1px solid var(--colour-grey-20);
     border-radius: 2px;
     content: '';
@@ -93,7 +93,7 @@
 }
 
 .cc-checkbox__icon {
-  color: var(--colour-white);
+  color: var(--color-white);
   left: 0.227rem;
   pointer-events: none;
   position: absolute;

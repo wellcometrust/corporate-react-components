@@ -8,7 +8,7 @@
 // ----------------------------------
 
 @mixin heading-divider(
-  $colour: var(--colour-black),
+  $colour: var(--color-black),
   $height: calc(0.5 * var(--space-unit)),
   $spacing: calc(1.5 * var(--space-unit)),
   $width: 1em
@@ -67,7 +67,7 @@
   transition-property: background-size;
 }
 
-@mixin hover-underline($height: 3px, $hover-colour: var(--colour-amber-30)) {
+@mixin hover-underline($height: 3px, $hover-colour: var(--color-amber-30)) {
   background-image: linear-gradient(transparent, transparent), linear-gradient($hover-colour, $hover-colour);
   background-position: left calc(100% - 1px);
   background-size: 0 1px, 100% $height;
@@ -95,7 +95,7 @@
  */
 @mixin animated-link(
   $height: 3px,
-  $hover-colour: var(--colour-amber-30),
+  $hover-colour: var(--color-amber-30),
   $underline-colour: var(--colour-grey-80),
   $child-selector: null
 ) {
@@ -139,7 +139,7 @@
  * @param {Int} $width
  */
 @mixin heading-fancy(
-  $color: var(--colour-amber-30),
+  $color: var(--color-amber-30),
   $height: calc(0.5 * var(--space-unit)),
   $space-above: var(--space-md),
   $width: calc(4 * var(--space-unit))
