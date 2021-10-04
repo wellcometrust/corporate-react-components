@@ -8,7 +8,7 @@
 
 // Hide the <input /> element
 .cc-radio-input__input-element {
-  @include visually-hidden-input($top: 0.25rem);
+  @include visually-hidden-input($top: 0.3125rem);
 }
 
 .cc-radio-input {
