@@ -46,9 +46,9 @@
   },
   "homepage": "https://github.com/wellcometrust/corporate-components#readme",
   "peerDependencies": {
+    "@wellcometrust/design-system": "^0.2.4",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "@wellcometrust/design-system": "^0.2.3"
+    "react-dom": "^16.12.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.4",
@@ -101,7 +101,7 @@
     "@types/react-paginate": "^6.2.1",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
-    "@wellcometrust/design-system": "^0.2.3",
+    "@wellcometrust/design-system": "^0.2.4",
     "autoprefixer": "^10.2.5",
     "babel-plugin-require-context-hook": "^1.0.0",
     "browserslist": "^4.8.2",
