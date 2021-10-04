@@ -18,7 +18,11 @@ export const Quote = ({ author, className, cite, text }: QuoteProps) => {
 
   return (
     <blockquote className={classNames}>
-      <div className="cc-quote__body">
+      <div
+        className={cx('cc-quote__body', {
+          'cc-quote__body--short-quote': text.trim().length <= 200
+        })}
+      >
         <RichText>{text}</RichText>
       </div>
       {author && (
@@ -31,6 +35,7 @@ export const Quote = ({ author, className, cite, text }: QuoteProps) => {
           links={author.links}
           name={author.name}
           organisation={author.organisation}
+          titleAs="p"
         />
       )}
       {cite && !author && <cite className="cc-quote__cite">{cite}</cite>}

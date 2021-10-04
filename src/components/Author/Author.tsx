@@ -17,6 +17,7 @@ export type AuthorProps = {
   }[];
   name: string;
   organisation?: string;
+  titleAs?: 'h2' | 'p';
 };
 
 export const Author = ({
@@ -28,8 +29,10 @@ export const Author = ({
   jobTitle,
   links,
   name,
-  organisation
+  organisation,
+  titleAs = 'h2'
 }: AuthorProps) => {
+  const TitleElement = titleAs;
   const classNames = cx('cc-author', {
     [`cc-author--${layoutVariant}`]: layoutVariant,
     [className]: className
@@ -49,9 +52,9 @@ export const Author = ({
         </figure>
       )}
       <div className="cc-author__body">
-        <h2 className="cc-author__name" itemProp="name">
+        <TitleElement className="cc-author__name" itemProp="name">
           {name}
-        </h2>
+        </TitleElement>
         {jobTitle && (
           <p className="cc-author__byline" itemProp="jobTitle">
             {jobTitle}

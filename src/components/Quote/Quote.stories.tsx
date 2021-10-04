@@ -17,6 +17,8 @@ const QuoteExample = () => {
     generalGroupID
   );
 
+  const hasAuthor = boolean('Has author?', true, generalGroupID);
+
   const imageSrc = text(
     'Image path',
     `https://via.placeholder.com/300`,
@@ -34,7 +36,7 @@ const QuoteExample = () => {
     };
   });
 
-  const author = {
+  const author = hasAuthor && {
     imageSrc: hasImage && imageSrc,
     jobTitle,
     links,

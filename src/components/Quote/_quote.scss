@@ -26,6 +26,10 @@
   }
 }
 
+.cc-quote__body--short-quote {
+  font-size: var(--body-lg);
+}
+
 .cc-quote__author {
   * {
     font-size: var(--body-sm);
@@ -36,7 +40,4 @@
   color: var(--meta-text-colour);
   display: block;
   font-style: normal;
-  margin-top: calc(-4 * var(--space-unit));
-  padding-right: calc(6 * var(--space-unit));
-  position: relative;
 }
