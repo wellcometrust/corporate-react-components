@@ -5,6 +5,7 @@
 // Design System 1.0 Alpha
 // 2019-11-11
 // ----------------------------------
+@use 'sass:math';
 
 .cc-card {
   background: var(--colour-white);
@@ -45,7 +46,7 @@
     flex-direction: column;
     flex-grow: 0;
     flex-shrink: 0;
-    margin: $grid-gutter-md / 2;
+    margin: math.div($grid-gutter-md, 2);
     width: calc(33.33% - #{$grid-gutter-md});
 
     .cc-card__image,
@@ -55,7 +56,7 @@
   }
 
   @include mq(xl) {
-    margin: $grid-gutter-xl / 2;
+    margin: math.div($grid-gutter-xl, 2);
     width: calc(33.33% - #{$grid-gutter-xl});
   }
 }

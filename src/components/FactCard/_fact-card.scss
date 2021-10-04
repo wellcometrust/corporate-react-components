@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .cc-fact-card {
   margin-bottom: calc(4 * var(--space-unit));
 
@@ -5,13 +7,13 @@
     flex-basis: calc(33.33% - #{$grid-gutter-md});
     flex-grow: 0;
     flex-shrink: 0;
-    margin: $grid-gutter-md / 2;
+    margin: math.div($grid-gutter-md, 2);
     padding-bottom: var(--space-unit);
   }
 
   @include mq(xl) {
     flex-basis: calc(33.33% - #{$grid-gutter-xl});
-    margin: $grid-gutter-xl / 2;
+    margin: math.div($grid-gutter-xl, 2);
   }
 }
 

@@ -5,6 +5,7 @@
 // Design System 1.0 Alpha
 // 2019-11-11
 // ----------------------------------
+@use 'sass:math';
 
 .cc-image-card {
   position: relative;
@@ -154,13 +155,13 @@
     flex-basis: calc(33.33% - #{$grid-gutter-md});
     flex-grow: 0;
     flex-shrink: 0;
-    margin: $grid-gutter-md / 2;
+    margin: math.div($grid-gutter-md, 2);
     padding-bottom: var(--space-unit);
   }
 
   @include mq(xl) {
     flex-basis: calc(33.33% - #{$grid-gutter-xl});
-    margin: $grid-gutter-xl / 2;
+    margin: math.div($grid-gutter-xl, 2);
   }
 
   .cc-image-card__figure {
