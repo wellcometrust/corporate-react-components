@@ -49,29 +49,12 @@
   --colour-red-60: #e10f2d;
 
   --link-colour: var(--colour-grey-80);
-  --link-colour-hover: var(--colour-grey-80);
-  --link-colour-focus-outline: var(--colour-blue-50);
   --link-colour-active: var(--colour-grey-80);
   --link-colour-disabled: var(--colour-grey-40);
+  --link-colour-hover: var(--colour-grey-80);
+
+  --link-colour-focus-outline: var(--colour-blue-50);
 
   --body-text-colour: var(--colour-grey-80);
   --meta-text-colour: var(--colour-grey-60);
-
-  /**
-   * Use X- prefix to indicate deprecation. Try to avoid using any
-   * of these properties.
-   */
-  --X-colour-error-red: #d2373f;
-  --X-colour-error-pink: #ffebeb;
-  --X-colour-dark-blue: #003667;
-
-  /**
-   * In safari background linear gradients which fade to transparent display badly.
-   * An rgba value of almost transparent white fixes this.
-   *
-   * @see {@link https://stackoverflow.com/questions/11829410/css3-gradient-rendering-issues-from-transparent-to-white}
-   */
-  --hack-safari-transparent-white: rgba(255, 255, 255, 0.01);
 }
-
-$colour-grey-60: #767676;

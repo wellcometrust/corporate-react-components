@@ -17,7 +17,9 @@ const content = `
 <script>alert('another xss')</script>
 `;
 describe('<Text />', () => {
-  const outputShallow = shallow(<Text className="shallow-text">{content}</Text>);
+  const outputShallow = shallow(
+    <Text className="shallow-text">{content}</Text>
+  );
   const outputRender = render(<Text className="rendered-text">{content}</Text>);
 
   it('contains a RichText child component', () => {
@@ -37,8 +39,8 @@ describe('<Text />', () => {
   });
 
   it('has 7 link elements but no javascript contained in the href', () => {
-    expect(outputRender.find('[href]')).toHaveLength(7)
-    expect(outputRender.find('[href]')).not.toContain('javascript')
+    expect(outputRender.find('[href]')).toHaveLength(7);
+    expect(outputRender.find('[href]')).not.toContain('javascript');
   });
 
   it('ignores email links and absolute links to wellcome.org or wellcome.ac.uk when adding external link icons', () => {
