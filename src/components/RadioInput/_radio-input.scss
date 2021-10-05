@@ -43,7 +43,7 @@
   }
 
   .cc-radio-input__input-element:checked ~ &:before {
-    background-color: var(--colour-blue-60);
+    background-color: var(--color-blue-60);
   }
 
   .cc-radio-input__input-element:checked ~ &:after {
@@ -53,7 +53,7 @@
   // Hovered/Focused Radio
   &:not(:disabled):hover:before,
   .cc-radio-input__input-element:not(:disabled):focus ~ &:before {
-    border-color: var(--colour-blue-60);
+    border-color: var(--color-blue-60);
   }
 
   /**
@@ -61,7 +61,7 @@
    */
   // Focused radio
   .cc-radio-input__input-element:not(:disabled):focus ~ &:before {
-    box-shadow: 0 0 0 3px var(--colour-blue-30);
+    box-shadow: 0 0 0 3px var(--color-blue-30);
   }
 
   /**
@@ -73,7 +73,7 @@
   }
 
   .cc-radio-input__input-element:not(:disabled):focus-visible ~ &:before {
-    box-shadow: 0 0 0 3px var(--colour-blue-30);
+    box-shadow: 0 0 0 3px var(--color-blue-30);
   }
 
   // Disabled
