@@ -10,7 +10,7 @@
   --transition-timing-function-in: cubic-bezier(0.23, 1, 0.32, 1);
   --transition-timing-function-out: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 
-  background: var(--colour-amber-05);
+  background: var(--color-amber-05);
   position: relative;
 }
 
@@ -86,7 +86,7 @@
   text-transform: uppercase;
 
   &:after {
-    color: var(--colour-amber-30);
+    color: var(--color-amber-30);
     content: '/';
     padding-left: var(--space-unit);
     padding-right: var(--space-unit);

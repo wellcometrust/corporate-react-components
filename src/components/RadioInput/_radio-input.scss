@@ -18,7 +18,7 @@
   &:before {
     @include middle(y, absolute);
 
-    background-color: var(--colour-white);
+    background-color: var(--color-white);
     border: 1px solid var(--colour-grey-20);
     border-radius: 50%;
     content: '';

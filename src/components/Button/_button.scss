@@ -45,28 +45,28 @@
 }
 
 .btn--primary {
-  background-color: var(--colour-amber-30);
+  background-color: var(--color-amber-30);
 
   &:hover {
-    background-color: var(--colour-amber-20);
+    background-color: var(--color-amber-20);
   }
 
   &:focus,
   &:active {
-    background-color: var(--colour-amber-30);
+    background-color: var(--color-amber-30);
   }
 }
 
 .btn--secondary {
-  background-color: var(--colour-amber-20);
+  background-color: var(--color-amber-20);
 
   &:hover {
-    background-color: var(--colour-amber-10);
+    background-color: var(--color-amber-10);
   }
 
   &:focus,
   &:active {
-    background-color: var(--colour-amber-20);
+    background-color: var(--color-amber-20);
   }
 }
 
@@ -74,7 +74,7 @@
   background-color: transparent;
 
   &:hover {
-    background-color: var(--colour-amber-05);
+    background-color: var(--color-amber-05);
   }
 
   &:focus,
@@ -83,7 +83,7 @@
   }
 
   &:active {
-    background-color: var(--colour-amber-10);
+    background-color: var(--color-amber-10);
   }
 }
 
