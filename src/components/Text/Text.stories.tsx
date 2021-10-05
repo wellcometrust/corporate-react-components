@@ -21,7 +21,34 @@ const TextExample = () => {
       <p><script>alert('xss')</script>Paragraph hiding a script tag</p>
       <p><span class="foo">Text in a span with a class of 'foo'</span> followed by normal text not in a span.</p>
       <script>alert('another xss')</script>
-      <a href="javascript:alert(1)">Test JS URL</a>
+      <p><a href="javascript:alert(1)">Test JS URL</a></p>
+      <table>
+        <caption>Table caption</caption>
+        <thead>
+          <tr>
+            <th scope="col">Heading 1</th>
+            <th scope="col">Heading 2</th>
+            <th scope="col">Heading 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+          <tr>
+            <td>Cell</td>
+            <td>Cell</td>
+            <td>Cell</td>
+          </tr>
+        </tbody>
+      </table>
       `}
     </Text>
   );
