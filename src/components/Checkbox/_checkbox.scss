@@ -6,6 +6,10 @@
 // 2019-11-11
 // ----------------------------------
 
+:root {
+  --checkbox-radio-size: calc(2 * var(--space-unit));
+}
+
 // Hide the <input /> element
 .cc-checkbox__input {
   @include visually-hidden-input($top: 0.37rem);

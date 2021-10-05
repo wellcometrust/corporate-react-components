@@ -29,9 +29,14 @@
 }
 
 /**
- * Hide radio buttons and checkboxes visually (for screen-readers).
- * Allows Dragon users to access the inputs by using standard voice commands,
- * such as “Click button”.
+ * Hide checkboxes, radio buttons and any other interactive form elements
+ * that we may want to restyle, including file inputs.
+ *
+ * These elements must be discoverable by all screen reader users, particularly those navigating by touch,
+ * and Dragon users using standard voice commands, such as “Click button”.
+ * Dragon is a speech recognition software.
+ *
+ * @see {@link https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/}
  *
  * Usage:
  *
@@ -41,13 +46,13 @@
  *
  */
 
-@mixin visually-hidden-input($top: 0) {
+@mixin visually-hidden-input($top: 0, $size: var(--checkbox-radio-size)) {
   cursor: pointer;
-  height: var(--checkbox-radio-size);
+  height: $size;
   margin: 0;
   opacity: 0;
   position: absolute;
   top: $top;
-  width: var(--checkbox-radio-size);
+  width: $size;
   z-index: 1;
 }
