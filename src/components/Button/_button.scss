@@ -27,20 +27,20 @@
 .btn--tertiary {
   @extend %btn-size-standard;
 
-  color: var(--colour-grey-80);
+  color: var(--color-grey-80);
   padding: var(--space-unit) calc(2 * var(--space-unit));
 
   &:hover,
   &:focus,
   &:active {
-    color: var(--colour-grey-80);
+    color: var(--color-grey-80);
   }
 }
 
 .btn--primary,
 .btn--secondary {
   &[disabled] {
-    background-color: var(--colour-grey-10);
+    background-color: var(--color-grey-10);
   }
 }
 
@@ -88,7 +88,7 @@
 }
 
 .btn--tertiary .btn__text {
-  border-bottom: 1px solid var(--colour-grey-80);
+  border-bottom: 1px solid var(--color-grey-80);
   transition: ease 0.4s;
   transition-property: border-bottom-color;
 }

@@ -7,7 +7,7 @@
 // ----------------------------------
 
 .cc-label {
-  color: var(--colour-grey-80);
+  color: var(--color-grey-80);
   display: block;
   margin-bottom: var(--space-xs);
 
@@ -16,10 +16,10 @@
   &:hover ~ select,
   &:hover ~ textarea {
     // border colour has to match %text-input-base
-    border-color: var(--colour-grey-60);
+    border-color: var(--color-grey-60);
   }
 }
 
 .cc-label.is-disabled {
-  color: var(--colour-grey-60);
+  color: var(--color-grey-60);
 }

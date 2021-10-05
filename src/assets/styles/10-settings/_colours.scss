@@ -7,24 +7,13 @@
 // ----------------------------------
 
 :root {
-  --colour-grey-90: #000;
-  --colour-grey-80: #292929;
-  --colour-grey-70: #5c5c5c;
-  --colour-grey-60: #767676;
-  --colour-grey-50: #878787;
-  --colour-grey-40: #999;
-  --colour-grey-30: #b3b3b3;
-  --colour-grey-20: #ccc;
-  --colour-grey-10: #e6e6e6;
-  --colour-grey-05: #f2f2f2;
-
-  --link-colour: var(--colour-grey-80);
-  --link-colour-active: var(--colour-grey-80);
-  --link-colour-disabled: var(--colour-grey-40);
-  --link-colour-hover: var(--colour-grey-80);
+  --link-colour: var(--color-grey-80);
+  --link-colour-active: var(--color-grey-80);
+  --link-colour-disabled: var(--color-grey-40);
+  --link-colour-hover: var(--color-grey-80);
 
   --link-colour-focus-outline: var(--color-blue-50);
 
-  --body-text-colour: var(--colour-grey-80);
-  --meta-text-colour: var(--colour-grey-60);
+  --body-text-colour: var(--color-grey-80);
+  --meta-text-colour: var(--color-grey-60);
 }

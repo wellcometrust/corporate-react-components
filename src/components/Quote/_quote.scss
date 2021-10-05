@@ -28,7 +28,7 @@
   &:after {
     @extend %quote-mark;
     background-size: 100% auto;
-    color: var(--colour-grey-10);
+    color: var(--color-grey-10);
     content: '';
     display: block;
     font-family: var(--font-primary);

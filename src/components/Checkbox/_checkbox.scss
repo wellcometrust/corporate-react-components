@@ -26,7 +26,7 @@
 
   &:before {
     background-color: var(--color-white);
-    border: 1px solid var(--colour-grey-20);
+    border: 1px solid var(--color-grey-20);
     border-radius: 2px;
     content: '';
     height: var(--checkbox-width);
@@ -53,7 +53,7 @@
 
   // Hovered checkbox
   .cc-checkbox__input:not(:disabled) ~ &:hover:before {
-    border-color: var(--colour-grey-80);
+    border-color: var(--color-grey-80);
   }
 
   /**
@@ -78,17 +78,17 @@
 
   // Default checkbox
   .cc-checkbox__input ~ &:before {
-    border-color: var(--colour-grey-40);
+    border-color: var(--color-grey-40);
   }
 
   // Disabled checkbox
   .cc-checkbox__input:disabled ~ &:before {
-    background-color: var(--colour-grey-05);
-    border: 1px solid var(--colour-grey-20);
+    background-color: var(--color-grey-05);
+    border: 1px solid var(--color-grey-20);
   }
 
   .cc-checkbox__input:disabled ~ & {
-    color: var(--colour-grey-30);
+    color: var(--color-grey-30);
   }
 }
 

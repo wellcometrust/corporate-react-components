@@ -19,7 +19,7 @@
     @include middle(y, absolute);
 
     background-color: var(--color-white);
-    border: 1px solid var(--colour-grey-20);
+    border: 1px solid var(--color-grey-20);
     border-radius: 50%;
     content: '';
     height: var(--radio-width);
@@ -78,12 +78,12 @@
 
   // Disabled
   .cc-radio-input__input-element:disabled ~ &:before {
-    background-color: var(--colour-grey-05);
-    border: 1px solid var(--colour-grey-20);
+    background-color: var(--color-grey-05);
+    border: 1px solid var(--color-grey-20);
   }
 
   .cc-radio-input__input-element:disabled ~ & {
-    color: var(--colour-grey-30);
+    color: var(--color-grey-30);
   }
 }
 
