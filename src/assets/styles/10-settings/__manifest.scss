@@ -6,10 +6,9 @@
 // ----------------------------------
 
 @import 'mq'; // must be first import
-@import 'colours';
-@import 'spacing';
 @import '~@wellcometrust/design-system/dist/core';
-// @import '~@wellcometrust/design-system/dist/theme';
+@import '~@wellcometrust/design-system/dist/theme';
+@import 'spacing';
 @import 'grid';
 @import 'sizes';
 @import 'typography';

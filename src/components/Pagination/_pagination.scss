@@ -100,12 +100,12 @@
 }
 
 .cc-pagination .is-disabled > * {
-  color: var(--link-colour-disabled);
+  color: var(--color-link-disabled);
   cursor: not-allowed;
   pointer-events: none;
 
   &:hover {
-    color: var(--link-colour-disabled);
+    color: var(--color-link-disabled);
   }
 }
 

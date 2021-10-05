@@ -13,7 +13,7 @@
   width: 0.1px;
 
   &:focus + .btn--file-input:after {
-    border-color: var(--link-colour-focus-outline);
+    border-color: var(--color-link-focus-outline);
     border-radius: calc(0.5 * var(--space-unit));
     border-style: solid;
     border-width: 2px;
@@ -29,11 +29,11 @@
 
 .cc-file-input[disabled] {
   + .btn {
-    color: var(--link-colour-disabled);
+    color: var(--color-link-disabled);
     cursor: not-allowed;
 
     @include hocus {
-      color: var(--link-colour-disabled);
+      color: var(--color-link-disabled);
     }
   }
 
@@ -43,11 +43,11 @@
 
   + .btn--secondary {
     background-color: var(--color-grey-20);
-    border-color: var(--link-colour-disabled);
+    border-color: var(--color-link-disabled);
   }
 
   + .btn--tertiary {
-    border-color: var(--link-colour-disabled);
+    border-color: var(--color-link-disabled);
   }
 }
 
