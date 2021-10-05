@@ -6,12 +6,20 @@
 // 2019-11-11
 // ----------------------------------
 
+// Hide the <input /> element
+.cc-radio-input__input-element {
+  @include visually-hidden-input($top: 0.3125rem);
+}
+
+.cc-radio-input {
+  position: relative;
+}
+
 .cc-radio-input__label {
-  --radio-width: calc(2 * var(--space-unit));
   --radio-inner-width: calc(0.75 * var(--space-unit));
 
   cursor: pointer;
-  padding-left: calc(var(--radio-width) + var(--space-md));
+  padding-left: calc(var(--checkbox-radio-size) + var(--space-md));
   position: relative;
 
   &:after,
@@ -22,15 +30,15 @@
     border: 1px solid var(--colour-grey-20);
     border-radius: 50%;
     content: '';
-    height: var(--radio-width);
+    height: var(--checkbox-radio-size);
     left: 0;
-    width: var(--radio-width);
+    width: var(--checkbox-radio-size);
   }
 
   &:after {
     box-shadow: inset 0 0 0 0;
     height: var(--radio-inner-width);
-    left: calc((var(--radio-width) - var(--radio-inner-width)) / 2);
+    left: calc((var(--checkbox-radio-size) - var(--radio-inner-width)) / 2);
     opacity: 0;
     transition: opacity 0.2s, transform 0.2s;
     width: var(--radio-inner-width);
@@ -85,9 +93,4 @@
   .cc-radio-input__input-element:disabled ~ & {
     color: var(--colour-grey-30);
   }
-}
-
-// Hide the <input /> element
-.cc-radio-input__input-element {
-  @extend %visually-hidden;
 }

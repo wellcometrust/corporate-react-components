@@ -6,9 +6,13 @@
 // 2019-11-11
 // ----------------------------------
 
+:root {
+  --checkbox-radio-size: calc(2 * var(--space-unit));
+}
+
 // Hide the <input /> element
 .cc-checkbox__input {
-  @extend %visually-hidden;
+  @include visually-hidden-input($top: 0.37rem);
 }
 
 .cc-checkbox {
@@ -16,12 +20,11 @@
 }
 
 .cc-checkbox__label {
-  --checkbox-width: calc(2 * var(--space-unit));
   --checkbox-inner-width: calc(0.75 * var(--space-unit));
 
   cursor: pointer;
   display: inline-block;
-  padding-left: calc(var(--checkbox-width) + var(--space-md));
+  padding-left: calc(var(--checkbox-radio-size) + var(--space-md));
   position: relative;
 
   &:before {
@@ -29,17 +32,17 @@
     border: 1px solid var(--colour-grey-20);
     border-radius: 2px;
     content: '';
-    height: var(--checkbox-width);
+    height: var(--checkbox-radio-size);
     left: 0;
     position: absolute;
     top: 0.37rem;
-    width: var(--checkbox-width);
+    width: var(--checkbox-radio-size);
   }
 
   &:after {
     box-shadow: inset 0 0 0 0;
     height: var(--checkbox-inner-width);
-    left: calc((var(--checkbox-width) - var(--checkbox-inner-width)) / 2);
+    left: calc((var(--checkbox-radio-size) - var(--checkbox-inner-width)) / 2);
     opacity: 0;
     transition: opacity 0.2s, transform 0.2s;
     width: var(--checkbox-inner-width);
