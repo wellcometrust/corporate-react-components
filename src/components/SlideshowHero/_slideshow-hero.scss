@@ -19,7 +19,7 @@
 
 .slideshow-hero__container {
   @include mq(sm) {
-    background: var(--colour-cyan-05);
+    background: var(--color-cyan-05);
     position: relative;
   }
 }
@@ -41,7 +41,7 @@
     
     // used as background to expand edges to reach to screen edges of parent grid
     &:before {
-      background: var(--colour-cyan-05);
+      background: var(--color-cyan-05);
       bottom: 0;
       content: '';
       display: block;
@@ -100,7 +100,7 @@
 
 .slideshow-hero__btn-skip {
   @extend %btn-base;
-  color: var(--colour-blue-60);
+  color: var(--color-blue-60);
   height: calc(4 * var(--space-unit));
   justify-content: center;
   margin-bottom: var(--space-xl);

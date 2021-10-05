@@ -31,8 +31,8 @@
 }
 
 .cc-sidebar-filter__tags-list-item {
-  background-color: var(--colour-blue-05);
-  color: var(--colour-blue-60);
+  background-color: var(--color-blue-05);
+  color: var(--color-blue-60);
   font-size: var(--body-xs);
   justify-content: space-between;
   margin-bottom: var(--space-md);
@@ -40,8 +40,8 @@
   width: 100%;
 
   @include hocus {
-    background-color: var(--colour-blue-05);
-    color: var(--colour-blue-60);
+    background-color: var(--color-blue-05);
+    color: var(--color-blue-60);
   }
 
   .btn__icon {
@@ -70,12 +70,12 @@
 }
 
 .cc-sidebar-filter__tag {
-  background-color: var(--colour-blue-05);
-  color: var(--colour-blue-60);
+  background-color: var(--color-blue-05);
+  color: var(--color-blue-60);
 
   @include hocus {
-    background-color: var(--colour-blue-05);
-    color: var(--colour-blue-60);
+    background-color: var(--color-blue-05);
+    color: var(--color-blue-60);
   }
 }
 
