@@ -8,17 +8,17 @@
   transition-property: background-color;
 
   &:focus {
-    outline-color: var(--link-colour-focus-outline);
+    outline-color: var(--color-link-focus-outline);
     outline-offset: calc(0.5 * var(--space-unit));
   }
 }
 
 .btn[disabled] {
-  color: var(--link-colour-disabled);
+  color: var(--color-link-disabled);
   cursor: not-allowed;
 
   @include hocus {
-    color: var(--link-colour-disabled);
+    color: var(--color-link-disabled);
   }
 }
 
