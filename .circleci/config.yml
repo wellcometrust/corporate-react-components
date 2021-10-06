@@ -3,7 +3,7 @@ version: 2.1
 executors:
   node:
     docker:
-      - image: circleci/node:10.15.0
+      - image: circleci/node:15.0.1
 commands:
   set_deploy_key:
     description: Sets the ssh key for project access

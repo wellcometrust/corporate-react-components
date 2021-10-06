@@ -2,8 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { select, text } from '@storybook/addon-knobs';
 
-import { parseHtml } from 'utils/parse-html';
-
 import FeaturedPromo from './FeaturedPromo';
 
 const FeaturedPromoExample = () => {
