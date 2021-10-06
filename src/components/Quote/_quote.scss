@@ -6,55 +6,19 @@
 // 2019-11-11
 // ----------------------------------
 
-%quote-mark {
-  background-image: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2033%2032%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M14.48%200v5.554c-4.395.544-7.796%204.263-7.796%208.77%200%20.762.097%201.503.28%202.209h7.517V32H0V16.533h.04c-.027-.365-.04-.734-.04-1.105C0%207.258%206.388.567%2014.48%200zM33%200v5.554c-4.396.544-7.797%204.263-7.797%208.77%200%20.762.097%201.503.28%202.209H33V32H18.52V16.533h.038c-.026-.365-.039-.734-.039-1.105C18.52%207.258%2024.907.567%2033%200z%22%20fill%3D%22%23E6E6E6%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E');
-  background-repeat: no-repeat;
-}
-
 .cc-quote {
+  border-left: 3px solid var(--colour-amber-30);
   line-height: var(--body-line-height);
-  margin: 0;
+  margin: 0 0 0 var(--space-lg);
+  padding-left: var(--space-lg);
 }
 
 .cc-quote__body {
-  font-family: var(--font-secondary);
-
-  // padding bottom applied to enable consistent overall height of blockquote
-  // and positioning of close quote mark with or without citation
-  padding-bottom: calc(6 * var(--space-unit));
-  position: relative;
-
-  &:before,
-  &:after {
-    @extend %quote-mark;
-    background-size: 100% auto;
-    color: var(--colour-grey-10);
-    content: '';
-    display: block;
-    font-family: var(--font-primary);
-    font-size: 100px;
-    font-weight: bold;
-    height: 32px;
-    width: 33px;
-  }
-
-  &:before {
-    margin-bottom: var(--space-unit);
-  }
-
-  &:after {
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    transform: rotate(180deg);
-  }
+  font-style: italic;
+  margin-bottom: calc(4 * var(--space-unit));
 
   p {
     @extend %body-regular;
-  }
-
-  a {
-    @extend %anchor-base;
   }
 
   > :last-child {
@@ -62,11 +26,18 @@
   }
 }
 
+.cc-quote__body--short-quote {
+  font-size: var(--body-lg);
+}
+
+.cc-quote__author {
+  * {
+    font-size: var(--body-sm);
+  }
+}
+
 .cc-quote__cite {
   color: var(--meta-text-colour);
   display: block;
   font-style: normal;
-  margin-top: calc(-4 * var(--space-unit));
-  padding-right: calc(6 * var(--space-unit));
-  position: relative;
 }

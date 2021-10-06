@@ -22,6 +22,7 @@
   border-radius: 50%;
   flex-shrink: 0;
   height: var(--image-size);
+  margin-left: 0;
   margin-right: var(--space-lg);
   overflow: hidden;
   width: var(--image-size);
@@ -60,4 +61,14 @@
 
 .cc-author__link {
   @include animated-link;
+}
+
+// variant: horizontal
+
+.cc-author--horizontal {
+  display: flex;
+
+  .cc-author__image {
+    margin: 0 var(--space-lg) 0 0;
+  }
 }

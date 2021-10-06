@@ -2,22 +2,12 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
-import Quote from './Quote';
-import Readme from './Quote.md';
+import Author from './Author';
 
-const QuoteExample = () => {
+const AuthorExample = () => {
   const generalGroupID = 'General';
   const linksGroupID = 'Links';
   const imageGroupID = 'Image';
-
-  const cite = text('Cite', 'Citation or quote source', generalGroupID);
-  const quoteBody = text(
-    'Text',
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget fringilla massa. Quisque ut enim vehicula, volutpat dui et, gravida purus. In eget blandit libero.',
-    generalGroupID
-  );
-
-  const hasAuthor = boolean('Has author?', true, generalGroupID);
 
   const imageSrc = text(
     'Image path',
@@ -36,19 +26,25 @@ const QuoteExample = () => {
     };
   });
 
-  const author = hasAuthor && {
-    imageSrc: hasImage && imageSrc,
-    jobTitle,
-    links,
-    name,
-    organisation
-  };
+  const layoutVariant = select(
+    'Layout variant',
+    ['horizontal', null],
+    null,
+    generalGroupID
+  );
 
-  return <Quote cite={cite} text={quoteBody} author={author} />;
+  return (
+    <Author
+      imageSrc={hasImage && imageSrc}
+      layoutVariant={layoutVariant}
+      jobTitle={jobTitle}
+      links={links}
+      name={name}
+      organisation={organisation}
+    />
+  );
 };
 
-const stories = storiesOf('Components/Quote', module);
+const stories = storiesOf('Components/Author', module);
 
-stories.add('Quote', QuoteExample, {
-  readme: { sidebar: Readme }
-});
+stories.add('Author', AuthorExample);
