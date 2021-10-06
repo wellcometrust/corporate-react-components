@@ -1,3 +1,8 @@
+/**
+ * @deprecated SkipLink is to be moved into corporate-react
+ *
+ * @see {@link https://github.com/wellcometrust/corporate/issues/8967}
+ */
 import React from 'react';
 import cx from 'classnames';
 
