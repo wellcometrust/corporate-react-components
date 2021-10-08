@@ -22,5 +22,8 @@ coverage
 .DS_Store
 *.code-workspace
 
+# Audit files
+audit*.txt
+
 # Misc
 temp/
