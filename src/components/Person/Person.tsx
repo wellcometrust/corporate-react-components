@@ -6,6 +6,7 @@ import Link from 'Link';
 import RichText from 'RichText';
 
 export type PersonProps = {
+  className?: string;
   description?: string;
   imageSizes?: string;
   imageSrc?: string;
@@ -18,9 +19,11 @@ export type PersonProps = {
   }[];
   name: string;
   organisation?: string;
+  titleAs?: 'h3' | 'p';
 };
 
 export const Person = ({
+  className,
   description,
   imageSizes,
   imageSrc,
@@ -29,18 +32,18 @@ export const Person = ({
   layoutVariant,
   links,
   name,
-  organisation
+  organisation,
+  titleAs = 'h3'
 }: PersonProps) => {
+  const TitleElement = titleAs;
   const shouldShowDescription = description && layoutVariant !== 'compact';
+  const classNames = cx('cc-person', {
+    [`cc-person--${layoutVariant}`]: layoutVariant,
+    [className]: className
+  });
 
   return (
-    <div
-      className={cx('cc-person', {
-        [`cc-person--${layoutVariant}`]: layoutVariant
-      })}
-      itemScope
-      itemType="http://schema.org/Person"
-    >
+    <div className={classNames} itemScope itemType="http://schema.org/Person">
       {(imageSrc || imageSrcSet) && (
         <figure
           className={cx('cc-person__image', {
@@ -63,9 +66,9 @@ export const Person = ({
               layoutVariant && (imageSrc || imageSrcSet)
           })}
         >
-          <h3 className="cc-person__heading" itemProp="name">
+          <TitleElement className="cc-person__heading" itemProp="name">
             {name}
-          </h3>
+          </TitleElement>
           {jobTitle && (
             <p
               className="cc-person__heading cc-person__subheading"

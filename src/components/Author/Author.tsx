@@ -9,7 +9,6 @@ export type AuthorProps = {
   imageSizes?: string;
   imageSrc?: string;
   imageSrcSet?: string;
-  layoutVariant?: 'horizontal';
   jobTitle?: string;
   links?: {
     title: string;
@@ -25,7 +24,6 @@ export const Author = ({
   imageSizes,
   imageSrc,
   imageSrcSet,
-  layoutVariant,
   jobTitle,
   links,
   name,
@@ -34,7 +32,6 @@ export const Author = ({
 }: AuthorProps) => {
   const TitleElement = titleAs;
   const classNames = cx('cc-author', {
-    [`cc-author--${layoutVariant}`]: layoutVariant,
     [className]: className
   });
 

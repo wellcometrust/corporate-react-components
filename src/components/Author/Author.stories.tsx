@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { boolean, select, text } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 
 import Author from './Author';
 
@@ -26,17 +26,9 @@ const AuthorExample = () => {
     };
   });
 
-  const layoutVariant = select(
-    'Layout variant',
-    ['horizontal', null],
-    null,
-    generalGroupID
-  );
-
   return (
     <Author
       imageSrc={hasImage && imageSrc}
-      layoutVariant={layoutVariant}
       jobTitle={jobTitle}
       links={links}
       name={name}
