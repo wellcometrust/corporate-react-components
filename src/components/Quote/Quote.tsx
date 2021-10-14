@@ -1,11 +1,11 @@
 import React from 'react';
 import cx from 'classnames';
 
-import Author, { AuthorProps } from 'Author/Author';
+import Person, { PersonProps } from 'Person/Person';
 import RichText from 'RichText';
 
 type QuoteProps = {
-  author?: AuthorProps;
+  author?: PersonProps;
   className?: string;
   cite?: string;
   text: string;
@@ -25,12 +25,12 @@ export const Quote = ({ author, className, cite, text }: QuoteProps) => {
       >
         <RichText>{text}</RichText>
       </div>
-      {author && (
-        <Author
+      {author?.name && (
+        <Person
           className="cc-quote__author"
           imageSrc={author.imageSrc}
           imageSrcSet={author.imageSrcSet}
-          layoutVariant="horizontal"
+          layoutVariant="compact"
           jobTitle={author.jobTitle}
           links={author.links}
           name={author.name}
@@ -38,7 +38,7 @@ export const Quote = ({ author, className, cite, text }: QuoteProps) => {
           titleAs="p"
         />
       )}
-      {cite && !author && <cite className="cc-quote__cite">{cite}</cite>}
+      {cite && !author?.name && <cite className="cc-quote__cite">{cite}</cite>}
     </blockquote>
   );
 };

@@ -31,7 +31,8 @@
 }
 
 .cc-quote__author {
-  * {
+  .cc-person__heading,
+  .cc-person__link {
     font-size: var(--body-sm);
   }
 }
