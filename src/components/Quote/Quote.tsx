@@ -28,6 +28,7 @@ export const Quote = ({ author, className, cite, text }: QuoteProps) => {
       {author?.name && (
         <Person
           className="cc-quote__author"
+          imageSizes="80px"
           imageSrc={author.imageSrc}
           imageSrcSet={author.imageSrcSet}
           layoutVariant="compact"
