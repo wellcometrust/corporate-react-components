@@ -8,7 +8,7 @@
 
 // Hide the <input /> element
 .cc-radio-input__input-element {
-  @include visually-hidden-input($top: 0.3125rem);
+  @include visually-hidden-input;
 }
 
 .cc-radio-input {
@@ -82,6 +82,9 @@
   // Focused radio
   .cc-radio-input__input-element:not(:disabled):focus ~ &:before {
     box-shadow: 0 0 0 3px var(--colour-blue-30);
+
+    /* Since box shadows don't show up in high contrast mode, we're adding a transparent outline (which does show up). */
+    outline: 2px dotted transparent;
   }
 
   /**

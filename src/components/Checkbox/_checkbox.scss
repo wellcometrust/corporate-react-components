@@ -12,7 +12,7 @@
 
 // Hide the <input /> element
 .cc-checkbox__input {
-  @include visually-hidden-input($top: 0.37rem);
+  @include visually-hidden-input;
 }
 
 .cc-checkbox {
@@ -35,7 +35,7 @@
     height: var(--checkbox-radio-size);
     left: 0;
     position: absolute;
-    top: 0.37rem;
+    top: var(--space-xs);
     width: var(--checkbox-radio-size);
   }
 
@@ -101,7 +101,7 @@
   left: 0.227rem;
   pointer-events: none;
   position: absolute;
-  top: 0.34rem;
+  top: var(--space-xs);
   width: 0.56rem;
 
   .cc-checkbox__input:not(:checked) ~ & {
