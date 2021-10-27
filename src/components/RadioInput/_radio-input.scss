@@ -47,11 +47,23 @@
   // Checked Radio
   .cc-radio-input__input-element:checked ~ &:after,
   .cc-radio-input__input-element:checked ~ &:before {
-    border: 0;
+    border-color: transparent;
   }
 
   .cc-radio-input__input-element:checked ~ &:before {
     background-color: var(--colour-blue-60);
+
+    /**
+     * The background is removed in Windows high-contrast mode, so we
+     * need to set it explicitly. `WindowText` is a system color
+     * that should work with whatever high contrast mode the user has set.
+     * This works on Windows 7+, IE 10+, Edge
+     *
+     *  @see {@link https://www.a11ywithlindsey.com/blog/create-custom-keyboard-accessible-radio-buttons}
+     */
+    @media screen and (-ms-high-contrast: active) {
+      background-color: WindowText;
+    }
   }
 
   .cc-radio-input__input-element:checked ~ &:after {
@@ -92,5 +104,6 @@
 
   .cc-radio-input__input-element:disabled ~ & {
     color: var(--colour-grey-30);
+    cursor: default;
   }
 }

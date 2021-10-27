@@ -51,7 +51,7 @@
   // Checked checkbox
   .cc-checkbox__input:checked ~ &:before {
     background-color: var(--colour-blue-60);
-    border: 0;
+    border-color: transparent;
   }
 
   // Hovered checkbox
@@ -88,6 +88,7 @@
   .cc-checkbox__input:disabled ~ &:before {
     background-color: var(--colour-grey-05);
     border: 1px solid var(--colour-grey-20);
+    cursor: default;
   }
 
   .cc-checkbox__input:disabled ~ & {

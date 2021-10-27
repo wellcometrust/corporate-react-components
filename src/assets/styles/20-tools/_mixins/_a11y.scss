@@ -55,4 +55,8 @@
   top: $top;
   width: $size;
   z-index: 1;
+
+  &:disabled {
+    cursor: default;
+  }
 }
