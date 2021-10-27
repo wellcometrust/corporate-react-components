@@ -88,11 +88,11 @@
   .cc-checkbox__input:disabled ~ &:before {
     background-color: var(--colour-grey-05);
     border: 1px solid var(--colour-grey-20);
-    cursor: default;
   }
 
   .cc-checkbox__input:disabled ~ & {
     color: var(--colour-grey-30);
+    cursor: default;
   }
 }
 
