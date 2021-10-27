@@ -65,6 +65,9 @@
   // Focused checkbox
   .cc-checkbox__input:not(:disabled):focus ~ &:before {
     box-shadow: 0 0 0 2px var(--colour-blue-30);
+
+    /* Box shadows don't show up in high contrast mode, we're adding a transparent outline (which does show up). */
+    outline: 2px dotted transparent;
   }
 
   /**

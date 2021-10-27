@@ -10,6 +10,9 @@ const RadioInputExample = () => {
   const generalGroupID = 'General';
   const labelsGroupId = 'Labels';
 
+  const hasError = boolean('Has error?', false, generalGroupID);
+  const isDisabled = boolean('Is disabled?', false, generalGroupID);
+
   const errorMessage = text(
     'Error message',
     'Select yes if this is the person who took leave',
@@ -22,8 +25,7 @@ const RadioInputExample = () => {
   );
   const firstRadioLabel = text('First radio label', 'Yes', labelsGroupId);
   const secondRadioLabel = text('Second radio label', 'No', labelsGroupId);
-  const hasError = boolean('Has error?', false, generalGroupID);
-  const isDisabled = boolean('Is disabled?', false, generalGroupID);
+
   return (
     <form noValidate>
       <FormFieldset legend={radioGroupLegend}>

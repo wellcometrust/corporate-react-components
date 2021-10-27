@@ -11,6 +11,9 @@ const CheckboxExample = () => {
   const generalGroupID = 'General';
   const labelsGroupId = 'Labels';
 
+  const hasError = boolean('Has error?', false, generalGroupID);
+  const isDisabled = boolean('Is disabled?', false, generalGroupID);
+
   const errorMessage = text(
     'Error message',
     'Please confirm that your current organisation has been notified.',
@@ -26,8 +29,7 @@ const CheckboxExample = () => {
     'I confirm that I have discussed this transfer with the research office at my current organisation',
     labelsGroupId
   );
-  const hasError = boolean('Has error?', false, generalGroupID);
-  const isDisabled = boolean('Is disabled?', false, generalGroupID);
+
   return (
     <form noValidate>
       <FormField>

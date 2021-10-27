@@ -54,14 +54,14 @@
     background-color: var(--colour-blue-60);
 
     /**
-     * The background is removed in Windows high-contrast mode, so we
+     * The background is removed in Windows High Contrast mode, so we
      * need to set it explicitly. `WindowText` is a system color
      * that should work with whatever high contrast mode the user has set.
      * This works on Windows 7+, IE 10+, Edge
      *
      *  @see {@link https://www.a11ywithlindsey.com/blog/create-custom-keyboard-accessible-radio-buttons}
      */
-    @media screen and (-ms-high-contrast: active) {
+    @media (-ms-high-contrast: active), (forced-colors: active) {
       background-color: WindowText;
     }
   }
@@ -83,7 +83,7 @@
   .cc-radio-input__input-element:not(:disabled):focus ~ &:before {
     box-shadow: 0 0 0 3px var(--colour-blue-30);
 
-    /* Since box shadows don't show up in high contrast mode, we're adding a transparent outline (which does show up). */
+    /* Box shadows don't show up in high contrast mode, we're adding a transparent outline (which does show up). */
     outline: 2px dotted transparent;
   }
 
