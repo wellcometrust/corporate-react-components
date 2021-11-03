@@ -45,8 +45,7 @@
  * }
  *
  */
-
-@mixin visually-hidden-input($top: 0, $size: var(--checkbox-radio-size)) {
+@mixin visually-hidden-input($top: var(--space-xs), $size: calc(2 * var(--space-unit))) {
   cursor: pointer;
   height: $size;
   margin: 0;
@@ -55,4 +54,8 @@
   top: $top;
   width: $size;
   z-index: 1;
+
+  &:disabled {
+    cursor: default;
+  }
 }

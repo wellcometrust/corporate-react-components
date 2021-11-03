@@ -8,7 +8,7 @@
 
 // Hide the <input /> element
 .cc-radio-input__input-element {
-  @include visually-hidden-input($top: 0.3125rem);
+  @include visually-hidden-input;
 }
 
 .cc-radio-input {
@@ -47,11 +47,22 @@
   // Checked Radio
   .cc-radio-input__input-element:checked ~ &:after,
   .cc-radio-input__input-element:checked ~ &:before {
-    border: 0;
+    border-color: transparent;
   }
 
   .cc-radio-input__input-element:checked ~ &:before {
     background-color: var(--colour-blue-60);
+
+    /**
+     * The background is removed in Windows High Contrast mode, so we
+     * need to set it explicitly. `WindowText` is a system color
+     * that should work with whatever high contrast mode the user has set.
+     *
+     *  @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors}
+     */
+    @media (forced-colors: active) {
+      background-color: WindowText;
+    }
   }
 
   .cc-radio-input__input-element:checked ~ &:after {
@@ -70,6 +81,9 @@
   // Focused radio
   .cc-radio-input__input-element:not(:disabled):focus ~ &:before {
     box-shadow: 0 0 0 3px var(--colour-blue-30);
+
+    /* Box shadows don't show up in high contrast mode, we're adding a transparent outline (which does show up). */
+    outline: 2px dotted transparent;
   }
 
   /**
@@ -92,5 +106,6 @@
 
   .cc-radio-input__input-element:disabled ~ & {
     color: var(--colour-grey-30);
+    cursor: default;
   }
 }
