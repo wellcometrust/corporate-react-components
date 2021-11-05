@@ -60,7 +60,7 @@
      *
      *  @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors}
      */
-    @media (forced-colors: active) {
+    @media (-ms-high-contrast: active), (forced-colors: active) {
       background-color: WindowText;
     }
   }
