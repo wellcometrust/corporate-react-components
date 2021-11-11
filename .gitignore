@@ -22,7 +22,7 @@ coverage
 .DS_Store
 *.code-workspace
 
-# npm audit output
+# Audit files
 audit*.txt
 
 # Misc

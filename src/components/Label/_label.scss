@@ -9,6 +9,7 @@
 .cc-label {
   color: var(--color-grey-80);
   display: block;
+  line-height: var(--body-line-height);
   margin-bottom: var(--space-xs);
 
   // don't show hover state on input when hovering on label
