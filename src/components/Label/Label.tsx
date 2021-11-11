@@ -2,13 +2,15 @@ import React from 'react';
 import cx from 'classnames';
 
 type LabelProps = {
+  children?: React.ReactNode;
   className?: string;
   htmlFor: string;
   isDisabled?: boolean;
-  text: string;
+  text?: string;
 };
 
 export const FormLabel = ({
+  children,
   className,
   htmlFor,
   isDisabled,
@@ -21,7 +23,7 @@ export const FormLabel = ({
 
   return (
     <label className={classNames} htmlFor={htmlFor}>
-      {text}
+      {children || text}
     </label>
   );
 };
