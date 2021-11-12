@@ -33,8 +33,6 @@ export { Logo } from 'Logo/Logo';
 export { Modal } from 'Modal/Modal';
 export { default as ImageCard } from 'ImageCard';
 export { default as ImageCardWithCTA } from 'ImageCardWithCTA';
-export { NewsletterSignup } from 'NewsletterSignup/NewsletterSignup';
-export { NewsletterForm } from 'NewsletterForm/NewsletterForm';
 export { default as NumberInput } from 'NumberInput';
 export { Quote } from 'Quote/Quote';
 export { PageHeader } from 'PageHeader/PageHeader';
