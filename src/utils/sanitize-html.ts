@@ -1,7 +1,7 @@
 // polyfill and type definitions for String.prototype.replaceAll()
 import 'ts-replace-all';
 
-import xss from 'xss';
+import xss, { escapeAttrValue } from 'xss';
 
 /**
  * Sanitise an HTML string
@@ -15,6 +15,21 @@ import xss from 'xss';
  *
  * @returns {ReactElement}
  */
-export const sanitizeHtml = (html: string): string => xss(html);
+export const sanitizeHtml = (html: string): string => {
+  const options = {
+    /* eslint-disable consistent-return */
+    onIgnoreTagAttr: (tag: string, name: string, value: string) => {
+      // allow aria-hidden attributes
+      if (name === 'aria-hidden') {
+        // escape its value using built-in escapeAttrValue function
+        return `${name}="${escapeAttrValue(value)}"`;
+      }
+      // no return as `onIgnoreTagAttr` expects returned type of string or void
+    }
+    /* eslint-enable consistent-return */
+  };
+
+  return xss(html, options);
+};
 
 export default sanitizeHtml;
