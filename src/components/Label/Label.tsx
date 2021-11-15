@@ -20,9 +20,12 @@ export const FormLabel = ({
   });
 
   return (
-    <label className={classNames} htmlFor={htmlFor}>
-      {text}
-    </label>
+    // eslint-disable-next-line jsx-a11y/label-has-associated-control
+    <label
+      dangerouslySetInnerHTML={{ __html: text }}
+      className={classNames}
+      htmlFor={htmlFor}
+    />
   );
 };
 
