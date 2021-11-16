@@ -26,8 +26,8 @@
   &:before {
     @include middle(y, absolute);
 
-    background-color: var(--colour-white);
-    border: 1px solid var(--colour-grey-20);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-20);
     border-radius: 50%;
     content: '';
     height: var(--checkbox-radio-size);
@@ -51,7 +51,7 @@
   }
 
   .cc-radio-input__input-element:checked ~ &:before {
-    background-color: var(--colour-blue-60);
+    background-color: var(--color-blue-60);
 
     /**
      * The background is removed in Windows High Contrast mode, so we
@@ -72,7 +72,7 @@
   // Hovered/Focused Radio
   &:not(:disabled):hover:before,
   .cc-radio-input__input-element:not(:disabled):focus ~ &:before {
-    border-color: var(--colour-blue-60);
+    border-color: var(--color-blue-60);
   }
 
   /**
@@ -80,7 +80,7 @@
    */
   // Focused radio
   .cc-radio-input__input-element:not(:disabled):focus ~ &:before {
-    box-shadow: 0 0 0 3px var(--colour-blue-30);
+    box-shadow: 0 0 0 3px var(--color-blue-30);
 
     /* Box shadows don't show up in high contrast mode, we're adding a transparent outline (which does show up). */
     outline: 2px dotted transparent;
@@ -95,17 +95,17 @@
   }
 
   .cc-radio-input__input-element:not(:disabled):focus-visible ~ &:before {
-    box-shadow: 0 0 0 3px var(--colour-blue-30);
+    box-shadow: 0 0 0 3px var(--color-blue-30);
   }
 
   // Disabled
   .cc-radio-input__input-element:disabled ~ &:before {
-    background-color: var(--colour-grey-05);
-    border: 1px solid var(--colour-grey-20);
+    background-color: var(--color-grey-05);
+    border: 1px solid var(--color-grey-20);
   }
 
   .cc-radio-input__input-element:disabled ~ & {
-    color: var(--colour-grey-30);
+    color: var(--color-grey-30);
     cursor: default;
   }
 }

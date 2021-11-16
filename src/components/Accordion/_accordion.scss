@@ -13,8 +13,8 @@
 // .cc-accordion {}
 
 .cc-accordion--has-borders {
-  border-bottom: 1px solid var(--colour-grey-10);
-  border-top: 1px solid var(--colour-grey-10);
+  border-bottom: 1px solid var(--color-grey-10);
+  border-top: 1px solid var(--color-grey-10);
 
   & + & {
     border-top: 0;
@@ -85,7 +85,7 @@
   }
 
   .btn__icon--right {
-    color: var(--colour-blue-60);
+    color: var(--color-blue-60);
     margin-left: auto;
   }
 
@@ -115,7 +115,7 @@
 // Nested accordion
 
 .cc-accordion--nested {
-  border-left: 1px solid var(--colour-grey-10);
+  border-left: 1px solid var(--color-grey-10);
   margin-top: calc(2 * var(--space-unit));
   padding-left: var(--space-lg);
 
@@ -147,7 +147,7 @@
   position: relative;
 
   &:before {
-    background-color: var(--colour-grey-80);
+    background-color: var(--color-grey-80);
     content: '';
     height: calc(1 * var(--space-unit));
     left: 0;
@@ -172,6 +172,6 @@
   }
 
   .cc-accordion__button .icon {
-    color: var(--colour-black);
+    color: var(--color-black);
   }
 }

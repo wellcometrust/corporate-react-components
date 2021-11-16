@@ -8,7 +8,7 @@
 // ----------------------------------
 
 @mixin heading-divider(
-  $colour: var(--colour-black),
+  $colour: var(--color-black),
   $height: calc(0.5 * var(--space-unit)),
   $spacing: calc(1.5 * var(--space-unit)),
   $width: 1em
@@ -53,7 +53,7 @@
  *
  * i.e. hover-underline adds styles to a title after the image was hovered
  */
-@mixin default-underline($height: 3px, $underline-colour: var(--colour-grey-80)) {
+@mixin default-underline($height: 3px, $underline-colour: var(--color-grey-80)) {
   --transition-duration-link: 0.3s;
   --transition-timing-function: ease-in-out;
 
@@ -67,7 +67,7 @@
   transition-property: background-size;
 }
 
-@mixin hover-underline($height: 3px, $hover-colour: var(--colour-amber-30)) {
+@mixin hover-underline($height: 3px, $hover-colour: var(--color-amber-30)) {
   background-image: linear-gradient(transparent, transparent), linear-gradient($hover-colour, $hover-colour);
   background-position: left calc(100% - 1px);
   background-size: 0 1px, 100% $height;
@@ -95,8 +95,8 @@
  */
 @mixin animated-link(
   $height: 3px,
-  $hover-colour: var(--colour-amber-30),
-  $underline-colour: var(--colour-grey-80),
+  $hover-colour: var(--color-amber-30),
+  $underline-colour: var(--color-grey-80),
   $child-selector: null
 ) {
   @extend %anchor-base;
@@ -139,7 +139,7 @@
  * @param {Int} $width
  */
 @mixin heading-fancy(
-  $color: var(--colour-amber-30),
+  $color: var(--color-amber-30),
   $height: calc(0.5 * var(--space-unit)),
   $space-above: var(--space-md),
   $width: calc(4 * var(--space-unit))

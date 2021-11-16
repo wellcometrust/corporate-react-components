@@ -10,7 +10,7 @@
   --transition-timing-function-in: cubic-bezier(0.23, 1, 0.32, 1);
   --transition-timing-function-out: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 
-  background: var(--colour-amber-05);
+  background: var(--color-amber-05);
   position: relative;
 }
 
@@ -46,7 +46,7 @@
 
   @include mq(sm) {
     @include grid-column(1, 9);
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(var(--color-white-rgb), 0.95);
     padding: calc(6 * var(--space-unit)) calc(5 * var(--space-unit));
   }
 
@@ -80,13 +80,13 @@
 }
 
 .cc-full-width-promo__type {
-  color: var(--colour-grey-60);
+  color: var(--color-grey-60);
   font-size: var(--body-xxs);
   margin: 0;
   text-transform: uppercase;
 
   &:after {
-    color: var(--colour-amber-30);
+    color: var(--color-amber-30);
     content: '/';
     padding-left: var(--space-unit);
     padding-right: var(--space-unit);

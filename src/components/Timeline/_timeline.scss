@@ -18,7 +18,7 @@
 }
 
 .cc-timeline__status {
-  background-color: var(--colour-cyan-05);
+  background-color: var(--color-cyan-05);
   float: right;
   font-size: var(--body-sm);
   font-weight: bold;
@@ -53,7 +53,7 @@
   }
 
   &:before {
-    background-color: var(--colour-grey-60);
+    background-color: var(--color-grey-60);
     border-radius: 50%;
     content: '';
     height: 0.75rem;
@@ -71,7 +71,7 @@
   }
 
   &:not(:last-child):after {
-    border-left: 1px solid var(--colour-grey-60);
+    border-left: 1px solid var(--color-grey-60);
     bottom: -6px;
     content: '';
     left: calc(2 * var(--space-unit));
@@ -81,7 +81,7 @@
 
     @include mq(sm) {
       border-left: 0;
-      border-right: 1px solid var(--colour-grey-60);
+      border-right: 1px solid var(--color-grey-60);
       left: auto;
       right: 50%;
       transform: translateX(50%);
@@ -90,7 +90,7 @@
 }
 
 .cc-timeline__item-date {
-  color: var(--meta-text-colour);
+  color: var(--color-text-meta);
   flex-grow: 0;
   flex-shrink: 0;
   font-size: var(--body-sm);
@@ -121,7 +121,7 @@
 }
 
 .cc-timeline__item-body {
-  color: var(--meta-text-colour);
+  color: var(--color-text-meta);
   font-size: var(--body-sm);
 
   p {

@@ -28,8 +28,8 @@
   position: relative;
 
   &:before {
-    background-color: var(--colour-white);
-    border: 1px solid var(--colour-grey-20);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-20);
     border-radius: 2px;
     content: '';
     height: var(--checkbox-radio-size);
@@ -50,13 +50,13 @@
 
   // Checked checkbox
   .cc-checkbox__input:checked ~ &:before {
-    background-color: var(--colour-blue-60);
+    background-color: var(--color-blue-60);
     border-color: transparent;
   }
 
   // Hovered checkbox
   .cc-checkbox__input:not(:disabled) ~ &:hover:before {
-    border-color: var(--colour-grey-80);
+    border-color: var(--color-grey-80);
   }
 
   /**
@@ -64,7 +64,7 @@
    */
   // Focused checkbox
   .cc-checkbox__input:not(:disabled):focus ~ &:before {
-    box-shadow: 0 0 0 2px var(--colour-blue-30);
+    box-shadow: 0 0 0 2px var(--color-blue-30);
 
     /* Box shadows don't show up in high contrast mode, we're adding a transparent outline (which does show up). */
     outline: 2px dotted transparent;
@@ -79,28 +79,28 @@
   }
 
   .cc-checkbox__input:not(:disabled):focus-visible ~ &:before {
-    box-shadow: 0 0 0 2px var(--colour-blue-30);
+    box-shadow: 0 0 0 2px var(--color-blue-30);
   }
 
   // Default checkbox
   .cc-checkbox__input ~ &:before {
-    border-color: var(--colour-grey-40);
+    border-color: var(--color-grey-40);
   }
 
   // Disabled checkbox
   .cc-checkbox__input:disabled ~ &:before {
-    background-color: var(--colour-grey-05);
-    border: 1px solid var(--colour-grey-20);
+    background-color: var(--color-grey-05);
+    border: 1px solid var(--color-grey-20);
   }
 
   .cc-checkbox__input:disabled ~ & {
-    color: var(--colour-grey-30);
+    color: var(--color-grey-30);
     cursor: default;
   }
 }
 
 .cc-checkbox__icon {
-  color: var(--colour-white);
+  color: var(--color-white);
   left: 0.227rem;
   pointer-events: none;
   position: absolute;

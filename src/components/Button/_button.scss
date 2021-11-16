@@ -8,17 +8,17 @@
   transition-property: background-color;
 
   &:focus {
-    outline-color: var(--link-colour-focus-outline);
+    outline-color: var(--color-link-focus-outline);
     outline-offset: calc(0.5 * var(--space-unit));
   }
 }
 
 .btn[disabled] {
-  color: var(--link-colour-disabled);
+  color: var(--color-link-disabled);
   cursor: not-allowed;
 
   @include hocus {
-    color: var(--link-colour-disabled);
+    color: var(--color-link-disabled);
   }
 }
 
@@ -27,46 +27,46 @@
 .btn--tertiary {
   @extend %btn-size-standard;
 
-  color: var(--colour-grey-80);
+  color: var(--color-grey-80);
   padding: var(--space-unit) calc(2 * var(--space-unit));
 
   &:hover,
   &:focus,
   &:active {
-    color: var(--colour-grey-80);
+    color: var(--color-grey-80);
   }
 }
 
 .btn--primary,
 .btn--secondary {
   &[disabled] {
-    background-color: var(--colour-grey-10);
+    background-color: var(--color-grey-10);
   }
 }
 
 .btn--primary {
-  background-color: var(--colour-amber-30);
+  background-color: var(--color-amber-30);
 
   &:hover {
-    background-color: var(--colour-amber-20);
+    background-color: var(--color-amber-20);
   }
 
   &:focus,
   &:active {
-    background-color: var(--colour-amber-30);
+    background-color: var(--color-amber-30);
   }
 }
 
 .btn--secondary {
-  background-color: var(--colour-amber-20);
+  background-color: var(--color-amber-20);
 
   &:hover {
-    background-color: var(--colour-amber-10);
+    background-color: var(--color-amber-10);
   }
 
   &:focus,
   &:active {
-    background-color: var(--colour-amber-20);
+    background-color: var(--color-amber-20);
   }
 }
 
@@ -74,7 +74,7 @@
   background-color: transparent;
 
   &:hover {
-    background-color: var(--colour-amber-05);
+    background-color: var(--color-amber-05);
   }
 
   &:focus,
@@ -83,12 +83,12 @@
   }
 
   &:active {
-    background-color: var(--colour-amber-10);
+    background-color: var(--color-amber-10);
   }
 }
 
 .btn--tertiary .btn__text {
-  border-bottom: 1px solid var(--colour-grey-80);
+  border-bottom: 1px solid var(--color-grey-80);
   transition: ease 0.4s;
   transition-property: border-bottom-color;
 }

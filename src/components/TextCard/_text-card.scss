@@ -1,5 +1,5 @@
 .cc-text-card {
-  border-top: 1px solid var(--colour-grey-10);
+  border-top: 1px solid var(--color-grey-10);
   padding-bottom: var(--space-lg);
   padding-top: var(--space-lg);
   text-align: left;
@@ -39,19 +39,19 @@
   margin-left: var(--space-xs);
 
   &:before {
-    color: var(--colour-amber-30);
+    color: var(--color-amber-30);
     content: '/';
     margin-right: var(--space-unit);
   }
 }
 
 .cc-text-card__closing-date {
-  color: var(--meta-text-colour);
+  color: var(--color-text-meta);
 }
 
 .cc-text-card__date,
 .cc-text-card__date-updated {
-  color: var(--meta-text-colour);
+  color: var(--color-text-meta);
 
   @include mq($until: xs) {
     display: block;
@@ -74,7 +74,7 @@
 }
 
 .cc-text-card__file-meta-size {
-  color: var(--meta-text-colour);
+  color: var(--color-text-meta);
   font-size: var(--body-sm);
 }
 
@@ -83,5 +83,5 @@
 }
 
 .cc-text-card__institution {
-  color: var(--colour-grey-70);
+  color: var(--color-grey-70);
 }

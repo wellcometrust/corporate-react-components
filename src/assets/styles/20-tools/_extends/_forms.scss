@@ -21,7 +21,7 @@
 %text-input-reset {
   border: 0;
   box-sizing: border-box;
-  color: var(--colour-black);
+  color: var(--color-black);
   width: 100%;
 
   @include mq(md) {
@@ -29,7 +29,7 @@
   }
 
   &::placeholder {
-    color: var(--meta-text-colour);
+    color: var(--color-text-meta);
   }
 }
 
@@ -47,7 +47,7 @@
 %text-input-base {
   @extend %text-input-reset;
 
-  border: 1px solid var(--colour-grey-60);
+  border: 1px solid var(--color-grey-60);
   border-radius: calc(0.25 * var(--space-unit));
   display: block;
   letter-spacing: var(--body-letter-spacing);
@@ -58,16 +58,16 @@
   padding-top: calc(1.5 * var(--space-unit));
 
   &:hover {
-    border-color: var(--colour-grey-90);
+    border-color: var(--color-grey-90);
   }
 
   &:focus {
-    border-color: var(--colour-blue-60);
+    border-color: var(--color-blue-60);
   }
 
   &:disabled {
-    background-color: var(--colour-grey-05);
-    border-color: var(--colour-grey-20);
+    background-color: var(--color-grey-05);
+    border-color: var(--color-grey-20);
   }
 }
 

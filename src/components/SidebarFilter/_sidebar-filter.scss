@@ -2,7 +2,7 @@
 
 .cc-sidebar-filter__header {
   align-items: center;
-  border-top: 1px solid var(--colour-grey-10);
+  border-top: 1px solid var(--color-grey-10);
   display: flex;
   height: calc(8.75 * var(--space-unit));
   justify-content: space-between;
@@ -17,7 +17,7 @@
 }
 
 .cc-sidebar-filter__header-meta {
-  color: var(--colour-grey-30);
+  color: var(--color-grey-30);
   font-size: var(--body-sm);
 }
 
@@ -26,13 +26,13 @@
 }
 
 .cc-sidebar-filter__tags-list {
-  border-top: 1px solid var(--colour-grey-10);
+  border-top: 1px solid var(--color-grey-10);
   padding-top: var(--space-md);
 }
 
 .cc-sidebar-filter__tags-list-item {
-  background-color: var(--colour-blue-05);
-  color: var(--colour-blue-60);
+  background-color: var(--color-blue-05);
+  color: var(--color-blue-60);
   font-size: var(--body-xs);
   justify-content: space-between;
   margin-bottom: var(--space-md);
@@ -40,8 +40,8 @@
   width: 100%;
 
   @include hocus {
-    background-color: var(--colour-blue-05);
-    color: var(--colour-blue-60);
+    background-color: var(--color-blue-05);
+    color: var(--color-blue-60);
   }
 
   .btn__icon {
@@ -70,12 +70,12 @@
 }
 
 .cc-sidebar-filter__tag {
-  background-color: var(--colour-blue-05);
-  color: var(--colour-blue-60);
+  background-color: var(--color-blue-05);
+  color: var(--color-blue-60);
 
   @include hocus {
-    background-color: var(--colour-blue-05);
-    color: var(--colour-blue-60);
+    background-color: var(--color-blue-05);
+    color: var(--color-blue-60);
   }
 }
 

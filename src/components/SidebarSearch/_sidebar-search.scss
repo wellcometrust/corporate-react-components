@@ -21,7 +21,7 @@
 
 .cc-sidebar-search__input {
   @extend %text-input-base;
-  border-color: var(--colour-grey-30);
+  border-color: var(--color-grey-30);
   height: calc(6.75 * var(--space-unit));
 }
 

@@ -5,9 +5,10 @@
 // Design System 1.0 Alpha
 // 2019-11-11
 // ----------------------------------
+@use 'sass:math';
 
 .cc-card {
-  background: var(--colour-white);
+  background: var(--color-white);
   margin-bottom: var(--space-lg);
   position: relative;
 
@@ -45,7 +46,7 @@
     flex-direction: column;
     flex-grow: 0;
     flex-shrink: 0;
-    margin: $grid-gutter-md / 2;
+    margin: math.div($grid-gutter-md, 2);
     width: calc(33.33% - #{$grid-gutter-md});
 
     .cc-card__image,
@@ -55,7 +56,7 @@
   }
 
   @include mq(xl) {
-    margin: $grid-gutter-xl / 2;
+    margin: math.div($grid-gutter-xl, 2);
     width: calc(33.33% - #{$grid-gutter-xl});
   }
 }
@@ -110,7 +111,7 @@
 }
 
 .cc-card__link:before {
-  box-shadow: 0 2px 6px 0 rgba($colour-grey-60, 0.3);
+  box-shadow: 0 2px 6px 0 rgba(var(--color-grey-60-rgb), 0.3);
   transition: box-shadow 0.2s;
 }
 
@@ -118,14 +119,14 @@
 .cc-card__link:focus,
 .cc-card__link:hover {
   &:before {
-    box-shadow: 0 0 2px 0 rgba($colour-grey-60, 0.3);
+    box-shadow: 0 0 2px 0 rgba(var(--color-grey-60-rgb), 0.3);
   }
 }
 
 .cc-card__type,
 .cc-card__author,
 .cc-card__date {
-  color: var(--meta-text-colour);
+  color: var(--color-text-meta);
   font-size: var(--body-sm);
   line-height: var(--body-line-height);
 }

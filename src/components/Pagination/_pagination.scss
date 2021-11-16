@@ -30,7 +30,7 @@
 }
 
 .cc-pagination__break .cc-pagination__break-link { // overwrites a:not([href])
-  color: var(--colour-blue-60);
+  color: var(--color-blue-60);
 }
 
 .cc-pagination__break-link,
@@ -38,7 +38,7 @@
 .cc-pagination__prev-link,
 .cc-pagination__link {
   align-items: center;
-  color: var(--colour-blue-60);
+  color: var(--color-blue-60);
   cursor: pointer;
   display: flex;
   font-size: var(--body-sm);
@@ -46,17 +46,17 @@
   text-decoration: none;
 
   @include hocus {
-    color: var(--colour-blue-70);
+    color: var(--color-blue-70);
   }
 
   &:active {
-    color: var(--colour-blue-50);
+    color: var(--color-blue-50);
   }
 }
 
 .cc-pagination__next,
 .cc-pagination__prev {
-  border: 1px solid var(--colour-grey-20);
+  border: 1px solid var(--color-grey-20);
   border-radius: 2px;
 
   @include mq($until: xs) {
@@ -95,17 +95,17 @@
 }
 
 .cc-pagination__link.is-active {
-  color: var(--colour-blue-60);
+  color: var(--color-blue-60);
   text-decoration: underline;
 }
 
 .cc-pagination .is-disabled > * {
-  color: var(--link-colour-disabled);
+  color: var(--color-link-disabled);
   cursor: not-allowed;
   pointer-events: none;
 
   &:hover {
-    color: var(--link-colour-disabled);
+    color: var(--color-link-disabled);
   }
 }
 

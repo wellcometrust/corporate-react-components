@@ -5,6 +5,7 @@
 // Design System 1.0 Alpha
 // 2019-11-11
 // ----------------------------------
+@use 'sass:math';
 
 .cc-image-card {
   position: relative;
@@ -58,14 +59,14 @@
 }
 
 .cc-image-card__meta-item--label {
-  color: var(--colour-grey-60);
+  color: var(--color-grey-60);
   font-size: var(--body-xxs);
   text-transform: uppercase;
 }
 
 .cc-image-card__meta-item--flag {
   &:after {
-    color: var(--colour-amber-30);
+    color: var(--color-amber-30);
     content: '/';
     margin-left: var(--space-xs);
   }
@@ -154,13 +155,13 @@
     flex-basis: calc(33.33% - #{$grid-gutter-md});
     flex-grow: 0;
     flex-shrink: 0;
-    margin: $grid-gutter-md / 2;
+    margin: math.div($grid-gutter-md, 2);
     padding-bottom: var(--space-unit);
   }
 
   @include mq(xl) {
     flex-basis: calc(33.33% - #{$grid-gutter-xl});
-    margin: $grid-gutter-xl / 2;
+    margin: math.div($grid-gutter-xl, 2);
   }
 
   .cc-image-card__figure {

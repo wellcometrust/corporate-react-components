@@ -12,6 +12,6 @@
   max-width: calc(22 * var(--space-unit)); // 176px
 
   &:disabled::-webkit-datetime-edit {
-    color: var(--colour-grey-60);
+    color: var(--color-grey-60);
   }
 }

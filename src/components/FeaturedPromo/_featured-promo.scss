@@ -46,7 +46,7 @@
   padding-top: calc(2 * var(--space-unit));
 
   @include mq($until: sm) {
-    background-color: var(--colour-amber-05);
+    background-color: var(--color-amber-05);
     padding-left: calc(2 * var(--space-unit));
     padding-right: calc(2 * var(--space-unit));
   }
@@ -64,14 +64,14 @@
 }
 
 .cc-featured-promo__meta-item--label {
-  color: var(--colour-grey-60);
+  color: var(--color-grey-60);
   font-size: var(--body-xxs);
   text-transform: uppercase;
 }
 
 .cc-featured-promo__meta-item--flag {
   &:after {
-    color: var(--colour-amber-30);
+    color: var(--color-amber-30);
     content: '/';
     margin-left: var(--space-xs);
   }

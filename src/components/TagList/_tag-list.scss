@@ -19,7 +19,7 @@
 
 .cc-tag {
   align-items: center;
-  background-color: var(--colour-blue-05);
+  background-color: var(--color-blue-05);
   display: inline-flex;
   font-size: var(--tag-text-size);
   justify-content: center;
@@ -38,6 +38,6 @@
   transition-property: background-color, color;
 
   &:hover {
-    background-color: var(--colour-blue-20);
+    background-color: var(--color-blue-20);
   }
 }

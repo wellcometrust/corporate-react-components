@@ -13,12 +13,14 @@ const content = `
 <p><a href="http://test.com" target="_blank">External link</a></p>
 <p><a href="https://who.org" target="_blank">Another external link</a></p>
 <p><script>alert('xss')</script>Paragraph hiding a script tag</p>
+<p><a href="javascript:alert('xss')">Link with a JavaScript href</a></p>
 <script>alert('another xss')</script>
 `;
-
 describe('<Text />', () => {
-  const outputShallow = shallow(<Text className="My text">{content}</Text>);
-  const outputRender = render(<Text className="My text">{content}</Text>);
+  const outputShallow = shallow(
+    <Text className="shallow-text">{content}</Text>
+  );
+  const outputRender = render(<Text className="rendered-text">{content}</Text>);
 
   it('contains a RichText child component', () => {
     expect(outputShallow.find(RichText)).toHaveLength(1);
@@ -29,12 +31,16 @@ describe('<Text />', () => {
   });
 
   it('has script elements stripped out', () => {
-    expect(
-      outputShallow
-        .find(RichText)
-        .dive()
-        .find('script')
-    ).toHaveLength(0);
+    expect(outputRender.find('script')).toHaveLength(0);
+  });
+
+  it('has 7 link elements', () => {
+    expect(outputRender.find('[href]')).toHaveLength(7);
+  });
+
+  it('has 7 link elements but no javascript contained in the href', () => {
+    expect(outputRender.find('[href]')).toHaveLength(7);
+    expect(outputRender.find('[href]')).not.toContain('javascript');
   });
 
   it('ignores email links and absolute links to wellcome.org or wellcome.ac.uk when adding external link icons', () => {

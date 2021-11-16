@@ -1,7 +1,7 @@
 .cookie-message {
-  background-color: var(--colour-cyan-20);
+  background-color: var(--color-cyan-20);
   bottom: 0;
-  color: var(--colour-black);
+  color: var(--color-black);
   left: 0;
   letter-spacing: var(--body-letter-spacing);
   padding: calc(2 * var(--space-unit));
@@ -36,7 +36,7 @@
 }
 
 .cookie-message__heading-icon {
-  color: var(--colour-grey-80);
+  color: var(--color-grey-80);
   margin-right: calc(1.25 * var(--space-unit));
 }
 
