@@ -6,6 +6,8 @@ type FormattedDateProps = {
 };
 
 export const FormattedDate = ({ dateString }: FormattedDateProps) => {
+  if (!dateString) return null;
+
   const dateObject = new Date(dateString);
 
   return <>{isValid(dateObject) ? format(dateObject, 'd MMMM yyyy') : null}</>;
