@@ -19,7 +19,7 @@ type AuthorPropsExtend = AuthorProps & {
 
 type PageHeaderCompactProps = {
   authors: AuthorPropsExtend[];
-  date: string;
+  date?: string;
   imageAlt?: string;
   imageCaption?: string;
   imageCredit?: string;
@@ -84,34 +84,38 @@ export const PageHeaderCompact = ({
         )}
       </figure>
     )}
-    <div className="cc-page-header-compact__aside cc-page-header-compact__section cc-page-header-compact__section--sidebar">
-      {authors && (
-        <div className="cc-page-header-compact__authors">
-          {authors.map(author => (
-            <Author
-              imageSrc={author.imageSrc}
-              imageSrcSet={author.imageSrcSet}
-              jobTitle={author.jobTitle}
-              links={author.links}
-              key={`author-${author.id}`}
-              name={`${author.name}`}
-              organisation={author.organisation}
-            />
-          ))}
-        </div>
-      )}
-      {topics && (
-        <div className="cc-page-header-compact__topics">
-          <TagList tags={topics} />
-        </div>
-      )}
-    </div>
-    <div className="cc-page-header-compact__tray cc-page-header-compact__section cc-page-header-compact__section--main">
-      <time dateTime={date}>
-        <FormattedDate dateString={date} />
-      </time>
-      <SocialShare url={socialUrl} body={standfirst} title={title} />
-    </div>
+    {(authors || !!topics?.length) && (
+      <div className="cc-page-header-compact__aside cc-page-header-compact__section cc-page-header-compact__section--sidebar">
+        {authors && (
+          <div className="cc-page-header-compact__authors">
+            {authors.map(author => (
+              <Author
+                imageSrc={author.imageSrc}
+                imageSrcSet={author.imageSrcSet}
+                jobTitle={author.jobTitle}
+                links={author.links}
+                key={`author-${author.id}`}
+                name={`${author.name}`}
+                organisation={author.organisation}
+              />
+            ))}
+          </div>
+        )}
+        {!!topics?.length && (
+          <div className="cc-page-header-compact__topics">
+            <TagList tags={topics} />
+          </div>
+        )}
+      </div>
+    )}
+    {date && (
+      <div className="cc-page-header-compact__tray cc-page-header-compact__section cc-page-header-compact__section--main">
+        <time dateTime={date}>
+          <FormattedDate dateString={date} />
+        </time>
+        <SocialShare url={socialUrl} body={standfirst} title={title} />
+      </div>
+    )}
   </header>
 );
 
