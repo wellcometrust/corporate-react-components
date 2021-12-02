@@ -1,13 +1,18 @@
 import React, { forwardRef } from 'react';
 import cx from 'classnames';
 
+type FormSelectOptionProps = {
+  label: string;
+  value?: string;
+};
+
 type FormSelectProps = {
   className?: string;
   defaultText?: string;
   id: string;
   isRequired?: boolean;
   name: string;
-  options: string[];
+  options: (string | FormSelectOptionProps)[];
 };
 
 export const FormSelect = forwardRef(
@@ -38,9 +43,19 @@ export const FormSelect = forwardRef(
         <option disabled value="">
           {defaultText}
         </option>
-        {options.map(option => (
-          <option key={`option-${option}`}>{option}</option>
-        ))}
+        {options.map(option => {
+          if (typeof option === 'object') {
+            return (
+              <option
+                key={`option-${option.label}`}
+                value={option.value || option.label}
+              >
+                {option.label}
+              </option>
+            );
+          }
+          return <option key={`option-${option}`}>{option}</option>;
+        })}
       </select>
     );
   }
