@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 type FormSelectOptionProps = {
   label: string;
-  value?: string;
+  value: string;
 };
 
 type FormSelectProps = {
@@ -46,10 +46,7 @@ export const FormSelect = forwardRef(
         {options.map(option => {
           if (typeof option === 'object') {
             return (
-              <option
-                key={`option-${option.label}`}
-                value={option.value || option.label}
-              >
+              <option key={`option-${option.label}`} value={option.value}>
                 {option.label}
               </option>
             );
