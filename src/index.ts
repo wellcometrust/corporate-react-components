@@ -28,6 +28,7 @@ export { Image, ImageElement } from 'Image/Image';
 export { InfoBox } from 'InfoBox/InfoBox';
 export { default as Label } from 'Label';
 export { default as Link } from 'Link';
+export { ExternalLinkMarker } from 'Link';
 export { Listing, ListingElement, ListingLink } from 'Listing/Listing';
 export { Logo } from 'Logo/Logo';
 export { Modal } from 'Modal/Modal';
