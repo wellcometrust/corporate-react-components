@@ -42,8 +42,4 @@ describe('<Text />', () => {
     expect(outputRender.find('[href]')).toHaveLength(7);
     expect(outputRender.find('[href]')).not.toContain('javascript');
   });
-
-  it('ignores email links and absolute links to wellcome.org or wellcome.ac.uk when adding external link icons', () => {
-    expect(outputRender.find('.u-link-new-window')).toHaveLength(2);
-  });
 });
