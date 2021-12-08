@@ -1,8 +1,5 @@
 import React from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
 import cx from 'classnames';
-
-import { ExternalLinkMarker } from 'Link';
 
 import { sanitizeHtml } from 'utils/sanitize-html';
 
@@ -24,9 +21,6 @@ const regexTableElements = /<table(.*?)>(.|\n)(.*?)(.|\n)*<\/table>/g;
  */
 const formatHTMLString = (children: string) => {
   try {
-    // renderToStaticMarkup used to preserve svg attributes in JSX format for re-rendering
-    const externalMarker = renderToStaticMarkup(<ExternalLinkMarker />);
-
     return (
       children
         /**
