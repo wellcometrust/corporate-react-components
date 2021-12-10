@@ -114,7 +114,18 @@
   }
 }
 
-.cc-text-snippet__title,
+.cc-text-snippet__title {
+  @extend %heading-base;
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-heading);
+  letter-spacing: var(--letter-spacing-heading-minor);
+  margin-bottom: var(--space-unit);
+
+  @include mq(sm) {
+    margin-bottom: calc(2 * var(--space-unit));
+  }
+}
+
 .cc-rich-text-snippet h2,
 .cc-rich-text-snippet h3,
 .cc-rich-text-snippet h4,
