@@ -22,7 +22,7 @@ export const Text = ({
 
   return (
     <div className={classNames}>
-      {title && <p className={`cc-${variant}__title`}>{title}</p>}
+      {title && <h2 className={`cc-${variant}__title`}>{title}</h2>}
       <RichText variant={variant}>{children}</RichText>
     </div>
   );
