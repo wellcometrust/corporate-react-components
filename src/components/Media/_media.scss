@@ -36,7 +36,7 @@
   }
 }
 
-.cc-media--caption--below-image {
+.cc-media--caption-below-image {
   @include grid-column(1, 7);
 
   @include mq(sm) {
