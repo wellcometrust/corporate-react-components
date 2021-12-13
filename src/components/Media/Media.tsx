@@ -31,9 +31,9 @@ const Media = ({
       <div className="cc-media__element">{children}</div>
       <MediaCaption
         caption={caption}
-        captionVariant={captionVariant}
         className={cx({
-          'cc-media--wide__caption': captionVariant === 'right'
+          'cc-media--caption-below-image': captionVariant === 'below',
+          'cc-media--caption-beside-image': captionVariant === 'right'
         })}
         credit={credit}
         licence={licence}
