@@ -12,6 +12,12 @@ type LinkProps = {
 };
 
 /**
+ * Test if a string ends with a given filename extension
+ */
+const isFileLink = (str: string) =>
+  /\.(csv|doc|docm|docx|pdf|ppt|pptm|pptx|xls|xlsm|xlsx)$/g.test(str);
+
+/**
  * Displays an <a> tag with extra attributes depedendent on whether
  * href is an external domain.
  *
@@ -26,7 +32,13 @@ export const Link = forwardRef(
     { children, className, to, ...props }: LinkProps,
     ref: Ref<HTMLAnchorElement>
   ) => {
-    return (
+    const isFile = isFileLink(to);
+
+    return isFile ? (
+      <a className={className} download={isFile} href={to} ref={ref} {...props}>
+        {children}
+      </a>
+    ) : (
       <RouterLinkWrapper href={to} ref={ref}>
         <a className={className} href={to} {...props}>
           {children}
