@@ -18,6 +18,7 @@
     display: grid;
     // stylelint-disable value-no-vendor-prefix
     display: -ms-grid;
+    position: relative;
   }
 
   @include mq(xl) {
@@ -72,6 +73,7 @@
     margin-top: calc(var(--body-sm) +
     (2 * var(--space-unit)) +
     (var(--body-line-height) * var(--body-sm) * 0.5));
+    position: absolute;
   }
 }
 
