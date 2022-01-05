@@ -1,7 +1,6 @@
-import React, { forwardRef, useState, useEffect, Ref } from 'react';
+import React, { forwardRef, Ref } from 'react';
 
 import RouterLinkWrapper from 'RouterLinkWrapper';
-import ExternalLinkMarker from './ExternalLinkMarker';
 
 type LinkProps = {
   className?: string;
@@ -19,25 +18,6 @@ const isFileLink = (str: string) =>
   /\.(csv|doc|docm|docx|pdf|ppt|pptm|pptx|xls|xlsm|xlsx)$/g.test(str);
 
 /**
- * Detect whether a given string is going to an external domain
- *
- * @param { string } url
- * @returns { boolean }
- */
-const isExternalLink = (url: string) => {
-  const isRelativeUrl = ['#', '/', '?'].includes(url.charAt(0));
-
-  // Else test whether the current origin === destination URL
-  const { origin } = window.location;
-  const destination = url
-    .replace('http://', '')
-    .replace('https://', '')
-    .split('/')[0];
-
-  return !(origin === destination || isRelativeUrl);
-};
-
-/**
  * Displays an <a> tag with extra attributes depedendent on whether
  * href is an external domain.
  *
@@ -52,28 +32,11 @@ export const Link = forwardRef(
     { children, className, to, ...props }: LinkProps,
     ref: Ref<HTMLAnchorElement>
   ) => {
-    const [isExternal, setExternal] = useState(false);
     const isFile = isFileLink(to);
 
-    // Ensures 'window' is present
-    useEffect(() => {
-      if (to) {
-        setExternal(isExternalLink(to));
-      }
-    }, []);
-
-    return isExternal || isFile ? (
-      <a
-        className={className}
-        download={isFile}
-        href={to}
-        ref={ref}
-        rel="noopener noreferrer"
-        target="_blank"
-        {...props}
-      >
+    return isFile ? (
+      <a className={className} download={isFile} href={to} ref={ref} {...props}>
         {children}
-        {isExternal && !isFile && <ExternalLinkMarker />}
       </a>
     ) : (
       <RouterLinkWrapper href={to} ref={ref}>
@@ -86,4 +49,3 @@ export const Link = forwardRef(
 );
 
 export default Link;
-export { ExternalLinkMarker };
