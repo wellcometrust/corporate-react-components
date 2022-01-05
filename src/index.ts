@@ -26,7 +26,7 @@ export { Icon } from 'Icon/Icon';
 export { default as Iframe } from 'Iframe';
 export { Image, ImageElement } from 'Image/Image';
 export { default as Label } from 'Label';
-export { default as Link, ExternalLinkMarker } from 'Link';
+export { default as Link } from 'Link';
 export { Listing, ListingElement, ListingLink } from 'Listing/Listing';
 export { Logo } from 'Logo/Logo';
 export { Modal } from 'Modal/Modal';
