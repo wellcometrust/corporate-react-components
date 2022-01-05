@@ -73,8 +73,8 @@
 .cc-media--caption-beside-image .cc-media__caption-content {
   @include mq(md) {
     left: 0;
-    right: 0;
     position: absolute;
+    right: 0;
     top: 0;
   }
 }
