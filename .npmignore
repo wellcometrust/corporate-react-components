@@ -1,19 +1,20 @@
+.circleci
 .idea
-src
-coverage
 config
+coverage
+src
+storybook-static
 
-rollup.config.js
-jest.config.js
 .editorconfig
-.babelrc
 .eslintignore
-.eslint.js
+.eslintrc.js
+.nvmrc
 .prettierignore
 .prettierrc
 .stylelintrc.json
+*.txt
 babel.config.js
-•.code-workspace
+*.code-workspace
 jest.config.js
 tsconfig.json
 typings.d.ts
