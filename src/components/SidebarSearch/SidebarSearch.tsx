@@ -38,27 +38,29 @@ export const SidebarSearch = ({
         htmlFor={`search-${id}`}
         text={label}
       />
-      <input
-        className="cc-sidebar-search__input"
-        name={`search-${id}`}
-        onChange={onChange}
-        onKeyDown={onKeyDown}
-        onKeyUp={onKeyUp}
-        placeholder={placeholder}
-        value={value}
-        id={`search-${id}`}
-      />
-      <Button
-        className="cc-sidebar-search__btn"
-        icon="search"
-        iconClassName="u-mr-0 u-ml-0"
-        iconPlacementSwitch
-        onClick={onClick}
-        textClassName="u-visually-hidden"
-        variant="unstyled"
-      >
-        Search
-      </Button>
+      <div className="cc-sidebar-search__control">
+        <input
+          className="cc-sidebar-search__input"
+          name={`search-${id}`}
+          onChange={onChange}
+          onKeyDown={onKeyDown}
+          onKeyUp={onKeyUp}
+          placeholder={placeholder}
+          value={value}
+          id={`search-${id}`}
+        />
+        <Button
+          className="cc-sidebar-search__btn"
+          icon="search"
+          iconClassName="u-mr-0 u-ml-0"
+          iconPlacementSwitch
+          onClick={onClick}
+          textClassName="u-visually-hidden"
+          variant="unstyled"
+        >
+          Search
+        </Button>
+      </div>
     </div>
   );
 };
