@@ -67,19 +67,23 @@ export const PageHeaderCompact = ({
         />
         {(imageCaption || imageCredit || imageLicence) && (
           <figcaption className="cc-media__caption">
-            {imageCaption && (
-              <RichText className="cc-media__caption-detail">
-                {imageCaption}
-              </RichText>
-            )}
-            {imageCredit && (
-              <RichText className="cc-media__credit">
-                {`Credit: ${imageCredit}`}
-              </RichText>
-            )}
-            {imageLicence && (
-              <RichText className="cc-media__license">{imageLicence}</RichText>
-            )}
+            <div className="cc-media__caption-content">
+              {imageCaption && (
+                <RichText className="cc-media__caption-detail">
+                  {imageCaption}
+                </RichText>
+              )}
+              {imageCredit && (
+                <RichText className="cc-media__credit">
+                  {`Credit: ${imageCredit}`}
+                </RichText>
+              )}
+              {imageLicence && (
+                <RichText className="cc-media__license">
+                  {imageLicence}
+                </RichText>
+              )}
+            </div>
           </figcaption>
         )}
       </figure>
