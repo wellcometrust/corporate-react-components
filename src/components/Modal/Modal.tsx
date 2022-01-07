@@ -34,7 +34,7 @@ export const Modal = ({
 }: ModalProps) => {
   const [wasAccepted, setWasAccepted] = useState(false);
 
-  const classNames = cx('cc-info-box cc-modal', {
+  const classNames = cx('c-info-box cc-modal', {
     [className]: className
   });
 
