@@ -112,17 +112,3 @@
   margin-left: calc(1.5 * var(--space-unit));
   margin-right: calc(-0.5 * var(--space-unit));
 }
-
-// Call To Action wrapper styles
-
-.cc-cta {
-  text-align: center;
-}
-
-.cc-info-box .cc-cta {
-  margin: calc(4 * var(--space-unit)) 0;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
