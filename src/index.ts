@@ -29,7 +29,6 @@ export { default as Label } from 'Label';
 export { default as Link } from 'Link';
 export { Listing, ListingElement, ListingLink } from 'Listing/Listing';
 export { Logo } from 'Logo/Logo';
-export { Modal } from 'Modal/Modal';
 export { default as ImageCard } from 'ImageCard';
 export { default as ImageCardWithCTA } from 'ImageCardWithCTA';
 export { default as NumberInput } from 'NumberInput';
