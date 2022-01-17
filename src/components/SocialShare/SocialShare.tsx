@@ -51,8 +51,6 @@ export const SocialShare = ({
           <a
             href={`https://www.facebook.com/share.php?u=${url}&quote=${titleAndBodyText}&utm_source=facebookShare`}
             className="cc-social-share__link"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <VisuallyHidden>Share on Facebook</VisuallyHidden>
             <Icon name="facebook" className="cc-social-share__icon" />
@@ -62,8 +60,6 @@ export const SocialShare = ({
           <a
             href={`https://twitter.com/intent/tweet?text=${titleText}%20%40wellcometrust&url=${url}&utm_source=twitterShare`}
             className="cc-social-share__link"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <VisuallyHidden>Tweet</VisuallyHidden>
             <Icon name="twitter" className="cc-social-share__icon" />
@@ -73,8 +69,6 @@ export const SocialShare = ({
           <a
             href={`http://www.linkedin.com/shareArticle?mini=true&url=${url}&utm_source=linkedinShare`}
             className="cc-social-share__link"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <VisuallyHidden>Share on LinkedIn</VisuallyHidden>
             <Icon name="linkedin" className="cc-social-share__icon" />
@@ -84,8 +78,6 @@ export const SocialShare = ({
           <a
             href={`mailto:?subject=Shared%20from%20Wellcome%3A%20${titleText}&body=${bodyText}%0d%0a%0d%0a${url}&utm_source=emailShare %0A%0A---%0A%0ASign up to the Wellcome newsletter: https://wellcome.org/newsletters/subscribe-to-wellcome-newsletter-temp`}
             className="cc-social-share__link"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <VisuallyHidden>Email</VisuallyHidden>
             <Icon name="email" className="cc-social-share__icon" />
