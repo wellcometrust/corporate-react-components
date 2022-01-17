@@ -63,7 +63,7 @@ export const Timeline = ({
    * In order to maintain a correct headers order we should update an timeline's item
    * heading if a timeline title not present.
    */
-  const ItemTitleElement = title ? 'h4' : 'h3'; // maintain correct header order
+  const ItemTitleElement = title ? 'h4' : 'h3';
   const classNames = cx('cc-timeline', {
     [className]: className
   });
