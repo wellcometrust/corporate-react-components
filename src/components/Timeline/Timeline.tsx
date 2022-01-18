@@ -59,6 +59,11 @@ export const Timeline = ({
   milestones,
   title
 }: TimelineProps) => {
+  /**
+   * In order to maintain a correct headers order we should update an timeline's item
+   * heading if a timeline title not present.
+   */
+  const ItemTitleElement = title ? 'h4' : 'h3';
   const classNames = cx('cc-timeline', {
     [className]: className
   });
@@ -139,7 +144,9 @@ export const Timeline = ({
                 </a>
               )}
               <div className="cc-timeline__item-details">
-                <h4 className="cc-timeline__item-title">{item.title}</h4>
+                <ItemTitleElement className="cc-timeline__item-title">
+                  {item.title}
+                </ItemTitleElement>
                 {item.body && (
                   <RichText className="cc-timeline__item-body">
                     {item.body}
