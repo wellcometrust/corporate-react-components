@@ -6,8 +6,7 @@ module.exports = {
     '@storybook/addon-knobs',
     '@storybook/addon-actions',
     '@storybook/addon-a11y',
-    '@storybook/addon-viewport',
-    'storybook-readme'
+    '@storybook/addon-viewport'
   ],
   typescript: {
     reactDocgen: 'react-docgen-typescript'
