@@ -15,8 +15,7 @@ module.exports = {
   ],
   transformIgnorePatterns: ['/node_modules/'],
   transform: {
-    '^.+\\.((js|ts)x?)?$': 'babel-jest',
-    '^.+\\.md?$': 'markdown-loader-jest'
+    '^.+\\.((js|ts)x?)?$': 'babel-jest'
   },
   verbose: true
 };
