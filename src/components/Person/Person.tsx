@@ -5,6 +5,8 @@ import { ImageElement } from 'Image';
 import Link from 'Link';
 import RichText from 'RichText';
 
+import getLinkLabel from 'utils/get-link-label';
+
 export type PersonProps = {
   className?: string;
   description?: string;
@@ -100,7 +102,11 @@ export const Person = ({
                     className="cc-person__link-item"
                     key={`${name}-link-${link.url}`}
                   >
-                    <Link className="cc-person__link" to={link.url}>
+                    <Link
+                      aria-label={`${name}'s ${getLinkLabel(link.url)}`}
+                      className="cc-person__link"
+                      to={link.url}
+                    >
                       {link.title}
                     </Link>
                   </li>
