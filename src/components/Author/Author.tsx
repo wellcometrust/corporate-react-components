@@ -72,7 +72,7 @@ export const Author = ({
                 key={`${name}-link-${link.url}`}
               >
                 <Link
-                  aria-label={`${name}'s ${getLinkLabel(link.url)}`}
+                  aria-label={getLinkLabel(name, link)}
                   className="cc-author__link"
                   to={link.url}
                 >
