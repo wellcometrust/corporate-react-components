@@ -4,6 +4,7 @@ import cx from 'classnames';
 import Icon from 'Icon';
 import ImageElement from 'Image/ImageElement';
 import RichText from 'RichText';
+import VisuallyHidden from 'VisuallyHidden';
 
 type ContactImageSourceProps = {
   image_full_hi?: string;
@@ -45,6 +46,8 @@ export const Contact = ({
     'cc-contact--nested': isNested,
     [className]: className
   });
+
+  const accessiblePhoneText = name ? `Phone ${name} on` : 'Phone us on';
 
   return (
     <div className={classNames} itemScope itemType="http://schema.org/Person">
@@ -97,6 +100,7 @@ export const Contact = ({
         <p className="cc-contact__item">
           <Icon name="phone" className="cc-contact__link-icon" />
           <a href={`tel://${tel}`} className="cc-contact__link">
+            <VisuallyHidden>{accessiblePhoneText}</VisuallyHidden>
             {tel}
           </a>
         </p>
