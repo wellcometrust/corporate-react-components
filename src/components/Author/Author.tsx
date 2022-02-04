@@ -4,6 +4,8 @@ import cx from 'classnames';
 import { ImageElement } from 'Image';
 import Link from 'Link';
 
+import getLinkLabel from 'utils/get-link-label';
+
 export type AuthorProps = {
   className?: string;
   imageSizes?: string;
@@ -69,7 +71,11 @@ export const Author = ({
                 className="cc-author__link-item"
                 key={`${name}-link-${link.url}`}
               >
-                <Link className="cc-author__link" to={link.url}>
+                <Link
+                  aria-label={getLinkLabel(name, link)}
+                  className="cc-author__link"
+                  to={link.url}
+                >
                   {link.title}
                 </Link>
               </li>
