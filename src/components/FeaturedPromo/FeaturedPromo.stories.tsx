@@ -15,12 +15,15 @@ const FeaturedPromoExample = () => {
 
   const description = text(
     'Description',
-    `<p>Nulla non Lorem in fugiat dolore aliquip ad irure reprehenderit reprehenderit proident.</p>`
+    `Nulla non Lorem in fugiat dolore aliquip ad irure reprehenderit reprehenderit proident.`
   );
 
   const metaLabel = text('metaLabel', 'Climate Change');
 
   const href = text('href', '/news/all');
+
+  const date = text('Date', '02/08/2022');
+  const readTime = text('Read time', '6 minutes');
 
   return (
     <FeaturedPromo
@@ -32,11 +35,13 @@ const FeaturedPromoExample = () => {
               .map(a => a.trim())
           : []
       }
+      date={date}
       description={description}
       href={href}
       imageAlt={imageAlt}
       imageSrc={`${imageSrc}?text=${imageAlt}`}
       metaLabel={metaLabel}
+      readTime={readTime}
       title={title}
       titleAs={titleAs}
     />

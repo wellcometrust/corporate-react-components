@@ -64,7 +64,11 @@ export const FullWidthPromo = ({
         {(metaLabel || authors) && (
           <div className="cc-full-width-promo__meta">
             {metaLabel && (
-              <ReadTime metaLabel={metaLabel} readTime={readTime} />
+              <ReadTime
+                className="cc-full-width-promo__read-time"
+                metaLabel={metaLabel}
+                readTime={readTime}
+              />
             )}
             {authors?.length > 0 && (
               <dl className="cc-full-width-promo__authors">

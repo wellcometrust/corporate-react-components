@@ -18,7 +18,7 @@ type ImageCardProps = {
   imageWidth?: string;
   layoutVariant?: 'listing';
   metaLabel?: string;
-  readTime: string;
+  readTime?: string;
   title: string;
   titleAs?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 };

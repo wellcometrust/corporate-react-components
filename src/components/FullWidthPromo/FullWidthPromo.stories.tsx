@@ -26,6 +26,7 @@ const FullWidthPromoExample = () => {
 
   const authors = text('authors', 'Author One, Author Two', metaID);
   const metaLabel = text('metaLabel', 'Meta', metaID);
+  const readTime = text('readTime', '6 minutes', metaID);
   const tags = [
     {
       href: text(
@@ -58,6 +59,7 @@ const FullWidthPromoExample = () => {
       imageSrc={imageSrc}
       linkText={linkText}
       metaLabel={metaLabel}
+      readTime={readTime}
       title={title}
       topics={tags}
     />
