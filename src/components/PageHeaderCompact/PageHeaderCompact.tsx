@@ -51,79 +51,76 @@ export const PageHeaderCompact = ({
   standfirst,
   title,
   topics
-}: PageHeaderCompactProps) => {
-  console.log('readTime', readTime);
-  return (
-    <header className="cc-page-header-compact">
-      <div className="cc-page-header-compact__main cc-page-header-compact__section cc-page-header-compact__section--main">
-        <PageTitle metaLabel={metaLabel} title={title} />
-        <div className="cc-page-header-compact__standfirst">
-          <RichText>{standfirst}</RichText>
-        </div>
+}: PageHeaderCompactProps) => (
+  <header className="cc-page-header-compact">
+    <div className="cc-page-header-compact__main cc-page-header-compact__section cc-page-header-compact__section--main">
+      <PageTitle metaLabel={metaLabel} title={title} />
+      <div className="cc-page-header-compact__standfirst">
+        <RichText>{standfirst}</RichText>
       </div>
-      {(!!imageSrc || (imageSrcSet && imageSizes?.trim().length)) && (
-        <figure className="cc-page-header-compact__image cc-page-header-compact__section cc-page-header-compact__section--main">
-          <ImageElement
-            alt={imageAlt}
-            sizes={imageSizes}
-            src={imageSrc}
-            srcSet={imageSrcSet}
-          />
-          {(imageCaption || imageCredit || imageLicence) && (
-            <figcaption className="cc-media__caption">
-              <div className="cc-media__caption-content">
-                {imageCaption && (
-                  <RichText className="cc-media__caption-detail">
-                    {imageCaption}
-                  </RichText>
-                )}
-                {imageCredit && (
-                  <RichText className="cc-media__credit">
-                    {`Credit: ${imageCredit}`}
-                  </RichText>
-                )}
-                {imageLicence && (
-                  <RichText className="cc-media__license">
-                    {imageLicence}
-                  </RichText>
-                )}
-              </div>
-            </figcaption>
-          )}
-        </figure>
-      )}
-      {(authors || !!topics?.length) && (
-        <div className="cc-page-header-compact__aside cc-page-header-compact__section cc-page-header-compact__section--sidebar">
-          {authors && (
-            <div className="cc-page-header-compact__authors">
-              {authors.map(author => (
-                <Author
-                  imageSrc={author.imageSrc}
-                  imageSrcSet={author.imageSrcSet}
-                  jobTitle={author.jobTitle}
-                  links={author.links}
-                  key={`author-${author.id}`}
-                  name={`${author.name}`}
-                  organisation={author.organisation}
-                />
-              ))}
+    </div>
+    {(!!imageSrc || (imageSrcSet && imageSizes?.trim().length)) && (
+      <figure className="cc-page-header-compact__image cc-page-header-compact__section cc-page-header-compact__section--main">
+        <ImageElement
+          alt={imageAlt}
+          sizes={imageSizes}
+          src={imageSrc}
+          srcSet={imageSrcSet}
+        />
+        {(imageCaption || imageCredit || imageLicence) && (
+          <figcaption className="cc-media__caption">
+            <div className="cc-media__caption-content">
+              {imageCaption && (
+                <RichText className="cc-media__caption-detail">
+                  {imageCaption}
+                </RichText>
+              )}
+              {imageCredit && (
+                <RichText className="cc-media__credit">
+                  {`Credit: ${imageCredit}`}
+                </RichText>
+              )}
+              {imageLicence && (
+                <RichText className="cc-media__license">
+                  {imageLicence}
+                </RichText>
+              )}
             </div>
-          )}
-          {!!topics?.length && (
-            <div className="cc-page-header-compact__topics">
-              <TagList tags={topics} />
-            </div>
-          )}
-        </div>
-      )}
-      {date && (
-        <div className="cc-page-header-compact__tray cc-page-header-compact__section cc-page-header-compact__section--main">
-          <ReadTime date={date} readTime={readTime} />
-          <SocialShare url={socialUrl} body={standfirst} title={title} />
-        </div>
-      )}
-    </header>
-  );
-};
+          </figcaption>
+        )}
+      </figure>
+    )}
+    {(authors || !!topics?.length) && (
+      <div className="cc-page-header-compact__aside cc-page-header-compact__section cc-page-header-compact__section--sidebar">
+        {authors && (
+          <div className="cc-page-header-compact__authors">
+            {authors.map(author => (
+              <Author
+                imageSrc={author.imageSrc}
+                imageSrcSet={author.imageSrcSet}
+                jobTitle={author.jobTitle}
+                links={author.links}
+                key={`author-${author.id}`}
+                name={`${author.name}`}
+                organisation={author.organisation}
+              />
+            ))}
+          </div>
+        )}
+        {!!topics?.length && (
+          <div className="cc-page-header-compact__topics">
+            <TagList tags={topics} />
+          </div>
+        )}
+      </div>
+    )}
+    {date && (
+      <div className="cc-page-header-compact__tray cc-page-header-compact__section cc-page-header-compact__section--main">
+        <ReadTime date={date} readTime={readTime} />
+        <SocialShare url={socialUrl} body={standfirst} title={title} />
+      </div>
+    )}
+  </header>
+);
 
 export default PageHeaderCompact;
