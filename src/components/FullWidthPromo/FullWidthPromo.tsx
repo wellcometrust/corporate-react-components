@@ -3,6 +3,7 @@ import React from 'react';
 import CTALink from 'CTALink';
 import { ImageElement } from 'Image';
 import Link from 'Link';
+import ReadTime from 'ReadTime';
 import RichText from 'RichText';
 import TagList, { TagProps } from 'TagList/TagList';
 
@@ -21,6 +22,7 @@ type FullWidthPromoProps = {
   imageWidth?: string;
   linkText?: string;
   metaLabel?: string;
+  readTime?: string;
   title: string;
   topics: TagProps[];
 };
@@ -37,6 +39,7 @@ export const FullWidthPromo = ({
   imageWidth,
   linkText,
   metaLabel,
+  readTime,
   title,
   topics
 }: FullWidthPromoProps) => (
@@ -61,7 +64,7 @@ export const FullWidthPromo = ({
         {(metaLabel || authors) && (
           <div className="cc-full-width-promo__meta">
             {metaLabel && (
-              <p className="cc-full-width-promo__type">{metaLabel}</p>
+              <ReadTime metaLabel={metaLabel} readTime={readTime} />
             )}
             {authors?.length > 0 && (
               <dl className="cc-full-width-promo__authors">

@@ -26,6 +26,7 @@ type ListingElementProps = {
   hasMetaLabel?: boolean;
   linkText?: string;
   metaLabel?: string;
+  readTime?: string;
   title: string;
   type?: 'content' | 'file' | 'taxonomy_term';
   variant:
@@ -74,6 +75,7 @@ export const ListingElement = ({
   imageWidth,
   linkText,
   metaLabel,
+  readTime,
   title,
   type,
   variant,
@@ -108,6 +110,7 @@ export const ListingElement = ({
       linkText={linkText}
       hasMetaLabel={hasMetaLabel}
       metaLabel={metaLabel}
+      readTime={readTime}
       title={title}
       type={type}
       variant={variant}

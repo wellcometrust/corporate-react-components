@@ -13,6 +13,7 @@ const SingleImageCard = () => {
   );
 
   const date = text('Date', '03/08/1991');
+  const readTime = text('Read time', '6 minutes');
 
   const href = text('href', '/news/all');
 
@@ -39,6 +40,7 @@ const SingleImageCard = () => {
       imageAlt={imageAlt}
       imageSrc={imageSrc}
       metaLabel={metaLabel}
+      readTime={readTime}
       title={title}
       titleAs={titleAs}
     />
@@ -63,6 +65,7 @@ const MultipleImageCard = () => {
       `Card ${i + 1}`
     ),
     metaLabel: text('Meta Label', 'Climate Change', `Card ${i + 1}`),
+    readTime: text('Read time', '6 minutes', `Card ${i + 1}`),
     title: text('Title', 'My section', `Card ${i + 1}`),
     titleAs: select(
       'Title element',
@@ -87,6 +90,7 @@ const MultipleImageCard = () => {
           titleAs={knobs[i].titleAs}
           metaLabel={knobs[i].metaLabel}
           href={knobs[i].href}
+          readTime={knobs[i].readTime}
         />
       ))}
     </Listing>

@@ -2,8 +2,8 @@ import React, { forwardRef, Ref } from 'react';
 import cx from 'classnames';
 
 import { ImageElement } from 'Image';
-import FormattedDate from 'FormattedDate';
 import Link from 'Link';
+import ReadTime from 'ReadTime';
 
 type ImageCardProps = {
   authors?: string[];
@@ -18,6 +18,7 @@ type ImageCardProps = {
   imageWidth?: string;
   layoutVariant?: 'listing';
   metaLabel?: string;
+  readTime: string;
   title: string;
   titleAs?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 };
@@ -37,6 +38,7 @@ export const ImageCard = forwardRef(
       imageWidth,
       layoutVariant,
       metaLabel,
+      readTime,
       title,
       titleAs = 'h3'
     }: ImageCardProps,
@@ -97,15 +99,7 @@ export const ImageCard = forwardRef(
               {title}
             </Link>
           </TitleElement>
-          {date && (
-            <time
-              className="cc-image-card__date"
-              dateTime={date}
-              itemProp="datePublished"
-            >
-              <FormattedDate dateString={date} />
-            </time>
-          )}
+          {date && <ReadTime date={date} readTime={readTime} />}
         </div>
       </article>
     );

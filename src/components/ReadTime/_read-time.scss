@@ -1,0 +1,14 @@
+.cc-read-time {
+  color: var(--color-grey-60);
+  font-size: var(--body-sm);
+}
+
+.cc-read-time__time {
+  margin-left: var(--space-unit);
+
+  &:before {
+    color: var(--color-amber-30);
+    content: '/';
+    margin-right: var(--space-unit);
+  }
+}

@@ -79,20 +79,6 @@
   padding-top: var(--space-unit);
 }
 
-.cc-full-width-promo__type {
-  color: var(--color-grey-60);
-  font-size: var(--body-xxs);
-  margin: 0;
-  text-transform: uppercase;
-
-  &:after {
-    color: var(--color-amber-30);
-    content: '/';
-    padding-left: var(--space-unit);
-    padding-right: var(--space-unit);
-  }
-}
-
 .cc-full-width-promo__authors {
   align-items: center;
   display: flex;

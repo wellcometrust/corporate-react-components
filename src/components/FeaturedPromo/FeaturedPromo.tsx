@@ -1,9 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
 
-import FormattedDate from 'FormattedDate';
 import { ImageElement } from 'Image';
 import Link from 'Link';
+import ReadTime from 'ReadTime';
 import RichText from 'RichText';
 
 type FeaturedPromoProps = {
@@ -19,6 +19,7 @@ type FeaturedPromoProps = {
   imageSrcSet?: string;
   imageWidth?: string;
   metaLabel?: string;
+  readTime?: string;
   title: string;
   titleAs?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 };
@@ -36,6 +37,7 @@ export const FeaturedPromo = ({
   imageSrcSet,
   imageWidth,
   metaLabel,
+  readTime,
   title,
   titleAs = 'h3'
 }: FeaturedPromoProps) => {
@@ -91,13 +93,11 @@ export const FeaturedPromo = ({
           </Link>
         </TitleElement>
         {date && (
-          <time
+          <ReadTime
             className="cc-featured-promo__date"
-            dateTime={date}
-            itemProp="datePublished"
-          >
-            <FormattedDate dateString={date} />
-          </time>
+            date={date}
+            readTime={readTime}
+          />
         )}
         {description && (
           <RichText
