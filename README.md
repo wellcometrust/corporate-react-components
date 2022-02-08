@@ -83,8 +83,8 @@ import { ComponentName } from '@wellcometrust/corporate-components';
 
 ### Import styles
 
-```js
-import '@wellcometrust/corporate-components/dist/styles.css';
+```css
+@import '@wellcometrust/corporate-components/dist/style.css';
 ```
 
 
