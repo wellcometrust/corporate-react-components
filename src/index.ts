@@ -43,7 +43,6 @@ export { TableauChart } from 'TableauChart/TableauChart';
 export { default as TagList } from 'TagList';
 export { Text } from 'Text/Text';
 export { default as TextArea } from 'TextArea';
-export { default as TextCard } from 'TextCard';
 export { default as TextInput } from 'TextInput';
 export { default as Timeline } from 'Timeline';
 export { Video } from 'Video/Video';
