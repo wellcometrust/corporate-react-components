@@ -28,7 +28,6 @@ export { default as Link } from 'Link';
 export { Listing, ListingElement, ListingLink } from 'Listing/Listing';
 export { Logo } from 'Logo/Logo';
 export { default as ImageCard } from 'ImageCard';
-export { default as ImageCardWithCTA } from 'ImageCardWithCTA';
 export { default as NumberInput } from 'NumberInput';
 export { Quote } from 'Quote/Quote';
 export { PageHeader } from 'PageHeader/PageHeader';
