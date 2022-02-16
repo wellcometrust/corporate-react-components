@@ -2,7 +2,6 @@ import React from 'react';
 import cx from 'classnames';
 
 import Card from 'Card';
-import ImageCard from 'ImageCard';
 import { ListingLink } from 'Listing/ListingLink/ListingLink';
 import TextCard from 'TextCard';
 import ImageCardWithCTA from 'ImageCardWithCTA';
@@ -28,7 +27,6 @@ type ListingElementProps = {
   title: string;
   type?: 'content' | 'file' | 'taxonomy_term';
   variant:
-    | 'image_card'
     | 'horizontal_card'
     | 'link_card_cta_link'
     | 'link_list'
@@ -39,7 +37,6 @@ type ListingElementProps = {
 
 const variantElement = {
   horizontal_card: Card,
-  image_card: ImageCard,
 
   /**
    * todo: Build + integrate Image card with CTA link component
