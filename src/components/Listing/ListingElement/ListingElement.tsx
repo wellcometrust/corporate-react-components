@@ -4,7 +4,6 @@ import cx from 'classnames';
 import Card from 'Card';
 import ImageCard from 'ImageCard';
 import { ListingLink } from 'Listing/ListingLink/ListingLink';
-import FactCard from 'FactCard';
 import TextCard from 'TextCard';
 import ImageCardWithCTA from 'ImageCardWithCTA';
 
@@ -29,7 +28,6 @@ type ListingElementProps = {
   title: string;
   type?: 'content' | 'file' | 'taxonomy_term';
   variant:
-    | 'fact_card'
     | 'image_card'
     | 'horizontal_card'
     | 'link_card_cta_link'
@@ -48,7 +46,6 @@ const variantElement = {
    *
    * @see {@link https://github.com/wellcometrust/corporate/issues/7771}
    */
-  fact_card: FactCard,
   link_card_cta_link: ImageCardWithCTA,
   link_list: ListingLink,
   mid_page_card: Card,

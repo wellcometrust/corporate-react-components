@@ -10,7 +10,6 @@ export { CookieMessage } from 'CookieMessage/CookieMessage';
 export { default as CTALink } from 'CTALink';
 export { default as DateInput } from 'DateInput';
 export { default as DescriptionList } from 'DescriptionList';
-export { default as FactCard } from 'FactCard';
 export { FileDownload } from 'FileDownload/FileDownload';
 export { default as FileInput } from 'FileInput';
 export { FormattedDate } from 'FormattedDate/FormattedDate';
