@@ -1,7 +1,6 @@
 import React, { Children, cloneElement } from 'react';
 import cx from 'classnames';
 
-import ListingElement from './ListingElement';
 import ListingLink from './ListingLink';
 
 type ListingProps = {
@@ -55,4 +54,4 @@ export const Listing = ({
 };
 
 export default Listing;
-export { ListingElement, ListingLink };
+export { ListingLink };
