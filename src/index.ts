@@ -34,7 +34,6 @@ export { default as ImageCardWithCTA } from 'ImageCardWithCTA';
 export { default as NumberInput } from 'NumberInput';
 export { Quote } from 'Quote/Quote';
 export { PageHeader } from 'PageHeader/PageHeader';
-export { default as PageHeaderCompact } from 'PageHeaderCompact';
 export { default as Pagination } from 'Pagination';
 export { default as Person } from 'Person';
 export { default as RadioInput } from 'RadioInput';
