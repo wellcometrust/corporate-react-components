@@ -1,1 +1,1 @@
-export { default, ListingElement, ListingLink } from './Listing';
+export { default, ListingLink } from './Listing';
