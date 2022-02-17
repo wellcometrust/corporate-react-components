@@ -20,7 +20,7 @@ export const sanitizeHtml = (html: string): string => {
     /* eslint-disable consistent-return */
     onIgnoreTagAttr: (tag: string, name: string, value: string) => {
       // allow aria-hidden attributes
-      if (name === 'aria-hidden') {
+      if (name === 'aria-hidden' || name === 'id') {
         // escape its value using built-in escapeAttrValue function
         return `${name}="${escapeAttrValue(value)}"`;
       }
