@@ -44,7 +44,6 @@ export { default as TagList } from 'TagList';
 export { Text } from 'Text/Text';
 export { default as TextArea } from 'TextArea';
 export { default as TextInput } from 'TextInput';
-export { default as Timeline } from 'Timeline';
 export { Video } from 'Video/Video';
 export { default as VisuallyHidden } from 'VisuallyHidden';
 
