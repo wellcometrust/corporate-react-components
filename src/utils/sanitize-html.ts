@@ -11,7 +11,6 @@ import xss, { escapeAttrValue } from 'xss';
  * @see {@link https://www.npmjs.com/package/xss}
  *
  * @param {string} html
- * @param {object} options
  *
  * @returns {ReactElement}
  */
