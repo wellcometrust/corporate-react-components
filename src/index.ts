@@ -6,7 +6,6 @@ export { default as Author } from 'Author';
 export { Button } from 'Button/Button';
 export { default as Checkbox } from 'Checkbox';
 export { Contact } from 'Contact/Contact';
-export { CookieMessage } from 'CookieMessage/CookieMessage';
 export { default as CTALink } from 'CTALink';
 export { default as DateInput } from 'DateInput';
 export { FileDownload } from 'FileDownload/FileDownload';
