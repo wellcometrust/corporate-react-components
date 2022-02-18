@@ -9,7 +9,6 @@ export { Contact } from 'Contact/Contact';
 export { CookieMessage } from 'CookieMessage/CookieMessage';
 export { default as CTALink } from 'CTALink';
 export { default as DateInput } from 'DateInput';
-export { default as DescriptionList } from 'DescriptionList';
 export { FileDownload } from 'FileDownload/FileDownload';
 export { default as FileInput } from 'FileInput';
 export { FormattedDate } from 'FormattedDate/FormattedDate';
