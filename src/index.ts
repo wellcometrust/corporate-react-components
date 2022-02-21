@@ -24,7 +24,6 @@ export { default as Label } from 'Label';
 export { default as Link } from 'Link';
 export { Logo } from 'Logo/Logo';
 export { default as NumberInput } from 'NumberInput';
-export { Quote } from 'Quote/Quote';
 export { PageHeader } from 'PageHeader/PageHeader';
 export { default as Pagination } from 'Pagination';
 export { default as Person } from 'Person';
