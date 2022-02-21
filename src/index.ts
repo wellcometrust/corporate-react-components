@@ -34,7 +34,6 @@ export { RouterLinkWrapper } from 'RouterLinkWrapper/RouterLinkWrapper';
 export { SearchForm } from 'SearchForm/SearchForm';
 export { Section } from 'Section/Section';
 export { SectionTitle } from 'SectionTitle/SectionTitle';
-export { default as SkipLink } from 'SkipLink';
 export { default as SidebarSearch } from 'SidebarSearch';
 export { SocialShare } from 'SocialShare/SocialShare';
 export { TableauChart } from 'TableauChart/TableauChart';
