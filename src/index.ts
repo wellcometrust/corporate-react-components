@@ -34,7 +34,6 @@ export { SearchForm } from 'SearchForm/SearchForm';
 export { Section } from 'Section/Section';
 export { SectionTitle } from 'SectionTitle/SectionTitle';
 export { default as SidebarSearch } from 'SidebarSearch';
-export { SocialShare } from 'SocialShare/SocialShare';
 export { TableauChart } from 'TableauChart/TableauChart';
 export { default as TagList } from 'TagList';
 export { Text } from 'Text/Text';
