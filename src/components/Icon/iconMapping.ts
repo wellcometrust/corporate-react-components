@@ -18,7 +18,10 @@ import facebook from './components/Facebook';
 import info from './components/Info';
 import linkedin from './components/Linkedin';
 import message from './components/Message';
+import mute from './components/Mute';
+import pause from './components/Pause';
 import phone from './components/Phone';
+import play from './components/Play';
 import plus from './components/Plus';
 import search from './components/Search';
 import shareLink from './components/ShareLink';
@@ -27,6 +30,7 @@ import tick from './components/Tick';
 import twitter from './components/Twitter';
 import update from './components/Update';
 import upload from './components/Upload';
+import volume from './components/Volume';
 import youTube from './components/YouTube';
 
 // Map is used here instead of an object to ensure there is no type mismatch thrown by TypeScript
@@ -51,7 +55,10 @@ export default new Map([
   ['info', info],
   ['linkedin', linkedin],
   ['message', message],
+  ['mute', mute],
+  ['pause', pause],
   ['phone', phone],
+  ['play', play],
   ['plus', plus],
   ['search', search],
   ['shareLink', shareLink],
@@ -60,5 +67,6 @@ export default new Map([
   ['twitter', twitter],
   ['update', update],
   ['upload', upload],
+  ['volume', volume],
   ['youTube', youTube]
 ]);
