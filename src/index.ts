@@ -33,7 +33,6 @@ export { RouterLinkWrapper } from 'RouterLinkWrapper/RouterLinkWrapper';
 export { SearchForm } from 'SearchForm/SearchForm';
 export { Section } from 'Section/Section';
 export { SectionTitle } from 'SectionTitle/SectionTitle';
-export { TableauChart } from 'TableauChart/TableauChart';
 export { default as TagList } from 'TagList';
 export { Text } from 'Text/Text';
 export { default as TextArea } from 'TextArea';
