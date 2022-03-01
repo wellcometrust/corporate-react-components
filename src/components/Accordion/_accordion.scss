@@ -34,10 +34,6 @@
   .cc-rich-text + * {
     margin-top: calc(2 * var(--space-sm));
   }
-
-  .cc-contact--nested + * {
-    margin-top: var(--space-sm);
-  }
 }
 
 .cc-accordion__button {
