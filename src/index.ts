@@ -2,7 +2,6 @@ import 'assets/styles/app.scss';
 
 // standard components
 export { Accordion, AccordionItem } from 'Accordion/Accordion';
-export { default as Author } from 'Author';
 export { Button } from 'Button/Button';
 export { default as Checkbox } from 'Checkbox';
 export { Contact } from 'Contact/Contact';
@@ -41,4 +40,5 @@ export { default as TextInput } from 'TextInput';
 export { Video } from 'Video/Video';
 export { default as VisuallyHidden } from 'VisuallyHidden';
 
+export { getLinkLabel } from 'utils/get-link-label';
 export { sanitizeHtml } from 'utils/sanitize-html';
