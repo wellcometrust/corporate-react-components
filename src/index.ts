@@ -40,5 +40,4 @@ export { default as TextInput } from 'TextInput';
 export { Video } from 'Video/Video';
 export { default as VisuallyHidden } from 'VisuallyHidden';
 
-export { getLinkLabel } from 'utils/get-link-label';
 export { sanitizeHtml } from 'utils/sanitize-html';
