@@ -1,7 +1,6 @@
 import 'assets/styles/app.scss';
 
 // standard components
-export { Accordion, AccordionItem } from 'Accordion/Accordion';
 export { Button } from 'Button/Button';
 export { default as Checkbox } from 'Checkbox';
 export { default as CTALink } from 'CTALink';
