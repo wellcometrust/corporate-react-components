@@ -23,7 +23,6 @@ export { default as Link } from 'Link';
 export { Logo } from 'Logo/Logo';
 export { default as NumberInput } from 'NumberInput';
 export { default as Pagination } from 'Pagination';
-export { default as Person } from 'Person';
 export { default as RadioInput } from 'RadioInput';
 export { default as RichText } from 'RichText';
 export { RouterLinkWrapper } from 'RouterLinkWrapper/RouterLinkWrapper';
