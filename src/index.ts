@@ -19,6 +19,7 @@ export { default as Iframe } from 'Iframe';
 export { default as Label } from 'Label';
 export { default as Link } from 'Link';
 export { Logo } from 'Logo/Logo';
+export { default as Media } from 'Media';
 export { default as NumberInput } from 'NumberInput';
 export { default as Pagination } from 'Pagination';
 export { default as RadioInput } from 'RadioInput';
@@ -30,7 +31,6 @@ export { SectionTitle } from 'SectionTitle/SectionTitle';
 export { Text } from 'Text/Text';
 export { default as TextArea } from 'TextArea';
 export { default as TextInput } from 'TextInput';
-export { Video } from 'Video/Video';
 export { default as VisuallyHidden } from 'VisuallyHidden';
 
 export { sanitizeHtml } from 'utils/sanitize-html';
