@@ -19,7 +19,6 @@ export { default as Iframe } from 'Iframe';
 export { default as Label } from 'Label';
 export { default as Link } from 'Link';
 export { Logo } from 'Logo/Logo';
-export { default as Media } from 'Media';
 export { default as NumberInput } from 'NumberInput';
 export { default as Pagination } from 'Pagination';
 export { default as RadioInput } from 'RadioInput';
