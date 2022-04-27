@@ -53,7 +53,7 @@
  *
  * i.e. hover-underline adds styles to a title after the image was hovered
  */
-@mixin default-underline($height: 3px, $underline-colour: var(--color-grey-80)) {
+@mixin default-underline($height: 3px, $underline-colour: var(--color-text-body)) {
   --transition-duration-link: 0.3s;
   --transition-timing-function: ease-in-out;
 
@@ -96,7 +96,7 @@
 @mixin animated-link(
   $height: 3px,
   $hover-colour: var(--color-amber-30),
-  $underline-colour: var(--color-grey-80),
+  $underline-colour: var(--color-text-body),
   $child-selector: null
 ) {
   @extend %anchor-base;
