@@ -96,11 +96,10 @@
 @mixin animated-link(
   $height: 3px,
   $hover-colour: var(--color-amber-30),
-  $underline-colour: var(--color-text-body),
+  $underline-colour: currentColor,
   $child-selector: null
 ) {
-  @extend %anchor-base;
-
+  @include link;
   text-decoration: none;
 
   &:hover,
@@ -151,5 +150,29 @@
     height: $height;
     margin-top: $space-above;
     width: $width;
+  }
+}
+
+@mixin link($prefix: --color-link) {
+  color: var(#{$prefix});
+  text-decoration: underline;
+
+  &:hover {
+    color: var(#{$prefix}-hover);
+  }
+
+  &:active {
+    color: var(#{$prefix}-active);
+  }
+
+  &:focus {
+    color: var(#{$prefix}-active);
+    outline-color: var(#{$prefix}-focus-outline);
+    outline-offset: rem(4);
+  }
+
+  [disabled],
+  &:not([href]) {
+    color: var(#{$prefix}-disabled);
   }
 }
