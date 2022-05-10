@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  @extend %anchor-base;
+  @include link;
 }
 
 button {
