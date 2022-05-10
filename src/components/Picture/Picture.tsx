@@ -1,3 +1,6 @@
+/**
+ * Deprecated - to be removed (not currently used)
+ */
 import React, { useEffect, useState, SyntheticEvent } from 'react';
 import cx from 'classnames';
 
