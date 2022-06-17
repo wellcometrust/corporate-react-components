@@ -22,7 +22,6 @@ export { Logo } from 'Logo/Logo';
 export { default as NumberInput } from 'NumberInput';
 export { default as Pagination } from 'Pagination';
 export { default as RadioInput } from 'RadioInput';
-export { default as RichText } from 'RichText';
 export { RouterLinkWrapper } from 'RouterLinkWrapper/RouterLinkWrapper';
 export { SearchForm } from 'SearchForm/SearchForm';
 export { Section } from 'Section/Section';
