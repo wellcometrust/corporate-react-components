@@ -5,7 +5,6 @@ export { Button } from 'Button/Button';
 export { default as Checkbox } from 'Checkbox';
 export { default as CTALink } from 'CTALink';
 export { default as DateInput } from 'DateInput';
-export { FileDownload } from 'FileDownload/FileDownload';
 export { default as FileInput } from 'FileInput';
 export { FormattedDate } from 'FormattedDate/FormattedDate';
 export { default as FormField } from 'FormField';
