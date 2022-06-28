@@ -20,7 +20,6 @@ export { default as Label } from 'Label';
 export { default as Link } from 'Link';
 export { Logo } from 'Logo/Logo';
 export { default as NumberInput } from 'NumberInput';
-export { default as Pagination } from 'Pagination';
 export { default as RadioInput } from 'RadioInput';
 export { RouterLinkWrapper } from 'RouterLinkWrapper/RouterLinkWrapper';
 export { SearchForm } from 'SearchForm/SearchForm';
