@@ -14,7 +14,6 @@ export { default as FormFieldset } from 'FormFieldset';
 export { default as FormSelect } from 'FormSelect';
 export { Grid, GridCell } from 'Grid/Grid';
 export { Icon } from 'Icon/Icon';
-export { default as Iframe } from 'Iframe';
 export { default as Label } from 'Label';
 export { default as Link } from 'Link';
 export { Logo } from 'Logo/Logo';
