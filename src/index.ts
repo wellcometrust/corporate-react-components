@@ -6,7 +6,6 @@ export { default as Checkbox } from 'Checkbox';
 export { default as CTALink } from 'CTALink';
 export { default as DateInput } from 'DateInput';
 export { default as FileInput } from 'FileInput';
-export { FormattedDate } from 'FormattedDate/FormattedDate';
 export { default as FormField } from 'FormField';
 export { default as FormFieldError } from 'FormFieldError';
 export { default as FormFieldHint } from 'FormFieldHint';
