@@ -2,7 +2,6 @@ import 'assets/styles/app.scss';
 
 // standard components
 export { Button } from 'Button/Button';
-export { default as CTALink } from 'CTALink';
 export { default as DateInput } from 'DateInput';
 export { default as FileInput } from 'FileInput';
 export { default as FormField } from 'FormField';
