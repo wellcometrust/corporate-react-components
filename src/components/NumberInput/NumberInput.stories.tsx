@@ -6,7 +6,7 @@ import NumberInput from 'NumberInput';
 import Label from 'Label';
 import FormField from 'FormField';
 import FormFieldHint from 'FormFieldHint';
-import FormFieldError from 'FormFieldError';
+// import FormFieldError from 'FormFieldError';
 import Readme from './NumberInput.md';
 
 const NumberInputExample = () => {
@@ -35,9 +35,9 @@ const NumberInputExample = () => {
       <FormFieldHint id="numberExampleHint">
         <p>{hint}</p>
       </FormFieldHint>
-      {(hasError || isRequired) && (
-        <FormFieldError id="numberExampleError" errors={error} />
-      )}
+      {/* {(hasError || isRequired) && ( */}
+      {/*  <FormFieldError id="numberExampleError" errors={error} /> */}
+      {/* )} */}
     </FormField>
   );
 };

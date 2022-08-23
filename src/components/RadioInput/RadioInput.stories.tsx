@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { boolean, text } from '@storybook/addon-knobs';
 
 import FormFieldset from 'FormFieldset';
-import FormFieldError from 'FormFieldError';
+// import FormFieldError from 'FormFieldError';
 import RadioInput from 'RadioInput';
 
 const RadioInputExample = () => {
@@ -45,12 +45,12 @@ const RadioInputExample = () => {
           name="isPersonWhoTookLeave"
           value="no"
         />
-        {hasError && (
-          <FormFieldError
-            errors={errorMessage}
-            id="isPersonWhoTookLeaveErrors"
-          />
-        )}
+        {/* {hasError && ( */}
+        {/*  <FormFieldError */}
+        {/*    errors={errorMessage} */}
+        {/*    id="isPersonWhoTookLeaveErrors" */}
+        {/*  /> */}
+        {/* )} */}
       </FormFieldset>
     </form>
   );
