@@ -3,7 +3,6 @@ import 'assets/styles/app.scss';
 // standard components
 export { Button } from 'Button/Button';
 export { default as FormField } from 'FormField';
-export { default as FormFieldError } from 'FormFieldError';
 export { default as FormFieldHint } from 'FormFieldHint';
 export { default as FormFieldset } from 'FormFieldset';
 export { default as FormSelect } from 'FormSelect';

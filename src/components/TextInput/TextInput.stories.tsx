@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { boolean, text } from '@storybook/addon-knobs';
 
 import FormField from 'FormField';
-import FormFieldError from 'FormFieldError';
+// import FormFieldError from 'FormFieldError';
 import Label from 'Label';
 
 import TextInput from './TextInput';
@@ -42,9 +42,9 @@ const TextInputFormFieldExample = () => {
         name="text-input"
         type="text"
       />
-      {isInvalid && (
-        <FormFieldError id="text-input-error" errors="This field is invalid" />
-      )}
+      {/* {isInvalid && ( */}
+      {/*  <FormFieldError id="text-input-error" errors="This field is invalid" /> */}
+      {/* )} */}
     </FormField>
   );
 };
