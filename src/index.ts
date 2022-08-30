@@ -16,6 +16,5 @@ export { default as RadioInput } from 'RadioInput';
 export { RouterLinkWrapper } from 'RouterLinkWrapper/RouterLinkWrapper';
 export { Section } from 'Section/Section';
 export { SectionTitle } from 'SectionTitle/SectionTitle';
-export { default as TextArea } from 'TextArea';
 export { default as TextInput } from 'TextInput';
 export { default as VisuallyHidden } from 'VisuallyHidden';
