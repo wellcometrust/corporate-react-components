@@ -14,4 +14,3 @@ export { Logo } from 'Logo/Logo';
 export { RouterLinkWrapper } from 'RouterLinkWrapper/RouterLinkWrapper';
 export { Section } from 'Section/Section';
 export { SectionTitle } from 'SectionTitle/SectionTitle';
-export { default as TextInput } from 'TextInput';
