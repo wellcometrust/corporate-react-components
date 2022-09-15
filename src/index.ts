@@ -12,5 +12,4 @@ export { default as Label } from 'Label';
 export { default as Link } from 'Link';
 export { Logo } from 'Logo/Logo';
 export { RouterLinkWrapper } from 'RouterLinkWrapper/RouterLinkWrapper';
-export { Section } from 'Section/Section';
 export { SectionTitle } from 'SectionTitle/SectionTitle';
