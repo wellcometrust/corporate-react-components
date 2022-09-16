@@ -10,4 +10,3 @@ export { default as Label } from 'Label';
 export { default as Link } from 'Link';
 export { Logo } from 'Logo/Logo';
 export { RouterLinkWrapper } from 'RouterLinkWrapper/RouterLinkWrapper';
-export { SectionTitle } from 'SectionTitle/SectionTitle';
