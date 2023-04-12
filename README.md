@@ -1,5 +1,7 @@
 # Corporate Components
 
+**This repo is no longer maintained or supported**
+
 ## Table of contents
 
 - [Corporate Components](#corporate-components)
